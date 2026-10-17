@@ -4,11 +4,11 @@
 
 | 类别 | 唯一用例 | 通过 | 失败 | 跳过 | 运行环境 | 原始结果 |
 |---|---:|---:|---:|---:|---|---|
-| 核心单元 + 集成（Swift Testing） | **529** | 529 | 0 | 0 | macOS 27.0.1，Swift 6.4，`swift test --parallel` | [core-tests-20261018T044516.log](reports/core-tests-20261018T044516.log)、`.xml`（xUnit）、[清单](reports/core-tests-latest-inventory.md) |
-| iOS 交互自动化（XCUITest） | **24** | 24 | 0 | 0 | Xcode 27.1，iPhone 18 Pro 模拟器 iOS 27.0，确定性模型响应 | [ui-tests-20261018T044541.log](reports/ui-tests-20261018T044541.log) |
+| 核心单元 + 集成（Swift Testing） | **529** | 529 | 0 | 0 | macOS 27.0.1，Swift 6.4，`swift test --parallel` | [core-tests-20261018T092221.log](reports/core-tests-20261018T092221.log)、`.xml`（xUnit）、[清单](reports/core-tests-latest-inventory.md) |
+| iOS 交互自动化（XCUITest） | **24** | 24 | 0 | 0 | Xcode 27.1，iPhone 18 Pro 模拟器 iOS 27.0，确定性模型响应 | [ui-tests-20261018T092238.log](reports/ui-tests-20261018T092238.log) |
 | 合计 | **553** | 553 | 0 | 0 | | |
 
-- 两次运行都在同一份源码上（最终代码），尚未提交到 git（日志中“提交：未提交”）；交付前建议提交并在该提交上重跑 `Scripts/test-core.sh` 与 `Scripts/test-ui.sh`，以满足“绑定同一源码提交”的要求。
+- 两次运行都在同一源码提交 **`1bc5d7f`** 上执行（核心日志首行记录了提交号；UI 运行时工作区与该提交一致，之后 `test-ui.sh` 也会在日志开头写入提交号）。
 - 统计口径（8.1）：每个 `@Test` / XCTest 方法计 1 个；没有参数化展开计数；没有跳过、禁用或预期失败；重名 0。核心测试不访问网络、不依赖收费服务（HTTP 用可编排桩，时钟用 `ManualClock`）。
 - **iOS 18 最低系统未实测**：本机只有 iOS 27 模拟器运行时。
 

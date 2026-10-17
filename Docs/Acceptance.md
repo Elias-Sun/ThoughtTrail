@@ -8,7 +8,7 @@
 |---|---|---|---|
 | ACCEPT-01 | 18 个真实库模块，职责和依赖清楚 | **达成** | [Architecture.md](Architecture.md)；`Package.swift` 18 个 library target，SwiftPM 保证无循环；每个模块有调用方与测试 |
 | ACCEPT-02 | 第 5 节全部功能要求落实 | **大部分达成** | 本表第 2 节；未完成项为真机语音/中断、真实模型效果，以及未接入 Readium（偏离计划技术） |
-| ACCEPT-03 | ≥500 核心自动化与 ≥20 iOS 交互测试通过 | **达成（模拟器；待在提交后重跑绑定）** | 核心 529/529 通过；iOS 交互 24/24 通过（[TestReport.md](TestReport.md)） |
+| ACCEPT-03 | ≥500 核心自动化与 ≥20 iOS 交互测试通过 | **达成（模拟器，提交 `1bc5d7f`）** | 核心 529/529 通过；iOS 交互 24/24 通过（[TestReport.md](TestReport.md)） |
 | ACCEPT-04 | iOS 构建、安装、核心页面和完整演示通过 | **模拟器部分达成，真机未验收** | 模拟器构建/安装/全部页面可用；真机签名、iOS 18 实测与演示录像未完成（[DeviceAcceptance.md](DeviceAcceptance.md)） |
 | ACCEPT-05 | 对话、Embedding、Rerank 真实接口可用 | **未验收** | 适配器与协议测试完成（HTTP 桩）；`tt-live-check` 已就绪，需要用户提供百炼密钥后执行 |
 | ACCEPT-06 | 阅读边界、引用有效性和预算规则通过 | **规则测试达成；开发集边界 0 违规** | READ-04/05、EVID-01、RUN-01 测试；边界开发集结果见 [Evaluation.md](Evaluation.md)；验收集（人工复核）未建立 |

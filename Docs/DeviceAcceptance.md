@@ -6,7 +6,7 @@
 |---|---|---|---|
 | iOS 应用构建 | Xcode 27.1，iOS Simulator SDK 27.1，Debug | 构建成功 | `xcodebuild … build` 日志 |
 | 安装与启动 | iPhone 18 Pro 模拟器，iOS 27.0 | 启动进入书库，导入示例书、打开阅读器正常 | UI 测试与录屏 |
-| iOS 交互自动化 | 同上，确定性模型响应（`-uitest`） | 24/24 通过，见 [TestReport.md](TestReport.md) | `Docs/reports/ui-tests-20261018T044541.log` |
+| iOS 交互自动化 | 同上，确定性模型响应（`-uitest`） | 24/24 通过，见 [TestReport.md](TestReport.md) | `Docs/reports/ui-tests-20261018T092238.log` |
 | 模拟器流程录屏 | 同上，录制 UI-12（引用跳回原文）、UI-16（记忆修订与来源）、UI-17（自测）、UI-19（备份恢复）自动化运行过程 | 已录制 | [media/simulator-demo.mp4](media/simulator-demo.mp4)（960×540；确定性模型，**不是**含真实模型的完整演示录像） |
 
 ## 2. 未完成（需要真机或用户条件）
