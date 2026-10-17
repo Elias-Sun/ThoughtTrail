@@ -1,0 +1,191 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "judge" : "heuristic-v1（离线基线）"
+  },
+  "confusion" : {
+    "counts" : {
+      "contradicted" : {
+        "contradicted" : 42,
+        "insufficient" : 0,
+        "supported" : 38,
+        "unknown" : 0
+      },
+      "insufficient" : {
+        "contradicted" : 0,
+        "insufficient" : 80,
+        "supported" : 0,
+        "unknown" : 0
+      },
+      "supported" : {
+        "contradicted" : 0,
+        "insufficient" : 0,
+        "supported" : 80,
+        "unknown" : 0
+      },
+      "unknown" : {
+        "contradicted" : 0,
+        "insufficient" : 0,
+        "supported" : 0,
+        "unknown" : 0
+      }
+    },
+    "labels" : [
+      "supported",
+      "insufficient",
+      "contradicted",
+      "unknown"
+    ]
+  },
+  "createdAt" : "2026-10-17T17:37:54Z",
+  "datasetName" : "verification-dev",
+  "datasetSHA256" : "745fcfb7e84d96bddf80787023e422a3fe376df22fc92bb6d3ca2e7ff8d17aea",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+    {
+      "caseID" : "V2",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V5",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V23",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V26",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V32",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V38",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V41",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V65",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V74",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V83",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V86",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V92",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V98",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V110",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V119",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V128",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V140",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V178",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V181",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V187",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V190",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V192",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V194",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V209",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V212",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V213",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V215",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V218",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V220",
+      "detail" : "gold=contradicted pred=supported [number]"
+    },
+    {
+      "caseID" : "V221",
+      "detail" : "gold=contradicted pred=supported [number]"
+    }
+  ],
+  "metrics" : {
+    "accuracy" : {
+      "denominator" : 240,
+      "numerator" : 202,
+      "value" : 0.8416666666666667
+    },
+    "flagged_precision" : {
+      "denominator" : 122,
+      "numerator" : 122,
+      "value" : 1
+    },
+    "flagged_recall" : {
+      "denominator" : 160,
+      "numerator" : 122,
+      "value" : 0.7625
+    },
+    "unknown" : {
+      "denominator" : 240,
+      "numerator" : 0,
+      "value" : 0
+    }
+  },
+  "runID" : "2026-10-17T173753Z",
+  "sampleCount" : 240,
+  "suite" : "verification_heuristic"
+}

@@ -1,0 +1,66 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "embedding" : "hash-bow-256",
+    "final_limit" : "8",
+    "retriever" : "bm25+vector RRF",
+    "variant" : "hybrid"
+  },
+  "createdAt" : "2026-10-17T17:45:10Z",
+  "datasetName" : "retrieval-dev",
+  "datasetSHA256" : "e020606e3df740dbdcb34dbc2d2c5fff276c644194e036592221c5fabbd10bfc",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "latency_p50_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.033020973205566406,
+      "value" : 0.033020973205566406
+    },
+    "latency_p95_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.04601478576660156,
+      "value" : 0.04601478576660156
+    },
+    "ndcg@5" : {
+      "denominator" : 130,
+      "numerator" : 112.48076634370429,
+      "value" : 0.8652366641823407
+    },
+    "recall@10" : {
+      "denominator" : 130,
+      "numerator" : 130,
+      "value" : 1
+    },
+    "recall@10.annotationMemory" : {
+      "denominator" : 20,
+      "numerator" : 20,
+      "value" : 1
+    },
+    "recall@10.crossBook" : {
+      "denominator" : 30,
+      "numerator" : 30,
+      "value" : 1
+    },
+    "recall@10.crossChapter" : {
+      "denominator" : 40,
+      "numerator" : 40,
+      "value" : 1
+    },
+    "recall@10.local" : {
+      "denominator" : 40,
+      "numerator" : 40,
+      "value" : 1
+    },
+    "recall@5" : {
+      "denominator" : 130,
+      "numerator" : 121,
+      "value" : 0.9307692307692308
+    }
+  },
+  "runID" : "2026-10-17T174510Z",
+  "sampleCount" : 130,
+  "suite" : "retrieval_hybrid"
+}

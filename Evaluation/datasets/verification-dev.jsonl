@@ -1,0 +1,240 @@
+{"claim":"临川港有三座码头，最老的一座叫石门码头，建于光绪年间","evidence":["临川港有三座码头，最老的一座叫石门码头，建于光绪年间。"],"id":"V1","label":"supported","perturbation":"none"}
+{"claim":"每到冬季，港口一连二十天被浓雾笼罩，渔船只能靠灯塔的光回港","evidence":["每到冬季，港口一连四十天被浓雾笼罩，渔船只能靠灯塔的光回港。"],"id":"V2","label":"contradicted","perturbation":"number"}
+{"claim":"那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗","evidence":["少年阿桂在码头上卖鱼，他最大的愿望是登上灯塔看一次日出。"],"id":"V3","label":"insufficient","perturbation":"unrelated"}
+{"claim":"守塔人老周每天傍晚六点点灯，二十年来从未误过一次","evidence":["守塔人老周每天傍晚六点点灯，二十年来从未误过一次。"],"id":"V4","label":"supported","perturbation":"none"}
+{"claim":"老周说，灯塔的光每十五秒闪一次，船员靠闪烁的间隔认出临川港","evidence":["老周说，灯塔的光每十二秒闪一次，船员靠闪烁的间隔认出临川港。"],"id":"V5","label":"contradicted","perturbation":"number"}
+{"claim":"多年以后，阿桂成了临川港的新守塔人","evidence":["阿桂第一次上塔那天，老周教他擦拭灯罩上的盐霜。"],"id":"V6","label":"insufficient","perturbation":"unrelated"}
+{"claim":"那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗","evidence":["那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗。"],"id":"V7","label":"supported","perturbation":"none"}
+{"claim":"守塔人老周每天傍晚六点点灯，二十年来从未误过一次","evidence":["阿桂和老周点起备用的煤油灯，在塔顶守了整整一夜。"],"id":"V8","label":"insufficient","perturbation":"unrelated"}
+{"claim":"临川港有三座码头，最老的一座叫石门码头，建于光绪年间","evidence":["第二天清晨，七条渔船全部平安靠岸。"],"id":"V9","label":"insufficient","perturbation":"unrelated"}
+{"claim":"多年以后，阿桂成了临川港的新守塔人","evidence":["多年以后，阿桂成了临川港的新守塔人。"],"id":"V10","label":"supported","perturbation":"none"}
+{"claim":"老周临别时留下一本航海日志，日志里写着他其实不是失踪多年的船长","evidence":["老周临别时留下一本航海日志，日志里写着他其实是失踪多年的船长。"],"id":"V11","label":"contradicted","perturbation":"negation"}
+{"claim":"守塔人老周每天傍晚六点点灯，二十年来从未误过一次","evidence":["从此，阿桂每晚点灯时都会在日志上记一笔天气。"],"id":"V12","label":"insufficient","perturbation":"unrelated"}
+{"claim":"立春是二十四节气的第一个，通常在公历二月四日前后","evidence":["立春是二十四节气的第一个，通常在公历二月四日前后。"],"id":"V13","label":"supported","perturbation":"none"}
+{"claim":"惊蛰时春雷始鸣，蛰伏的虫子开始苏醒，农谚说“惊蛰不耙地，好不比蒸馍走了气”","evidence":["惊蛰时春雷始鸣，蛰伏的虫子开始苏醒，农谚说“惊蛰不耙地，好比蒸馍走了气”。"],"id":"V14","label":"contradicted","perturbation":"negation"}
+{"claim":"秋分这天昼夜等长，之后北半球白天逐渐变短","evidence":["清明前后种瓜点豆，北方的春播大多在这一时期开始。"],"id":"V15","label":"insufficient","perturbation":"unrelated"}
+{"claim":"芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种","evidence":["芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种。"],"id":"V16","label":"supported","perturbation":"none"}
+{"claim":"夏至不是一年中白昼最长的一天，北半球正午太阳最高","evidence":["夏至是一年中白昼最长的一天，北半球正午太阳最高。"],"id":"V17","label":"contradicted","perturbation":"negation"}
+{"claim":"冬至是北半球白昼最短的一天，北方有吃饺子的习俗","evidence":["三伏天从夏至后第三个庚日开始，是一年最热的时段。"],"id":"V18","label":"insufficient","perturbation":"unrelated"}
+{"claim":"秋分这天昼夜等长，之后北半球白天逐渐变短","evidence":["秋分这天昼夜等长，之后北半球白天逐渐变短。"],"id":"V19","label":"supported","perturbation":"none"}
+{"claim":"霜降不是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻","evidence":["霜降是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻。"],"id":"V20","label":"contradicted","perturbation":"negation"}
+{"claim":"立春是二十四节气的第一个，通常在公历二月四日前后","evidence":["秋收之后，农民会把秸秆还田来保持土壤肥力。"],"id":"V21","label":"insufficient","perturbation":"unrelated"}
+{"claim":"冬至是北半球白昼最短的一天，北方有吃饺子的习俗","evidence":["冬至是北半球白昼最短的一天，北方有吃饺子的习俗。"],"id":"V22","label":"supported","perturbation":"none"}
+{"claim":"数四从冬至开始计算，九个九天之后天气转暖","evidence":["数九从冬至开始计算，九个九天之后天气转暖。"],"id":"V23","label":"contradicted","perturbation":"number"}
+{"claim":"芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种","evidence":["大寒是二十四节气的最后一个，过后又是新一轮立春。"],"id":"V24","label":"insufficient","perturbation":"unrelated"}
+{"claim":"茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤","evidence":["茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤。"],"id":"V25","label":"supported","perturbation":"none"}
+{"claim":"云南的古茶树有的树龄超过三百年，被当地人视为“茶祖”","evidence":["云南的古茶树有的树龄超过一千年，被当地人视为“茶祖”。"],"id":"V26","label":"contradicted","perturbation":"number"}
+{"claim":"茶马古道以马帮为运输方式，把云南和四川的茶运往西藏","evidence":["采茶通常在清晨进行，此时叶片含水量适中、香气最足。"],"id":"V27","label":"insufficient","perturbation":"unrelated"}
+{"claim":"绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性","evidence":["绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性。"],"id":"V28","label":"supported","perturbation":"none"}
+{"claim":"红茶不是全发酵茶，揉捻后的茶叶在适宜温度下氧化变红","evidence":["红茶是全发酵茶，揉捻后的茶叶在适宜温度下氧化变红。"],"id":"V29","label":"contradicted","perturbation":"negation"}
+{"claim":"泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟","evidence":["乌龙茶介于两者之间，属于半发酵茶，做青是它的关键工序。"],"id":"V30","label":"insufficient","perturbation":"unrelated"}
+{"claim":"茶马古道以马帮为运输方式，把云南和四川的茶运往西藏","evidence":["茶马古道以马帮为运输方式，把云南和四川的茶运往西藏。"],"id":"V31","label":"supported","perturbation":"none"}
+{"claim":"十九世纪，荷兰商船把茶叶带到了欧洲","evidence":["十七世纪，荷兰商船把茶叶带到了欧洲。"],"id":"V32","label":"contradicted","perturbation":"number"}
+{"claim":"茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤","evidence":["砖茶便于长途运输，压紧后体积小、不易受潮。"],"id":"V33","label":"insufficient","perturbation":"unrelated"}
+{"claim":"泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟","evidence":["泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟。"],"id":"V34","label":"supported","perturbation":"none"}
+{"claim":"茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤","evidence":["泡乌龙茶要用沸水，第一泡通常用来温润茶叶。"],"id":"V35","label":"insufficient","perturbation":"unrelated"}
+{"claim":"绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性","evidence":["茶多酚是茶叶苦涩味的主要来源。"],"id":"V36","label":"insufficient","perturbation":"unrelated"}
+{"claim":"我在九月一日到达青岭小学，全校只有二十三名学生","evidence":["我在九月一日到达青岭小学，全校只有二十三名学生。"],"id":"V37","label":"supported","perturbation":"none"}
+{"claim":"学校在半山腰，从镇上走过来要三个小时山路","evidence":["学校在半山腰，从镇上走过来要两个小时山路。"],"id":"V38","label":"contradicted","perturbation":"number"}
+{"claim":"春天来了，村里通了公路，镇上的图书馆送来了三百本书","evidence":["孩子们最喜欢的课是自然课，因为可以去溪边捉蝌蚪。"],"id":"V39","label":"insufficient","perturbation":"unrelated"}
+{"claim":"十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上","evidence":["十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上。"],"id":"V40","label":"supported","perturbation":"none"}
+{"claim":"七年级的小禾写了一首关于月亮的诗，在县里的比赛得了二等奖","evidence":["五年级的小禾写了一首关于月亮的诗，在县里的比赛得了二等奖。"],"id":"V41","label":"contradicted","perturbation":"number"}
+{"claim":"两年支教期满，我要离开青岭了","evidence":["我开始每天晚上给孩子们读半小时的书。"],"id":"V42","label":"insufficient","perturbation":"unrelated"}
+{"claim":"春天来了，村里通了公路，镇上的图书馆送来了三百本书","evidence":["春天来了，村里通了公路，镇上的图书馆送来了三百本书。"],"id":"V43","label":"supported","perturbation":"none"}
+{"claim":"十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上","evidence":["我们在教室后面搭了一个书架，孩子们轮流当管理员。"],"id":"V44","label":"insufficient","perturbation":"unrelated"}
+{"claim":"我在九月一日到达青岭小学，全校只有二十三名学生","evidence":["小禾说她长大想当一名地质学家。"],"id":"V45","label":"insufficient","perturbation":"unrelated"}
+{"claim":"两年支教期满，我要离开青岭了","evidence":["两年支教期满，我要离开青岭了。"],"id":"V46","label":"supported","perturbation":"none"}
+{"claim":"我在九月一日到达青岭小学，全校只有二十三名学生","evidence":["临走那天，孩子们在黑板上写满了“再见”。"],"id":"V47","label":"insufficient","perturbation":"unrelated"}
+{"claim":"十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上","evidence":["我答应他们，每年都会寄一箱新书回来。"],"id":"V48","label":"insufficient","perturbation":"unrelated"}
+{"claim":"城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序","evidence":["城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序。"],"id":"V49","label":"supported","perturbation":"none"}
+{"claim":"加氯消毒不能在管网中保持余氯，防止细菌在输送途中滋生","evidence":["加氯消毒能在管网中保持余氯，防止细菌在输送途中滋生。"],"id":"V50","label":"contradicted","perturbation":"negation"}
+{"claim":"污水处理厂利用活性污泥中的微生物分解有机物","evidence":["老旧管网的漏损率有时超过百分之十五，是城市节水的重点。"],"id":"V51","label":"insufficient","perturbation":"unrelated"}
+{"claim":"硬化地面越多，雨水越难下渗，暴雨时更容易形成内涝","evidence":["硬化地面越多，雨水越难下渗，暴雨时更容易形成内涝。"],"id":"V52","label":"supported","perturbation":"none"}
+{"claim":"城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序","evidence":["海绵城市通过下沉式绿地、透水铺装和雨水花园让雨水先渗、再滞、再排。"],"id":"V53","label":"insufficient","perturbation":"unrelated"}
+{"claim":"阶梯水价让用水越多的家庭单价越高，以此鼓励节约","evidence":["一座雨水花园可以在暴雨时暂时储存周边屋顶流下来的雨水。"],"id":"V54","label":"insufficient","perturbation":"unrelated"}
+{"claim":"污水处理厂利用活性污泥中的微生物分解有机物","evidence":["污水处理厂利用活性污泥中的微生物分解有机物。"],"id":"V55","label":"supported","perturbation":"none"}
+{"claim":"处理后的再生水不可以用于冲厕、绿化浇灌和道路清扫","evidence":["处理后的再生水可以用于冲厕、绿化浇灌和道路清扫。"],"id":"V56","label":"contradicted","perturbation":"negation"}
+{"claim":"城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序","evidence":["污泥经过脱水后，可以焚烧发电或制成建材。"],"id":"V57","label":"insufficient","perturbation":"unrelated"}
+{"claim":"阶梯水价让用水越多的家庭单价越高，以此鼓励节约","evidence":["阶梯水价让用水越多的家庭单价越高，以此鼓励节约。"],"id":"V58","label":"supported","perturbation":"none"}
+{"claim":"一个滴水的水龙头一个月可不能浪费一吨以上的水","evidence":["一个滴水的水龙头一个月可能浪费一吨以上的水。"],"id":"V59","label":"contradicted","perturbation":"negation"}
+{"claim":"硬化地面越多，雨水越难下渗，暴雨时更容易形成内涝","evidence":["工业冷却水循环使用，是城市用水效率提升最快的领域。"],"id":"V60","label":"insufficient","perturbation":"unrelated"}
+{"claim":"艾宾浩斯用无意义音节做实验，发现遗忘在学习后的最初几小时最快","evidence":["艾宾浩斯用无意义音节做实验，发现遗忘在学习后的最初几小时最快。"],"id":"V61","label":"supported","perturbation":"none"}
+{"claim":"遗忘曲线并不不是对所有材料都一样，有意义的内容遗忘得更慢","evidence":["遗忘曲线并不是对所有材料都一样，有意义的内容遗忘得更慢。"],"id":"V62","label":"contradicted","perturbation":"negation"}
+{"claim":"把同样的学习时间分散在几天里，比集中在一次学完记得更牢，这叫间隔效应","evidence":["重新学习已经遗忘的内容，比第一次学习省时，这叫节省效应。"],"id":"V63","label":"insufficient","perturbation":"unrelated"}
+{"claim":"睡眠时海马体会重放白天的经历，帮助记忆转入长期存储","evidence":["睡眠时海马体会重放白天的经历，帮助记忆转入长期存储。"],"id":"V64","label":"supported","perturbation":"none"}
+{"claim":"熬夜后第三天的学习效率明显下降，新信息更难被编码","evidence":["熬夜后第二天的学习效率明显下降，新信息更难被编码。"],"id":"V65","label":"contradicted","perturbation":"number"}
+{"claim":"记忆宫殿法把要记的内容放在熟悉路线上的不同位置","evidence":["午睡二十分钟就能改善下午的注意力。"],"id":"V66","label":"insufficient","perturbation":"unrelated"}
+{"claim":"把同样的学习时间分散在几天里，比集中在一次学完记得更牢，这叫间隔效应","evidence":["把同样的学习时间分散在几天里，比集中在一次学完记得更牢，这叫间隔效应。"],"id":"V67","label":"supported","perturbation":"none"}
+{"claim":"主动回忆比反复重读更不能巩固记忆，这被称为测试效应","evidence":["主动回忆比反复重读更能巩固记忆，这被称为测试效应。"],"id":"V68","label":"contradicted","perturbation":"negation"}
+{"claim":"艾宾浩斯用无意义音节做实验，发现遗忘在学习后的最初几小时最快","evidence":["复习间隔可以逐渐拉长，例如一天、三天、一周、两周。"],"id":"V69","label":"insufficient","perturbation":"unrelated"}
+{"claim":"记忆宫殿法把要记的内容放在熟悉路线上的不同位置","evidence":["记忆宫殿法把要记的内容放在熟悉路线上的不同位置。"],"id":"V70","label":"supported","perturbation":"none"}
+{"claim":"古希腊诗人西摩尼得斯被认为不是记忆宫殿法的创始人","evidence":["古希腊诗人西摩尼得斯被认为是记忆宫殿法的创始人。"],"id":"V71","label":"contradicted","perturbation":"negation"}
+{"claim":"睡眠时海马体会重放白天的经历，帮助记忆转入长期存储","evidence":["记忆比赛选手常用这种方法在五分钟内记住一副扑克牌的顺序。"],"id":"V72","label":"insufficient","perturbation":"unrelated"}
+{"claim":"钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只比人还高的落地钟","evidence":["钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只比人还高的落地钟。"],"id":"V73","label":"supported","perturbation":"none"}
+{"claim":"老秦修了二十年表，他说每一只表都有自己的脾气","evidence":["老秦修了四十年表，他说每一只表都有自己的脾气。"],"id":"V74","label":"contradicted","perturbation":"number"}
+{"claim":"镇上钟楼的大钟停在三点十七分，已经整整十年","evidence":["学徒小满十五岁进铺，第一年只被允许拆洗发条。"],"id":"V75","label":"insufficient","perturbation":"unrelated"}
+{"claim":"老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走","evidence":["老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走。"],"id":"V76","label":"supported","perturbation":"none"}
+{"claim":"钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只比人还高的落地钟","evidence":["摆轮每秒摆动的次数决定了表走得准不准。"],"id":"V77","label":"insufficient","perturbation":"unrelated"}
+{"claim":"钟楼重新敲响的那天，全镇的人都出来听钟声","evidence":["小满第一次独立修好的是一只外婆留下的怀表。"],"id":"V78","label":"insufficient","perturbation":"unrelated"}
+{"claim":"镇上钟楼的大钟停在三点十七分，已经整整十年","evidence":["镇上钟楼的大钟停在三点十七分，已经整整十年。"],"id":"V79","label":"supported","perturbation":"none"}
+{"claim":"老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走","evidence":["镇长请老秦修钟，老秦却让小满去修。"],"id":"V80","label":"insufficient","perturbation":"unrelated"}
+{"claim":"钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只比人还高的落地钟","evidence":["小满在钟楼里发现，大钟停摆是因为一只燕子在齿轮间筑了巢。"],"id":"V81","label":"insufficient","perturbation":"unrelated"}
+{"claim":"钟楼重新敲响的那天，全镇的人都出来听钟声","evidence":["钟楼重新敲响的那天，全镇的人都出来听钟声。"],"id":"V82","label":"supported","perturbation":"none"}
+{"claim":"老秦把自己用了二十年的放大镜送给了小满","evidence":["老秦把自己用了四十年的放大镜送给了小满。"],"id":"V83","label":"contradicted","perturbation":"number"}
+{"claim":"老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走","evidence":["后来小满在铺子里收了自己的第一个学徒。"],"id":"V84","label":"insufficient","perturbation":"unrelated"}
+{"claim":"北斗七星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星","evidence":["北斗七星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星。"],"id":"V85","label":"supported","perturbation":"none"}
+{"claim":"全天共有六十六个星座，这是国际天文学联合会在一九二二年确定的","evidence":["全天共有八十八个星座，这是国际天文学联合会在一九二二年确定的。"],"id":"V86","label":"contradicted","perturbation":"number"}
+{"claim":"观测月亮最好的时间不是满月，而是上弦月前后，此时环形山的阴影最明显","evidence":["星等数值越小，星星越亮，肉眼最暗大约能看到六等星。"],"id":"V87","label":"insufficient","perturbation":"unrelated"}
+{"claim":"初学者最好先用双筒望远镜，它视野宽、容易找到目标","evidence":["初学者最好先用双筒望远镜，它视野宽、容易找到目标。"],"id":"V88","label":"supported","perturbation":"none"}
+{"claim":"望远镜的口径越大，收集的光越多，不能看到更暗的天体","evidence":["望远镜的口径越大，收集的光越多，能看到更暗的天体。"],"id":"V89","label":"contradicted","perturbation":"negation"}
+{"claim":"英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一","evidence":["观测前让眼睛在黑暗中适应二十分钟，可以看到更多星星。"],"id":"V90","label":"insufficient","perturbation":"unrelated"}
+{"claim":"观测月亮最好的时间不是满月，而是上弦月前后，此时环形山的阴影最明显","evidence":["观测月亮最好的时间不是满月，而是上弦月前后，此时环形山的阴影最明显。"],"id":"V91","label":"supported","perturbation":"none"}
+{"claim":"木星的六颗大卫星由伽利略在一六一〇年发现","evidence":["木星的四颗大卫星由伽利略在一六一〇年发现。"],"id":"V92","label":"contradicted","perturbation":"number"}
+{"claim":"北斗七星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星","evidence":["土星环用一架小型望远镜就能看到。"],"id":"V93","label":"insufficient","perturbation":"unrelated"}
+{"claim":"英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一","evidence":["英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一。"],"id":"V94","label":"supported","perturbation":"none"}
+{"claim":"北斗七星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星","evidence":["流星雨来自彗星留下的尘埃带，地球穿过时尘埃在大气中燃烧发光。"],"id":"V95","label":"insufficient","perturbation":"unrelated"}
+{"claim":"初学者最好先用双筒望远镜，它视野宽、容易找到目标","evidence":["观测流星雨不需要望远镜，躺下用眼睛看最好。"],"id":"V96","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The caravan left the oasis of Tamar with forty camels and twelve drivers","evidence":["The caravan left the oasis of Tamar with forty camels and twelve drivers."],"id":"V97","label":"supported","perturbation":"none"}
+{"claim":"Each camel carried six slabs of salt cut from the dry lake beds","evidence":["Each camel carried four slabs of salt cut from the dry lake beds."],"id":"V98","label":"contradicted","perturbation":"number"}
+{"claim":"The old well at Ksar Lem was dry when they arrived","evidence":["Young Idris joined the caravan to pay off his father's debt."],"id":"V99","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The guide Hassan navigated by the stars because the dunes moved after every storm","evidence":["The guide Hassan navigated by the stars because the dunes moved after every storm."],"id":"V100","label":"supported","perturbation":"none"}
+{"claim":"The caravan left the oasis of Tamar with forty camels and twelve drivers","evidence":["They travelled at night and rested in the shade of tents during the hottest hours."],"id":"V101","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth","evidence":["On the ninth day a sandstorm buried two of their water skins."],"id":"V102","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The old well at Ksar Lem was dry when they arrived","evidence":["The old well at Ksar Lem was dry when they arrived."],"id":"V103","label":"supported","perturbation":"none"}
+{"claim":"The guide Hassan navigated by the stars because the dunes moved after every storm","evidence":["Idris found a second well by following the tracks of desert foxes."],"id":"V104","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The caravan left the oasis of Tamar with forty camels and twelve drivers","evidence":["Hassan said that in fifty years he had never seen a boy read the sand so well."],"id":"V105","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth","evidence":["In the market of Timbra one slab of salt was traded for a bolt of indigo cloth."],"id":"V106","label":"supported","perturbation":"none"}
+{"claim":"The caravan left the oasis of Tamar with forty camels and twelve drivers","evidence":["Idris earned enough to clear his father's debt and buy a camel of his own."],"id":"V107","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The guide Hassan navigated by the stars because the dunes moved after every storm","evidence":["He decided to stay with the caravan and learn to guide by the stars."],"id":"V108","label":"insufficient","perturbation":"unrelated"}
+{"claim":"A honeybee colony has one queen, thousands of female workers and a few hundred male drones","evidence":["A honeybee colony has one queen, thousands of female workers and a few hundred male drones."],"id":"V109","label":"supported","perturbation":"none"}
+{"claim":"A queen can lay up to five hundred eggs a day during the summer peak","evidence":["A queen can lay up to two thousand eggs a day during the summer peak."],"id":"V110","label":"contradicted","perturbation":"number"}
+{"claim":"Gardens that bloom from early spring to late autumn give bees food all season","evidence":["Worker bees live about six weeks in summer but several months in winter."],"id":"V111","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Bees communicate the direction of flowers with the waggle dance","evidence":["Bees communicate the direction of flowers with the waggle dance."],"id":"V112","label":"supported","perturbation":"none"}
+{"claim":"A honeybee colony has one queen, thousands of female workers and a few hundred male drones","evidence":["The angle of the dance relative to vertical shows the angle between the sun and the food source."],"id":"V113","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In winter bees form a tight cluster and shiver their flight muscles to keep warm","evidence":["A forager may visit more than one hundred flowers on a single trip."],"id":"V114","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Gardens that bloom from early spring to late autumn give bees food all season","evidence":["Gardens that bloom from early spring to late autumn give bees food all season."],"id":"V115","label":"supported","perturbation":"none"}
+{"claim":"Single flowers are not easier for bees to reach than double flowers with many petals","evidence":["Single flowers are easier for bees to reach than double flowers with many petals."],"id":"V116","label":"contradicted","perturbation":"negation"}
+{"claim":"A honeybee colony has one queen, thousands of female workers and a few hundred male drones","evidence":["Avoid spraying pesticides while plants are in bloom."],"id":"V117","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In winter bees form a tight cluster and shiver their flight muscles to keep warm","evidence":["In winter bees form a tight cluster and shiver their flight muscles to keep warm."],"id":"V118","label":"supported","perturbation":"none"}
+{"claim":"The temperature at the centre of the winter cluster stays near twenty degrees Celsius","evidence":["The temperature at the centre of the winter cluster stays near thirty-five degrees Celsius."],"id":"V119","label":"contradicted","perturbation":"number"}
+{"claim":"Bees communicate the direction of flowers with the waggle dance","evidence":["A strong colony needs about twenty kilograms of honey to survive the winter."],"id":"V120","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The Ashby Library closed at nine, but the lights on the third floor stayed on","evidence":["The Ashby Library closed at nine, but the lights on the third floor stayed on."],"id":"V121","label":"supported","perturbation":"none"}
+{"claim":"On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas","evidence":["Librarian Nora noticed that a book returned itself to the shelf every night."],"id":"V122","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The brass key opened a small room behind the map collection","evidence":["The book was a worn atlas of lighthouses printed in 1908."],"id":"V123","label":"insufficient","perturbation":"unrelated"}
+{"claim":"On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas","evidence":["On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas."],"id":"V124","label":"supported","perturbation":"none"}
+{"claim":"He said he was not looking for the lighthouse where he had once been a keeper","evidence":["He said he was looking for the lighthouse where he had once been a keeper."],"id":"V125","label":"contradicted","perturbation":"negation"}
+{"claim":"Nora catalogued the letters and opened the room to the public","evidence":["The sailor left a brass key between the pages of the atlas."],"id":"V126","label":"insufficient","perturbation":"unrelated"}
+{"claim":"The brass key opened a small room behind the map collection","evidence":["The brass key opened a small room behind the map collection."],"id":"V127","label":"supported","perturbation":"none"}
+{"claim":"Inside were letters written by lighthouse keepers over a thousand years","evidence":["Inside were letters written by lighthouse keepers over a hundred years."],"id":"V128","label":"contradicted","perturbation":"number"}
+{"claim":"The Ashby Library closed at nine, but the lights on the third floor stayed on","evidence":["One letter described a storm that cut the power to the lamp for a whole night."],"id":"V129","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Nora catalogued the letters and opened the room to the public","evidence":["Nora catalogued the letters and opened the room to the public."],"id":"V130","label":"supported","perturbation":"none"}
+{"claim":"The Ashby Library closed at nine, but the lights on the third floor stayed on","evidence":["The sailor never came back, but the atlas stopped moving."],"id":"V131","label":"insufficient","perturbation":"unrelated"}
+{"claim":"On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas","evidence":["Visitors still leave notes in the atlas about lighthouses they have seen."],"id":"V132","label":"insufficient","perturbation":"unrelated"}
+{"claim":"A beam bridge is the simplest kind, a horizontal deck resting on supports","evidence":["A beam bridge is the simplest kind, a horizontal deck resting on supports."],"id":"V133","label":"supported","perturbation":"none"}
+{"claim":"In a suspension bridge the deck hangs from vertical cables attached to main cables","evidence":["An arch bridge carries its load outward along the curve into the abutments."],"id":"V134","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Steel is strong in tension, while concrete is strong in compression","evidence":["Roman arch bridges built of stone still stand after almost two thousand years."],"id":"V135","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In a suspension bridge the deck hangs from vertical cables attached to main cables","evidence":["In a suspension bridge the deck hangs from vertical cables attached to main cables."],"id":"V136","label":"supported","perturbation":"none"}
+{"claim":"The main cables pass over tall towers and are not anchored in the ground at both ends","evidence":["The main cables pass over tall towers and are anchored in the ground at both ends."],"id":"V137","label":"contradicted","perturbation":"negation"}
+{"claim":"Bridge piers in rivers can be undermined when floods scour away the riverbed","evidence":["Wind can make long suspension decks oscillate, so engineers test models in wind tunnels."],"id":"V138","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Steel is strong in tension, while concrete is strong in compression","evidence":["Steel is strong in tension, while concrete is strong in compression."],"id":"V139","label":"supported","perturbation":"none"}
+{"claim":"Reinforced concrete combines the three by embedding steel bars in concrete","evidence":["Reinforced concrete combines the two by embedding steel bars in concrete."],"id":"V140","label":"contradicted","perturbation":"number"}
+{"claim":"A beam bridge is the simplest kind, a horizontal deck resting on supports","evidence":["Salt water corrodes steel, so coastal bridges need regular inspection and painting."],"id":"V141","label":"insufficient","perturbation":"unrelated"}
+{"claim":"Bridge piers in rivers can be undermined when floods scour away the riverbed","evidence":["Bridge piers in rivers can be undermined when floods scour away the riverbed."],"id":"V142","label":"supported","perturbation":"none"}
+{"claim":"A beam bridge is the simplest kind, a horizontal deck resting on supports","evidence":["Engineers place large stones called riprap around piers to protect them from scour."],"id":"V143","label":"insufficient","perturbation":"unrelated"}
+{"claim":"In a suspension bridge the deck hangs from vertical cables attached to main cables","evidence":["Most bridge failures in floods are caused by scour rather than by the deck breaking."],"id":"V144","label":"insufficient","perturbation":"unrelated"}
+{"claim":"书中写道：临川港有三座码头，最老的一座叫石门码头，建于光绪年间","evidence":["临川港有三座码头，最老的一座叫石门码头，建于光绪年间。"],"id":"V145","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：每到冬季，港口一连四十天被浓雾笼罩，渔船只能靠灯塔的光回港","evidence":["每到冬季，港口一连四十天被浓雾笼罩，渔船只能靠灯塔的光回港。"],"id":"V146","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：少年阿桂在码头上卖鱼，他最大的愿望是登上灯塔看一次日出","evidence":["少年阿桂在码头上卖鱼，他最大的愿望是登上灯塔看一次日出。"],"id":"V147","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：守塔人老周每天傍晚六点点灯，二十年来从未误过一次","evidence":["守塔人老周每天傍晚六点点灯，二十年来从未误过一次。"],"id":"V148","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：老周说，灯塔的光每十二秒闪一次，船员靠闪烁的间隔认出临川港","evidence":["老周说，灯塔的光每十二秒闪一次，船员靠闪烁的间隔认出临川港。"],"id":"V149","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：阿桂第一次上塔那天，老周教他擦拭灯罩上的盐霜","evidence":["阿桂第一次上塔那天，老周教他擦拭灯罩上的盐霜。"],"id":"V150","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗","evidence":["那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗。"],"id":"V151","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：阿桂和老周点起备用的煤油灯，在塔顶守了整整一夜","evidence":["阿桂和老周点起备用的煤油灯，在塔顶守了整整一夜。"],"id":"V152","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：第二天清晨，七条渔船全部平安靠岸","evidence":["第二天清晨，七条渔船全部平安靠岸。"],"id":"V153","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：多年以后，阿桂成了临川港的新守塔人","evidence":["多年以后，阿桂成了临川港的新守塔人。"],"id":"V154","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：老周临别时留下一本航海日志，日志里写着他其实是失踪多年的船长","evidence":["老周临别时留下一本航海日志，日志里写着他其实是失踪多年的船长。"],"id":"V155","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：从此，阿桂每晚点灯时都会在日志上记一笔天气","evidence":["从此，阿桂每晚点灯时都会在日志上记一笔天气。"],"id":"V156","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：立春是二十四节气的第一个，通常在公历二月四日前后","evidence":["立春是二十四节气的第一个，通常在公历二月四日前后。"],"id":"V157","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：惊蛰时春雷始鸣，蛰伏的虫子开始苏醒，农谚说“惊蛰不耙地，好比蒸馍走了气”","evidence":["惊蛰时春雷始鸣，蛰伏的虫子开始苏醒，农谚说“惊蛰不耙地，好比蒸馍走了气”。"],"id":"V158","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：清明前后种瓜点豆，北方的春播大多在这一时期开始","evidence":["清明前后种瓜点豆，北方的春播大多在这一时期开始。"],"id":"V159","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种","evidence":["芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种。"],"id":"V160","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：夏至是一年中白昼最长的一天，北半球正午太阳最高","evidence":["夏至是一年中白昼最长的一天，北半球正午太阳最高。"],"id":"V161","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：三伏天从夏至后第三个庚日开始，是一年最热的时段","evidence":["三伏天从夏至后第三个庚日开始，是一年最热的时段。"],"id":"V162","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：秋分这天昼夜等长，之后北半球白天逐渐变短","evidence":["秋分这天昼夜等长，之后北半球白天逐渐变短。"],"id":"V163","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：霜降是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻","evidence":["霜降是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻。"],"id":"V164","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：秋收之后，农民会把秸秆还田来保持土壤肥力","evidence":["秋收之后，农民会把秸秆还田来保持土壤肥力。"],"id":"V165","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：冬至是北半球白昼最短的一天，北方有吃饺子的习俗","evidence":["冬至是北半球白昼最短的一天，北方有吃饺子的习俗。"],"id":"V166","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：数九从冬至开始计算，九个九天之后天气转暖","evidence":["数九从冬至开始计算，九个九天之后天气转暖。"],"id":"V167","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：大寒是二十四节气的最后一个，过后又是新一轮立春","evidence":["大寒是二十四节气的最后一个，过后又是新一轮立春。"],"id":"V168","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤","evidence":["茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤。"],"id":"V169","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：云南的古茶树有的树龄超过一千年，被当地人视为“茶祖”","evidence":["云南的古茶树有的树龄超过一千年，被当地人视为“茶祖”。"],"id":"V170","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：采茶通常在清晨进行，此时叶片含水量适中、香气最足","evidence":["采茶通常在清晨进行，此时叶片含水量适中、香气最足。"],"id":"V171","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性","evidence":["绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性。"],"id":"V172","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：红茶是全发酵茶，揉捻后的茶叶在适宜温度下氧化变红","evidence":["红茶是全发酵茶，揉捻后的茶叶在适宜温度下氧化变红。"],"id":"V173","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：乌龙茶介于两者之间，属于半发酵茶，做青是它的关键工序","evidence":["乌龙茶介于两者之间，属于半发酵茶，做青是它的关键工序。"],"id":"V174","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：茶马古道以马帮为运输方式，把云南和四川的茶运往西藏","evidence":["茶马古道以马帮为运输方式，把云南和四川的茶运往西藏。"],"id":"V175","label":"supported","perturbation":"paraphrase"}
+{"claim":"书中写道：十七世纪，荷兰商船把茶叶带到了欧洲","evidence":["十七世纪，荷兰商船把茶叶带到了欧洲。"],"id":"V176","label":"supported","perturbation":"paraphrase"}
+{"claim":"木星的四颗大卫星由伽利略在一六一〇年发现","evidence":["砖茶便于长途运输，压紧后体积小、不易受潮。"],"id":"V177","label":"insufficient","perturbation":"other_book"}
+{"claim":"泡绿茶的水温以九十度左右为宜，太烫会把嫩芽烫熟","evidence":["泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟。"],"id":"V178","label":"contradicted","perturbation":"number"}
+{"claim":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth","evidence":["泡乌龙茶要用沸水，第一泡通常用来温润茶叶。"],"id":"V179","label":"insufficient","perturbation":"other_book"}
+{"claim":"茶多酚不是茶叶苦涩味的主要来源","evidence":["茶多酚是茶叶苦涩味的主要来源。"],"id":"V180","label":"contradicted","perturbation":"negation"}
+{"claim":"我在九月一日到达青岭小学，全校只有三十二名学生","evidence":["我在九月一日到达青岭小学，全校只有二十三名学生。"],"id":"V181","label":"contradicted","perturbation":"number"}
+{"claim":"The brass key opened a small room behind the map collection","evidence":["学校在半山腰，从镇上走过来要两个小时山路。"],"id":"V182","label":"insufficient","perturbation":"other_book"}
+{"claim":"孩子们最喜欢的课是自然课，因为不可以去溪边捉蝌蚪","evidence":["孩子们最喜欢的课是自然课，因为可以去溪边捉蝌蚪。"],"id":"V183","label":"contradicted","perturbation":"negation"}
+{"claim":"Salt water corrodes steel, so coastal bridges need regular inspection and painting","evidence":["十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上。"],"id":"V184","label":"insufficient","perturbation":"other_book"}
+{"claim":"守塔人老周每天傍晚六点点灯，二十年来从未误过一次","evidence":["五年级的小禾写了一首关于月亮的诗，在县里的比赛得了二等奖。"],"id":"V185","label":"insufficient","perturbation":"other_book"}
+{"claim":"老周临别时留下一本航海日志，日志里写着他其实是失踪多年的船长","evidence":["我开始每天晚上给孩子们读半小时的书。"],"id":"V186","label":"insufficient","perturbation":"other_book"}
+{"claim":"春天来了，村里通了公路，镇上的图书馆送来了五百本书","evidence":["春天来了，村里通了公路，镇上的图书馆送来了三百本书。"],"id":"V187","label":"contradicted","perturbation":"number"}
+{"claim":"茶树是常绿植物，喜欢温暖湿润、排水良好的酸性土壤","evidence":["我们在教室后面搭了一个书架，孩子们轮流当管理员。"],"id":"V188","label":"insufficient","perturbation":"other_book"}
+{"claim":"十七世纪，荷兰商船把茶叶带到了欧洲","evidence":["小禾说她长大想当一名地质学家。"],"id":"V189","label":"insufficient","perturbation":"other_book"}
+{"claim":"三年支教期满，我要离开青岭了","evidence":["两年支教期满，我要离开青岭了。"],"id":"V190","label":"contradicted","perturbation":"number"}
+{"claim":"我答应他们，每年都不会寄一箱新书回来","evidence":["我答应他们，每年都会寄一箱新书回来。"],"id":"V191","label":"contradicted","perturbation":"negation"}
+{"claim":"城市自来水一般经过混凝、沉淀、过滤和消毒六道主要工序","evidence":["城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序。"],"id":"V192","label":"contradicted","perturbation":"number"}
+{"claim":"把同样的学习时间分散在几天里，比集中在一次学完记得更牢，这叫间隔效应","evidence":["加氯消毒能在管网中保持余氯，防止细菌在输送途中滋生。"],"id":"V193","label":"insufficient","perturbation":"other_book"}
+{"claim":"老旧管网的漏损率有时超过百分之十七，是城市节水的重点","evidence":["老旧管网的漏损率有时超过百分之十五，是城市节水的重点。"],"id":"V194","label":"contradicted","perturbation":"number"}
+{"claim":"硬化地面越不多，雨水越难下渗，暴雨时更容易形成内涝","evidence":["硬化地面越多，雨水越难下渗，暴雨时更容易形成内涝。"],"id":"V195","label":"contradicted","perturbation":"negation"}
+{"claim":"初学者最好先用双筒望远镜，它视野宽、容易找到目标","evidence":["海绵城市通过下沉式绿地、透水铺装和雨水花园让雨水先渗、再滞、再排。"],"id":"V196","label":"insufficient","perturbation":"other_book"}
+{"claim":"一座雨水花园不可以在暴雨时暂时储存周边屋顶流下来的雨水","evidence":["一座雨水花园可以在暴雨时暂时储存周边屋顶流下来的雨水。"],"id":"V197","label":"contradicted","perturbation":"negation"}
+{"claim":"污水处理厂利用活性污泥中的微生物分解没有机物","evidence":["污水处理厂利用活性污泥中的微生物分解有机物。"],"id":"V198","label":"contradicted","perturbation":"negation"}
+{"claim":"A honeybee colony has one queen, thousands of female workers and a few hundred male drones","evidence":["处理后的再生水可以用于冲厕、绿化浇灌和道路清扫。"],"id":"V199","label":"insufficient","perturbation":"other_book"}
+{"claim":"污泥经过脱水后，不可以焚烧发电或制成建材","evidence":["污泥经过脱水后，可以焚烧发电或制成建材。"],"id":"V200","label":"contradicted","perturbation":"negation"}
+{"claim":"阶梯水价让用水越不多的家庭单价越高，以此鼓励节约","evidence":["阶梯水价让用水越多的家庭单价越高，以此鼓励节约。"],"id":"V201","label":"contradicted","perturbation":"negation"}
+{"claim":"Nora catalogued the letters and opened the room to the public","evidence":["一个滴水的水龙头一个月可能浪费一吨以上的水。"],"id":"V202","label":"insufficient","perturbation":"other_book"}
+{"claim":"工业冷却水循环使用，不是城市用水效率提升最快的领域","evidence":["工业冷却水循环使用，是城市用水效率提升最快的领域。"],"id":"V203","label":"contradicted","perturbation":"negation"}
+{"claim":"Most bridge failures in floods are caused by scour rather than by the deck breaking","evidence":["艾宾浩斯用无意义音节做实验，发现遗忘在学习后的最初几小时最快。"],"id":"V204","label":"insufficient","perturbation":"other_book"}
+{"claim":"那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗","evidence":["遗忘曲线并不是对所有材料都一样，有意义的内容遗忘得更慢。"],"id":"V205","label":"insufficient","perturbation":"other_book"}
+{"claim":"重新学习已经遗忘的内容，不比第一次学习省时，这叫节省效应","evidence":["重新学习已经遗忘的内容，比第一次学习省时，这叫节省效应。"],"id":"V206","label":"contradicted","perturbation":"negation"}
+{"claim":"睡眠时海马体不会重放白天的经历，帮助记忆转入长期存储","evidence":["睡眠时海马体会重放白天的经历，帮助记忆转入长期存储。"],"id":"V207","label":"contradicted","perturbation":"negation"}
+{"claim":"绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性","evidence":["熬夜后第二天的学习效率明显下降，新信息更难被编码。"],"id":"V208","label":"insufficient","perturbation":"other_book"}
+{"claim":"午睡三十分钟就能改善下午的注意力","evidence":["午睡二十分钟就能改善下午的注意力。"],"id":"V209","label":"contradicted","perturbation":"number"}
+{"claim":"把同样的学习时间分散在几天里，不比集中在一次学完记得更牢，这叫间隔效应","evidence":["把同样的学习时间分散在几天里，比集中在一次学完记得更牢，这叫间隔效应。"],"id":"V210","label":"contradicted","perturbation":"negation"}
+{"claim":"城市自来水一般经过混凝、沉淀、过滤和消毒四道主要工序","evidence":["主动回忆比反复重读更能巩固记忆，这被称为测试效应。"],"id":"V211","label":"insufficient","perturbation":"other_book"}
+{"claim":"复习间隔可以逐渐拉长，例如一天、五天、一周、两周","evidence":["复习间隔可以逐渐拉长，例如一天、三天、一周、两周。"],"id":"V212","label":"contradicted","perturbation":"number"}
+{"claim":"记忆比赛选手常用这种方法在七分钟内记住一副扑克牌的顺序","evidence":["记忆比赛选手常用这种方法在五分钟内记住一副扑克牌的顺序。"],"id":"V213","label":"contradicted","perturbation":"number"}
+{"claim":"钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只不比人还高的落地钟","evidence":["钟表匠老秦的铺子开在桐镇石桥边，门口挂着一只比人还高的落地钟。"],"id":"V214","label":"contradicted","perturbation":"negation"}
+{"claim":"学徒小满十七岁进铺，第一年只被允许拆洗发条","evidence":["学徒小满十五岁进铺，第一年只被允许拆洗发条。"],"id":"V215","label":"contradicted","perturbation":"number"}
+{"claim":"老秦告诉小满，擒纵机构不是机械表的心脏，它让齿轮一格一格地走","evidence":["老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走。"],"id":"V216","label":"contradicted","perturbation":"negation"}
+{"claim":"小满第一次独立修好的不是一只外婆留下的怀表","evidence":["小满第一次独立修好的是一只外婆留下的怀表。"],"id":"V217","label":"contradicted","perturbation":"negation"}
+{"claim":"镇上钟楼的大钟停在五点十七分，已经整整十年","evidence":["镇上钟楼的大钟停在三点十七分，已经整整十年。"],"id":"V218","label":"contradicted","perturbation":"number"}
+{"claim":"小满在钟楼里发现，大钟停摆不是因为一只燕子在齿轮间筑了巢","evidence":["小满在钟楼里发现，大钟停摆是因为一只燕子在齿轮间筑了巢。"],"id":"V219","label":"contradicted","perturbation":"negation"}
+{"claim":"北斗九星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星","evidence":["北斗七星属于大熊座，沿着斗口两颗星的连线延长约五倍就能找到北极星。"],"id":"V220","label":"contradicted","perturbation":"number"}
+{"claim":"星等数值越小，星星越亮，肉眼最暗大约能看到八等星","evidence":["星等数值越小，星星越亮，肉眼最暗大约能看到六等星。"],"id":"V221","label":"contradicted","perturbation":"number"}
+{"claim":"观测前让眼睛在黑暗中适应三十分钟，可以看到更多星星","evidence":["观测前让眼睛在黑暗中适应二十分钟，可以看到更多星星。"],"id":"V222","label":"contradicted","perturbation":"number"}
+{"claim":"观测月亮最好的时间不不是满月，而是上弦月前后，此时环形山的阴影最明显","evidence":["观测月亮最好的时间不是满月，而是上弦月前后，此时环形山的阴影最明显。"],"id":"V223","label":"contradicted","perturbation":"negation"}
+{"claim":"土星环用一架小型望远镜就不能看到","evidence":["土星环用一架小型望远镜就能看到。"],"id":"V224","label":"contradicted","perturbation":"negation"}
+{"claim":"英仙座流星雨每年八月中旬达到极大，不是北半球最稳定的流星雨之一","evidence":["英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一。"],"id":"V225","label":"contradicted","perturbation":"negation"}
+{"claim":"观测流星雨不不需要望远镜，躺下用眼睛看最好","evidence":["观测流星雨不需要望远镜，躺下用眼睛看最好。"],"id":"V226","label":"contradicted","perturbation":"negation"}
+{"claim":"The caravan left the oasis of Tamar with sixty camels and twelve drivers","evidence":["The caravan left the oasis of Tamar with forty camels and twelve drivers."],"id":"V227","label":"contradicted","perturbation":"number"}
+{"claim":"On the third day a sandstorm buried two of their water skins","evidence":["On the ninth day a sandstorm buried two of their water skins."],"id":"V228","label":"contradicted","perturbation":"number"}
+{"claim":"The old well at Ksar Lem was not dry when they arrived","evidence":["The old well at Ksar Lem was dry when they arrived."],"id":"V229","label":"contradicted","perturbation":"negation"}
+{"claim":"Hassan said that in five years he had never seen a boy read the sand so well","evidence":["Hassan said that in fifty years he had never seen a boy read the sand so well."],"id":"V230","label":"contradicted","perturbation":"number"}
+{"claim":"In the market of Timbra one slab of salt was not traded for a bolt of indigo cloth","evidence":["In the market of Timbra one slab of salt was traded for a bolt of indigo cloth."],"id":"V231","label":"contradicted","perturbation":"negation"}
+{"claim":"A honeybee colony has one queen, thousands of female workers and a few thousand male drones","evidence":["A honeybee colony has one queen, thousands of female workers and a few hundred male drones."],"id":"V232","label":"contradicted","perturbation":"number"}
+{"claim":"Worker bees live about ten weeks in summer but several months in winter","evidence":["Worker bees live about six weeks in summer but several months in winter."],"id":"V233","label":"contradicted","perturbation":"number"}
+{"claim":"A forager may visit more than ten flowers on a single trip","evidence":["A forager may visit more than one hundred flowers on a single trip."],"id":"V234","label":"contradicted","perturbation":"number"}
+{"claim":"Avoid spraying pesticides while plants are not in bloom","evidence":["Avoid spraying pesticides while plants are in bloom."],"id":"V235","label":"contradicted","perturbation":"negation"}
+{"claim":"A strong colony needs about fifty kilograms of honey to survive the winter","evidence":["A strong colony needs about twenty kilograms of honey to survive the winter."],"id":"V236","label":"contradicted","perturbation":"number"}
+{"claim":"The Ashby Library closed at nine, but the lights on the third floor never stayed on","evidence":["The Ashby Library closed at nine, but the lights on the third floor stayed on."],"id":"V237","label":"contradicted","perturbation":"negation"}
+{"claim":"The book was a worn atlas of lighthouses printed in 1958","evidence":["The book was a worn atlas of lighthouses printed in 1908."],"id":"V238","label":"contradicted","perturbation":"number"}
+{"claim":"On a rainy Tuesday Nora never stayed late and saw an old sailor reading the atlas","evidence":["On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas."],"id":"V239","label":"contradicted","perturbation":"negation"}
+{"claim":"The sailor never left a brass key between the pages of the atlas","evidence":["The sailor left a brass key between the pages of the atlas."],"id":"V240","label":"contradicted","perturbation":"negation"}

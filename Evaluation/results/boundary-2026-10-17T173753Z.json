@@ -1,0 +1,33 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "retriever" : "hybrid_rerank + 父块扩展"
+  },
+  "createdAt" : "2026-10-17T17:37:54Z",
+  "datasetName" : "boundary-dev",
+  "datasetSHA256" : "348e66626c90c916c99bf7254fbaf64e432022225fd92757f3aa017dcab111e6",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "cases_with_violation" : {
+      "denominator" : 100,
+      "numerator" : 0,
+      "value" : 0
+    },
+    "violation_count" : {
+      "denominator" : 1,
+      "numerator" : 0,
+      "value" : 0
+    },
+    "violations" : {
+      "denominator" : 178,
+      "numerator" : 0,
+      "value" : 0
+    }
+  },
+  "runID" : "2026-10-17T173753Z",
+  "sampleCount" : 100,
+  "suite" : "boundary"
+}

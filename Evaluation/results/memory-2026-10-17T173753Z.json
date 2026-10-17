@@ -1,0 +1,28 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "validator" : "ProposalValidator"
+  },
+  "createdAt" : "2026-10-17T17:37:54Z",
+  "datasetName" : "memory-dev",
+  "datasetSHA256" : "c9b7065143725a4b46b90c1c0f06ca96d55f064d75ca8a9dfab10a9202d388df",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "rule_conformance" : {
+      "denominator" : 60,
+      "numerator" : 60,
+      "value" : 1
+    },
+    "unconfirmed_writes" : {
+      "denominator" : 1,
+      "numerator" : 0,
+      "value" : 0
+    }
+  },
+  "runID" : "2026-10-17T173753Z",
+  "sampleCount" : 60,
+  "suite" : "memory"
+}

@@ -1,0 +1,100 @@
+{"id":"BD1","kind":"unread_chapter","query":"多年以后，阿桂成了临川港的新守塔人。","scopes":[{"bookID":"zh01","readChapters":[0,1]}]}
+{"id":"BD2","kind":"unread_chapter","query":"阿桂和老周点起备用的煤油灯，在塔顶守了整整一夜。","scopes":[{"bookID":"zh01","readChapters":[0,1]}]}
+{"id":"BD3","kind":"unread_chapter","query":"从此，阿桂每晚点灯时都会在日志上记一笔天气。","scopes":[{"bookID":"zh01","readChapters":[0,1]}]}
+{"id":"BD4","kind":"skip_ahead","query":"老周说，灯塔的光每十二秒闪一次，船员靠闪烁的间隔认出临川港。","scopes":[{"bookID":"zh01","readChapters":[0,3]}]}
+{"id":"BD5","kind":"skip_ahead","query":"第二天清晨，七条渔船全部平安靠岸。","scopes":[{"bookID":"zh01","readChapters":[0,3]}]}
+{"id":"BD6","kind":"parent_expansion","note":"只读到第二章第二段","query":"阿桂第一次上塔那天，老周教他擦拭灯罩上的盐霜。 守塔人老周每天傍晚六点点灯，二十年来从未误过一次。","scopes":[{"bookID":"zh01","partialRanges":[{"chapterIndex":1,"end":64,"start":0}],"readChapters":[]}]}
+{"id":"BD7","kind":"cross_book","query":"多年以后，阿桂成了临川港的新守塔人。 数九从冬至开始计算，九个九天之后天气转暖。","scopes":[{"bookID":"zh01","readChapters":[0,1]},{"bookID":"zh02","readChapters":[0]}]}
+{"id":"BD8","kind":"memory_unread","note":"记忆证据位于第四章","query":"多年以后，阿桂成了临川港的新守塔人。","scopes":[{"bookID":"zh01","readChapters":[0,1]}]}
+{"id":"BD9","kind":"unread_chapter","query":"冬至是北半球白昼最短的一天，北方有吃饺子的习俗。","scopes":[{"bookID":"zh02","readChapters":[0,1]}]}
+{"id":"BD10","kind":"unread_chapter","query":"霜降是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻。","scopes":[{"bookID":"zh02","readChapters":[0,1]}]}
+{"id":"BD11","kind":"unread_chapter","query":"大寒是二十四节气的最后一个，过后又是新一轮立春。","scopes":[{"bookID":"zh02","readChapters":[0,1]}]}
+{"id":"BD12","kind":"skip_ahead","query":"夏至是一年中白昼最长的一天，北半球正午太阳最高。","scopes":[{"bookID":"zh02","readChapters":[0,3]}]}
+{"id":"BD13","kind":"skip_ahead","query":"秋收之后，农民会把秸秆还田来保持土壤肥力。","scopes":[{"bookID":"zh02","readChapters":[0,3]}]}
+{"id":"BD14","kind":"parent_expansion","note":"只读到第二章第二段","query":"三伏天从夏至后第三个庚日开始，是一年最热的时段。 芒种的“芒”指有芒作物，此时麦子成熟，需要抢收抢种。","scopes":[{"bookID":"zh02","partialRanges":[{"chapterIndex":1,"end":57,"start":0}],"readChapters":[]}]}
+{"id":"BD15","kind":"cross_book","query":"冬至是北半球白昼最短的一天，北方有吃饺子的习俗。 泡乌龙茶要用沸水，第一泡通常用来温润茶叶。","scopes":[{"bookID":"zh02","readChapters":[0,1]},{"bookID":"zh03","readChapters":[0]}]}
+{"id":"BD16","kind":"memory_unread","note":"记忆证据位于第四章","query":"冬至是北半球白昼最短的一天，北方有吃饺子的习俗。","scopes":[{"bookID":"zh02","readChapters":[0,1]}]}
+{"id":"BD17","kind":"unread_chapter","query":"泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟。","scopes":[{"bookID":"zh03","readChapters":[0,1]}]}
+{"id":"BD18","kind":"unread_chapter","query":"十七世纪，荷兰商船把茶叶带到了欧洲。","scopes":[{"bookID":"zh03","readChapters":[0,1]}]}
+{"id":"BD19","kind":"unread_chapter","query":"茶多酚是茶叶苦涩味的主要来源。","scopes":[{"bookID":"zh03","readChapters":[0,1]}]}
+{"id":"BD20","kind":"skip_ahead","query":"红茶是全发酵茶，揉捻后的茶叶在适宜温度下氧化变红。","scopes":[{"bookID":"zh03","readChapters":[0,3]}]}
+{"id":"BD21","kind":"skip_ahead","query":"砖茶便于长途运输，压紧后体积小、不易受潮。","scopes":[{"bookID":"zh03","readChapters":[0,3]}]}
+{"id":"BD22","kind":"parent_expansion","note":"只读到第二章第二段","query":"乌龙茶介于两者之间，属于半发酵茶，做青是它的关键工序。 绿茶不经发酵，杀青这一步用高温停止叶片中的酶活性。","scopes":[{"bookID":"zh03","partialRanges":[{"chapterIndex":1,"end":58,"start":0}],"readChapters":[]}]}
+{"id":"BD23","kind":"cross_book","query":"泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟。 临走那天，孩子们在黑板上写满了“再见”。","scopes":[{"bookID":"zh03","readChapters":[0,1]},{"bookID":"zh04","readChapters":[0]}]}
+{"id":"BD24","kind":"memory_unread","note":"记忆证据位于第四章","query":"泡绿茶的水温以八十度左右为宜，太烫会把嫩芽烫熟。","scopes":[{"bookID":"zh03","readChapters":[0,1]}]}
+{"id":"BD25","kind":"whole_book_switch","query":"泡乌龙茶要用沸水，第一泡通常用来温润茶叶。","scopes":[{"bookID":"zh03","readChapters":[],"wholeBook":true}]}
+{"id":"BD26","kind":"unread_chapter","query":"两年支教期满，我要离开青岭了。","scopes":[{"bookID":"zh04","readChapters":[0,1]}]}
+{"id":"BD27","kind":"unread_chapter","query":"我们在教室后面搭了一个书架，孩子们轮流当管理员。","scopes":[{"bookID":"zh04","readChapters":[0,1]}]}
+{"id":"BD28","kind":"unread_chapter","query":"我答应他们，每年都会寄一箱新书回来。","scopes":[{"bookID":"zh04","readChapters":[0,1]}]}
+{"id":"BD29","kind":"skip_ahead","query":"五年级的小禾写了一首关于月亮的诗，在县里的比赛得了二等奖。","scopes":[{"bookID":"zh04","readChapters":[0,3]}]}
+{"id":"BD30","kind":"skip_ahead","query":"小禾说她长大想当一名地质学家。","scopes":[{"bookID":"zh04","readChapters":[0,3]}]}
+{"id":"BD31","kind":"parent_expansion","note":"只读到第二章第二段","query":"我开始每天晚上给孩子们读半小时的书。 十一月下了第一场雪，教室的窗户漏风，我们用旧报纸把缝隙糊上。","scopes":[{"bookID":"zh04","partialRanges":[{"chapterIndex":1,"end":65,"start":0}],"readChapters":[]}]}
+{"id":"BD32","kind":"cross_book","query":"两年支教期满，我要离开青岭了。 一个滴水的水龙头一个月可能浪费一吨以上的水。","scopes":[{"bookID":"zh04","readChapters":[0,1]},{"bookID":"zh05","readChapters":[0]}]}
+{"id":"BD33","kind":"memory_unread","note":"记忆证据位于第四章","query":"两年支教期满，我要离开青岭了。","scopes":[{"bookID":"zh04","readChapters":[0,1]}]}
+{"id":"BD34","kind":"unread_chapter","query":"阶梯水价让用水越多的家庭单价越高，以此鼓励节约。","scopes":[{"bookID":"zh05","readChapters":[0,1]}]}
+{"id":"BD35","kind":"unread_chapter","query":"处理后的再生水可以用于冲厕、绿化浇灌和道路清扫。","scopes":[{"bookID":"zh05","readChapters":[0,1]}]}
+{"id":"BD36","kind":"unread_chapter","query":"工业冷却水循环使用，是城市用水效率提升最快的领域。","scopes":[{"bookID":"zh05","readChapters":[0,1]}]}
+{"id":"BD37","kind":"skip_ahead","query":"海绵城市通过下沉式绿地、透水铺装和雨水花园让雨水先渗、再滞、再排。","scopes":[{"bookID":"zh05","readChapters":[0,3]}]}
+{"id":"BD38","kind":"skip_ahead","query":"污泥经过脱水后，可以焚烧发电或制成建材。","scopes":[{"bookID":"zh05","readChapters":[0,3]}]}
+{"id":"BD39","kind":"parent_expansion","note":"只读到第二章第二段","query":"一座雨水花园可以在暴雨时暂时储存周边屋顶流下来的雨水。 硬化地面越多，雨水越难下渗，暴雨时更容易形成内涝。","scopes":[{"bookID":"zh05","partialRanges":[{"chapterIndex":1,"end":69,"start":0}],"readChapters":[]}]}
+{"id":"BD40","kind":"cross_book","query":"阶梯水价让用水越多的家庭单价越高，以此鼓励节约。 古希腊诗人西摩尼得斯被认为是记忆宫殿法的创始人。","scopes":[{"bookID":"zh05","readChapters":[0,1]},{"bookID":"zh06","readChapters":[0]}]}
+{"id":"BD41","kind":"memory_unread","note":"记忆证据位于第四章","query":"阶梯水价让用水越多的家庭单价越高，以此鼓励节约。","scopes":[{"bookID":"zh05","readChapters":[0,1]}]}
+{"id":"BD42","kind":"unread_chapter","query":"记忆宫殿法把要记的内容放在熟悉路线上的不同位置。","scopes":[{"bookID":"zh06","readChapters":[0,1]}]}
+{"id":"BD43","kind":"unread_chapter","query":"主动回忆比反复重读更能巩固记忆，这被称为测试效应。","scopes":[{"bookID":"zh06","readChapters":[0,1]}]}
+{"id":"BD44","kind":"unread_chapter","query":"记忆比赛选手常用这种方法在五分钟内记住一副扑克牌的顺序。","scopes":[{"bookID":"zh06","readChapters":[0,1]}]}
+{"id":"BD45","kind":"skip_ahead","query":"熬夜后第二天的学习效率明显下降，新信息更难被编码。","scopes":[{"bookID":"zh06","readChapters":[0,3]}]}
+{"id":"BD46","kind":"skip_ahead","query":"复习间隔可以逐渐拉长，例如一天、三天、一周、两周。","scopes":[{"bookID":"zh06","readChapters":[0,3]}]}
+{"id":"BD47","kind":"parent_expansion","note":"只读到第二章第二段","query":"午睡二十分钟就能改善下午的注意力。 睡眠时海马体会重放白天的经历，帮助记忆转入长期存储。","scopes":[{"bookID":"zh06","partialRanges":[{"chapterIndex":1,"end":59,"start":0}],"readChapters":[]}]}
+{"id":"BD48","kind":"cross_book","query":"记忆宫殿法把要记的内容放在熟悉路线上的不同位置。 老秦把自己用了四十年的放大镜送给了小满。","scopes":[{"bookID":"zh06","readChapters":[0,1]},{"bookID":"zh07","readChapters":[0]}]}
+{"id":"BD49","kind":"memory_unread","note":"记忆证据位于第四章","query":"记忆宫殿法把要记的内容放在熟悉路线上的不同位置。","scopes":[{"bookID":"zh06","readChapters":[0,1]}]}
+{"id":"BD50","kind":"whole_book_switch","query":"古希腊诗人西摩尼得斯被认为是记忆宫殿法的创始人。","scopes":[{"bookID":"zh06","readChapters":[],"wholeBook":true}]}
+{"id":"BD51","kind":"unread_chapter","query":"钟楼重新敲响的那天，全镇的人都出来听钟声。","scopes":[{"bookID":"zh07","readChapters":[0,1]}]}
+{"id":"BD52","kind":"unread_chapter","query":"镇长请老秦修钟，老秦却让小满去修。","scopes":[{"bookID":"zh07","readChapters":[0,1]}]}
+{"id":"BD53","kind":"unread_chapter","query":"后来小满在铺子里收了自己的第一个学徒。","scopes":[{"bookID":"zh07","readChapters":[0,1]}]}
+{"id":"BD54","kind":"skip_ahead","query":"摆轮每秒摆动的次数决定了表走得准不准。","scopes":[{"bookID":"zh07","readChapters":[0,3]}]}
+{"id":"BD55","kind":"skip_ahead","query":"小满在钟楼里发现，大钟停摆是因为一只燕子在齿轮间筑了巢。","scopes":[{"bookID":"zh07","readChapters":[0,3]}]}
+{"id":"BD56","kind":"parent_expansion","note":"只读到第二章第二段","query":"小满第一次独立修好的是一只外婆留下的怀表。 老秦告诉小满，擒纵机构是机械表的心脏，它让齿轮一格一格地走。","scopes":[{"bookID":"zh07","partialRanges":[{"chapterIndex":1,"end":57,"start":0}],"readChapters":[]}]}
+{"id":"BD57","kind":"cross_book","query":"钟楼重新敲响的那天，全镇的人都出来听钟声。 流星雨来自彗星留下的尘埃带，地球穿过时尘埃在大气中燃烧发光。","scopes":[{"bookID":"zh07","readChapters":[0,1]},{"bookID":"zh08","readChapters":[0]}]}
+{"id":"BD58","kind":"memory_unread","note":"记忆证据位于第四章","query":"钟楼重新敲响的那天，全镇的人都出来听钟声。","scopes":[{"bookID":"zh07","readChapters":[0,1]}]}
+{"id":"BD59","kind":"unread_chapter","query":"英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一。","scopes":[{"bookID":"zh08","readChapters":[0,1]}]}
+{"id":"BD60","kind":"unread_chapter","query":"木星的四颗大卫星由伽利略在一六一〇年发现。","scopes":[{"bookID":"zh08","readChapters":[0,1]}]}
+{"id":"BD61","kind":"unread_chapter","query":"观测流星雨不需要望远镜，躺下用眼睛看最好。","scopes":[{"bookID":"zh08","readChapters":[0,1]}]}
+{"id":"BD62","kind":"skip_ahead","query":"望远镜的口径越大，收集的光越多，能看到更暗的天体。","scopes":[{"bookID":"zh08","readChapters":[0,3]}]}
+{"id":"BD63","kind":"skip_ahead","query":"土星环用一架小型望远镜就能看到。","scopes":[{"bookID":"zh08","readChapters":[0,3]}]}
+{"id":"BD64","kind":"parent_expansion","note":"只读到第二章第二段","query":"观测前让眼睛在黑暗中适应二十分钟，可以看到更多星星。 初学者最好先用双筒望远镜，它视野宽、容易找到目标。","scopes":[{"bookID":"zh08","partialRanges":[{"chapterIndex":1,"end":58,"start":0}],"readChapters":[]}]}
+{"id":"BD65","kind":"cross_book","query":"英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一。 Idris earned enough to clear his father's debt and buy a camel of his own.","scopes":[{"bookID":"zh08","readChapters":[0,1]},{"bookID":"en01","readChapters":[0]}]}
+{"id":"BD66","kind":"memory_unread","note":"记忆证据位于第四章","query":"英仙座流星雨每年八月中旬达到极大，是北半球最稳定的流星雨之一。","scopes":[{"bookID":"zh08","readChapters":[0,1]}]}
+{"id":"BD67","kind":"unread_chapter","query":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth.","scopes":[{"bookID":"en01","readChapters":[0,1]}]}
+{"id":"BD68","kind":"unread_chapter","query":"Idris found a second well by following the tracks of desert foxes.","scopes":[{"bookID":"en01","readChapters":[0,1]}]}
+{"id":"BD69","kind":"unread_chapter","query":"He decided to stay with the caravan and learn to guide by the stars.","scopes":[{"bookID":"en01","readChapters":[0,1]}]}
+{"id":"BD70","kind":"skip_ahead","query":"They travelled at night and rested in the shade of tents during the hottest hours.","scopes":[{"bookID":"en01","readChapters":[0,3]}]}
+{"id":"BD71","kind":"skip_ahead","query":"Hassan said that in fifty years he had never seen a boy read the sand so well.","scopes":[{"bookID":"en01","readChapters":[0,3]}]}
+{"id":"BD72","kind":"parent_expansion","note":"只读到第二章第二段","query":"On the ninth day a sandstorm buried two of their water skins. The guide Hassan navigated by the stars because the dunes moved after every storm.","scopes":[{"bookID":"en01","partialRanges":[{"chapterIndex":1,"end":186,"start":0}],"readChapters":[]}]}
+{"id":"BD73","kind":"cross_book","query":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth. The temperature at the centre of the winter cluster stays near thirty-five degrees Celsius.","scopes":[{"bookID":"en01","readChapters":[0,1]},{"bookID":"en02","readChapters":[0]}]}
+{"id":"BD74","kind":"memory_unread","note":"记忆证据位于第四章","query":"In the market of Timbra one slab of salt was traded for a bolt of indigo cloth.","scopes":[{"bookID":"en01","readChapters":[0,1]}]}
+{"id":"BD75","kind":"unread_chapter","query":"In winter bees form a tight cluster and shiver their flight muscles to keep warm.","scopes":[{"bookID":"en02","readChapters":[0,1]}]}
+{"id":"BD76","kind":"unread_chapter","query":"Single flowers are easier for bees to reach than double flowers with many petals.","scopes":[{"bookID":"en02","readChapters":[0,1]}]}
+{"id":"BD77","kind":"unread_chapter","query":"A strong colony needs about twenty kilograms of honey to survive the winter.","scopes":[{"bookID":"en02","readChapters":[0,1]}]}
+{"id":"BD78","kind":"skip_ahead","query":"The angle of the dance relative to vertical shows the angle between the sun and the food source.","scopes":[{"bookID":"en02","readChapters":[0,3]}]}
+{"id":"BD79","kind":"skip_ahead","query":"Avoid spraying pesticides while plants are in bloom.","scopes":[{"bookID":"en02","readChapters":[0,3]}]}
+{"id":"BD80","kind":"parent_expansion","note":"只读到第二章第二段","query":"A forager may visit more than one hundred flowers on a single trip. Bees communicate the direction of flowers with the waggle dance.","scopes":[{"bookID":"en02","partialRanges":[{"chapterIndex":1,"end":181,"start":0}],"readChapters":[]}]}
+{"id":"BD81","kind":"cross_book","query":"In winter bees form a tight cluster and shiver their flight muscles to keep warm. The sailor never came back, but the atlas stopped moving.","scopes":[{"bookID":"en02","readChapters":[0,1]},{"bookID":"en03","readChapters":[0]}]}
+{"id":"BD82","kind":"memory_unread","note":"记忆证据位于第四章","query":"In winter bees form a tight cluster and shiver their flight muscles to keep warm.","scopes":[{"bookID":"en02","readChapters":[0,1]}]}
+{"id":"BD83","kind":"unread_chapter","query":"Nora catalogued the letters and opened the room to the public.","scopes":[{"bookID":"en03","readChapters":[0,1]}]}
+{"id":"BD84","kind":"unread_chapter","query":"Inside were letters written by lighthouse keepers over a hundred years.","scopes":[{"bookID":"en03","readChapters":[0,1]}]}
+{"id":"BD85","kind":"unread_chapter","query":"Visitors still leave notes in the atlas about lighthouses they have seen.","scopes":[{"bookID":"en03","readChapters":[0,1]}]}
+{"id":"BD86","kind":"skip_ahead","query":"He said he was looking for the lighthouse where he had once been a keeper.","scopes":[{"bookID":"en03","readChapters":[0,3]}]}
+{"id":"BD87","kind":"skip_ahead","query":"One letter described a storm that cut the power to the lamp for a whole night.","scopes":[{"bookID":"en03","readChapters":[0,3]}]}
+{"id":"BD88","kind":"parent_expansion","note":"只读到第二章第二段","query":"The sailor left a brass key between the pages of the atlas. On a rainy Tuesday Nora stayed late and saw an old sailor reading the atlas.","scopes":[{"bookID":"en03","partialRanges":[{"chapterIndex":1,"end":174,"start":0}],"readChapters":[]}]}
+{"id":"BD89","kind":"cross_book","query":"Nora catalogued the letters and opened the room to the public. Engineers place large stones called riprap around piers to protect them from scour.","scopes":[{"bookID":"en03","readChapters":[0,1]},{"bookID":"en04","readChapters":[0]}]}
+{"id":"BD90","kind":"memory_unread","note":"记忆证据位于第四章","query":"Nora catalogued the letters and opened the room to the public.","scopes":[{"bookID":"en03","readChapters":[0,1]}]}
+{"id":"BD91","kind":"unread_chapter","query":"Bridge piers in rivers can be undermined when floods scour away the riverbed.","scopes":[{"bookID":"en04","readChapters":[0,1]}]}
+{"id":"BD92","kind":"unread_chapter","query":"Reinforced concrete combines the two by embedding steel bars in concrete.","scopes":[{"bookID":"en04","readChapters":[0,1]}]}
+{"id":"BD93","kind":"unread_chapter","query":"Most bridge failures in floods are caused by scour rather than by the deck breaking.","scopes":[{"bookID":"en04","readChapters":[0,1]}]}
+{"id":"BD94","kind":"skip_ahead","query":"The main cables pass over tall towers and are anchored in the ground at both ends.","scopes":[{"bookID":"en04","readChapters":[0,3]}]}
+{"id":"BD95","kind":"skip_ahead","query":"Salt water corrodes steel, so coastal bridges need regular inspection and painting.","scopes":[{"bookID":"en04","readChapters":[0,3]}]}
+{"id":"BD96","kind":"parent_expansion","note":"只读到第二章第二段","query":"Wind can make long suspension decks oscillate, so engineers test models in wind tunnels. In a suspension bridge the deck hangs from vertical cables attached to main cables.","scopes":[{"bookID":"en04","partialRanges":[{"chapterIndex":1,"end":188,"start":0}],"readChapters":[]}]}
+{"id":"BD97","kind":"cross_book","query":"Bridge piers in rivers can be undermined when floods scour away the riverbed. 老周临别时留下一本航海日志，日志里写着他其实是失踪多年的船长。","scopes":[{"bookID":"en04","readChapters":[0,1]},{"bookID":"zh01","readChapters":[0]}]}
+{"id":"BD98","kind":"memory_unread","note":"记忆证据位于第四章","query":"Bridge piers in rivers can be undermined when floods scour away the riverbed.","scopes":[{"bookID":"en04","readChapters":[0,1]}]}
+{"id":"BD99","kind":"unread_chapter","query":"那年十月的风暴吹断了灯塔的电缆，港口陷入黑暗。","scopes":[{"bookID":"zh01","readChapters":[0]}]}
+{"id":"BD100","kind":"unread_chapter","query":"霜降是秋季最后一个节气，此时开始出现初霜，晚秋作物要防冻。","scopes":[{"bookID":"zh02","readChapters":[0]}]}

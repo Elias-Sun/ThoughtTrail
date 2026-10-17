@@ -1,0 +1,115 @@
+name: ThoughtTrail
+options:
+  bundleIdPrefix: app.thoughttrail
+  deploymentTarget:
+    iOS: "18.0"
+  createIntermediateGroups: true
+  developmentLanguage: zh-Hans
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+packages:
+  ThoughtTrailCore:
+    path: .
+targets:
+  ThoughtTrail:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+      - path: App/Resources
+        buildPhase: resources
+    dependencies:
+      - package: ThoughtTrailCore
+        product: LibraryCore
+      - package: ThoughtTrailCore
+        product: ReaderCore
+      - package: ThoughtTrailCore
+        product: ReadingSessionCore
+      - package: ThoughtTrailCore
+        product: ReflectionCore
+      - package: ThoughtTrailCore
+        product: SpeechCore
+      - package: ThoughtTrailCore
+        product: RetrievalCore
+      - package: ThoughtTrailCore
+        product: ContextRouting
+      - package: ThoughtTrailCore
+        product: ContextEngineering
+      - package: ThoughtTrailCore
+        product: BrainCore
+      - package: ThoughtTrailCore
+        product: AgentRuntime
+      - package: ThoughtTrailCore
+        product: ReaderAgent
+      - package: ThoughtTrailCore
+        product: ModelProviders
+      - package: ThoughtTrailCore
+        product: Persistence
+      - package: ThoughtTrailCore
+        product: AppInfrastructure
+      - package: ThoughtTrailCore
+        product: AchievementCore
+      - package: ThoughtTrailCore
+        product: EvidenceVerificationCore
+      - package: ThoughtTrailCore
+        product: LearningCore
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: 思迹
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UIApplicationSupportsIndirectInputEvents: true
+        NSMicrophoneUsageDescription: 录制语音反思，录音只保存在本机。
+        NSSpeechRecognitionUsageDescription: 把语音反思转写为文字；可在设备端完成转写。
+        LSSupportsOpeningDocumentsInPlace: false
+        UIFileSharingEnabled: false
+        CFBundleDocumentTypes:
+          - CFBundleTypeName: EPUB
+            LSHandlerRank: Alternate
+            LSItemContentTypes: [org.idpf.epub-container]
+        UTImportedTypeDeclarations:
+          - UTTypeIdentifier: org.idpf.epub-container
+            UTTypeDescription: EPUB 电子书
+            UTTypeConformsTo: [public.data, public.archive]
+            UTTypeTagSpecification:
+              public.filename-extension: [epub]
+              public.mime-type: [application/epub+zip]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.thoughttrail.ThoughtTrail
+        PRODUCT_NAME: ThoughtTrail
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1"
+        ENABLE_PREVIEWS: YES
+  ThoughtTrailUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: ThoughtTrail
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.thoughttrail.ThoughtTrailUITests
+        TEST_TARGET_NAME: ThoughtTrail
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_STRICT_CONCURRENCY: minimal
+schemes:
+  ThoughtTrail:
+    build:
+      targets:
+        ThoughtTrail: all
+        ThoughtTrailUITests: [test]
+    test:
+      targets:
+        - ThoughtTrailUITests
+      gatherCoverageData: false

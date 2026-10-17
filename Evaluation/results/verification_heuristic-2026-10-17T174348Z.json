@@ -1,0 +1,72 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "judge" : "heuristic-v1（离线基线）"
+  },
+  "confusion" : {
+    "counts" : {
+      "contradicted" : {
+        "contradicted" : 80,
+        "insufficient" : 0,
+        "supported" : 0,
+        "unknown" : 0
+      },
+      "insufficient" : {
+        "contradicted" : 0,
+        "insufficient" : 80,
+        "supported" : 0,
+        "unknown" : 0
+      },
+      "supported" : {
+        "contradicted" : 0,
+        "insufficient" : 0,
+        "supported" : 80,
+        "unknown" : 0
+      },
+      "unknown" : {
+        "contradicted" : 0,
+        "insufficient" : 0,
+        "supported" : 0,
+        "unknown" : 0
+      }
+    },
+    "labels" : [
+      "supported",
+      "insufficient",
+      "contradicted",
+      "unknown"
+    ]
+  },
+  "createdAt" : "2026-10-17T17:43:48Z",
+  "datasetName" : "verification-dev",
+  "datasetSHA256" : "745fcfb7e84d96bddf80787023e422a3fe376df22fc92bb6d3ca2e7ff8d17aea",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "accuracy" : {
+      "denominator" : 240,
+      "numerator" : 240,
+      "value" : 1
+    },
+    "flagged_precision" : {
+      "denominator" : 160,
+      "numerator" : 160,
+      "value" : 1
+    },
+    "flagged_recall" : {
+      "denominator" : 160,
+      "numerator" : 160,
+      "value" : 1
+    },
+    "unknown" : {
+      "denominator" : 240,
+      "numerator" : 0,
+      "value" : 0
+    }
+  },
+  "runID" : "2026-10-17T174348Z",
+  "sampleCount" : 240,
+  "suite" : "verification_heuristic"
+}

@@ -1,0 +1,31 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "grader" : "heuristic-v1（离线基线）"
+  },
+  "createdAt" : "2026-10-17T17:45:11Z",
+  "datasetName" : "learning-dev",
+  "datasetSHA256" : "5040fb5b69ebc9e9fc94d16c6f22c9da30a34275ea44d8ece92692b8f2467d7c",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+    {
+      "caseID" : "LRN49",
+      "detail" : "answerable expected=true got=false leak=true"
+    }
+  ],
+  "metrics" : {
+    "answerable_accuracy" : {
+      "denominator" : 60,
+      "numerator" : 59,
+      "value" : 0.9833333333333333
+    },
+    "feedback_agreement" : {
+      "denominator" : 39,
+      "numerator" : 39,
+      "value" : 1
+    }
+  },
+  "runID" : "2026-10-17T174510Z",
+  "sampleCount" : 60,
+  "suite" : "learning"
+}

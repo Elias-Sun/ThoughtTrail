@@ -1,0 +1,145 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "embedding" : "-",
+    "final_limit" : "8",
+    "retriever" : "bm25",
+    "variant" : "bm25"
+  },
+  "createdAt" : "2026-10-17T17:37:53Z",
+  "datasetName" : "retrieval-dev",
+  "datasetSHA256" : "e020606e3df740dbdcb34dbc2d2c5fff276c644194e036592221c5fabbd10bfc",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+    {
+      "caseID" : "C26",
+      "detail" : "Recall@10=0.50；What water problems did the caravan face?"
+    },
+    {
+      "caseID" : "B01",
+      "detail" : "Recall@10=0.50；两本书里的灯塔遇到风暴断电时，人们怎么做？"
+    },
+    {
+      "caseID" : "B02",
+      "detail" : "Recall@10=0.50；守塔人的故事在两本书里如何出现？"
+    },
+    {
+      "caseID" : "B03",
+      "detail" : "Recall@10=0.50；临川港的老周和图书馆里的老水手有什么相似之处？"
+    },
+    {
+      "caseID" : "B04",
+      "detail" : "Recall@10=0.50；茶和盐分别通过怎样的长途贸易运输？"
+    },
+    {
+      "caseID" : "B05",
+      "detail" : "Recall@10=0.50；茶叶和盐在贸易中是如何被压实或切块以便运输的？"
+    },
+    {
+      "caseID" : "B06",
+      "detail" : "Recall@10=0.50；十七世纪的茶叶贸易和沙漠里的盐换布有什么共同点？"
+    },
+    {
+      "caseID" : "B07",
+      "detail" : "Recall@10=0.50；城市排水和桥梁防洪分别怎样应对暴雨洪水？"
+    },
+    {
+      "caseID" : "B08",
+      "detail" : "Recall@10=0.50；两本书分别提到哪些保护设施来应对水的冲击？"
+    },
+    {
+      "caseID" : "B09",
+      "detail" : "Recall@10=0.50；水对城市管网和海边桥梁分别造成什么损耗？"
+    },
+    {
+      "caseID" : "B10",
+      "detail" : "Recall@10=0.50；节气与蜜蜂：一年中开花和农事的时间安排有何关联？"
+    },
+    {
+      "caseID" : "B11",
+      "detail" : "Recall@10=0.50；冬天里，节气书和蜜蜂书分别描述了什么？"
+    },
+    {
+      "caseID" : "B12",
+      "detail" : "Recall@10=0.50；两本书里提到哪些与夏季高峰有关的现象？"
+    },
+    {
+      "caseID" : "B14",
+      "detail" : "Recall@10=0.50；哪两本书里有人凭星星或齿轮的细节解决难题？"
+    },
+    {
+      "caseID" : "B15",
+      "detail" : "Recall@10=0.50；伽利略的发现和沙漠向导的星空导航有什么联系？"
+    },
+    {
+      "caseID" : "B16",
+      "detail" : "Recall@10=0.50；支教老师和图书管理员如何让书被更多人读到？"
+    },
+    {
+      "caseID" : "B17",
+      "detail" : "Recall@10=0.50；信件在两本书里起了什么作用？"
+    },
+    {
+      "caseID" : "B18",
+      "detail" : "Recall@10=0.50；阅读习惯：给孩子读书和在地图集里留言有何相似？"
+    },
+    {
+      "caseID" : "B19",
+      "detail" : "Recall@10=0.50；记忆宫殿和老水手寻找灯塔，都依靠什么样的“地图”？"
+    },
+    {
+      "caseID" : "B21",
+      "detail" : "Recall@10=0.50；睡眠与蜜蜂寿命：休息对两种对象分别意味着什么？"
+    }
+  ],
+  "metrics" : {
+    "latency_p50_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.015974044799804688,
+      "value" : 0.015974044799804688
+    },
+    "latency_p95_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.02300739288330078,
+      "value" : 0.02300739288330078
+    },
+    "ndcg@5" : {
+      "denominator" : 130,
+      "numerator" : 113.10468792459284,
+      "value" : 0.8700360609584065
+    },
+    "recall@10" : {
+      "denominator" : 130,
+      "numerator" : 117,
+      "value" : 0.9
+    },
+    "recall@10.annotationMemory" : {
+      "denominator" : 20,
+      "numerator" : 20,
+      "value" : 1
+    },
+    "recall@10.crossBook" : {
+      "denominator" : 30,
+      "numerator" : 17.5,
+      "value" : 0.5833333333333334
+    },
+    "recall@10.crossChapter" : {
+      "denominator" : 40,
+      "numerator" : 39.5,
+      "value" : 0.9875
+    },
+    "recall@10.local" : {
+      "denominator" : 40,
+      "numerator" : 40,
+      "value" : 1
+    },
+    "recall@5" : {
+      "denominator" : 130,
+      "numerator" : 117,
+      "value" : 0.9
+    }
+  },
+  "runID" : "2026-10-17T173753Z",
+  "sampleCount" : 130,
+  "suite" : "retrieval_bm25"
+}

@@ -1,0 +1,70 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "build" : "debug\/release 视调用方式",
+    "dims" : "256",
+    "host" : "macOS 开发机 arm64（非验收 iPhone）"
+  },
+  "createdAt" : "2026-10-17T17:45:11Z",
+  "datasetName" : "synthetic",
+  "datasetSHA256" : "-",
+  "datasetVersion" : "1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "chunks_20000_build_ms" : {
+      "denominator" : 1,
+      "numerator" : 449.660062789917,
+      "value" : 449.660062789917
+    },
+    "chunks_20000_p50_ms" : {
+      "denominator" : 1,
+      "numerator" : 10.357022285461426,
+      "value" : 10.357022285461426
+    },
+    "chunks_20000_p95_ms" : {
+      "denominator" : 1,
+      "numerator" : 11.767029762268066,
+      "value" : 11.767029762268066
+    },
+    "chunks_20000_text_mb" : {
+      "denominator" : 1,
+      "numerator" : 2.9541873931884766,
+      "value" : 2.9541873931884766
+    },
+    "chunks_20000_vector_mb" : {
+      "denominator" : 1,
+      "numerator" : 19.53125,
+      "value" : 19.53125
+    },
+    "chunks_5000_build_ms" : {
+      "denominator" : 1,
+      "numerator" : 105.30900955200195,
+      "value" : 105.30900955200195
+    },
+    "chunks_5000_p50_ms" : {
+      "denominator" : 1,
+      "numerator" : 2.0989179611206055,
+      "value" : 2.0989179611206055
+    },
+    "chunks_5000_p95_ms" : {
+      "denominator" : 1,
+      "numerator" : 2.3490190505981445,
+      "value" : 2.3490190505981445
+    },
+    "chunks_5000_text_mb" : {
+      "denominator" : 1,
+      "numerator" : 0.7353687286376953,
+      "value" : 0.7353687286376953
+    },
+    "chunks_5000_vector_mb" : {
+      "denominator" : 1,
+      "numerator" : 4.8828125,
+      "value" : 4.8828125
+    }
+  },
+  "runID" : "2026-10-17T174510Z",
+  "sampleCount" : 30,
+  "suite" : "scale_local"
+}

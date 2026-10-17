@@ -1,0 +1,42 @@
+[
+  {
+    "annotationStatus" : "draft_unreviewed",
+    "description" : "检索\/回答问题：局部、跨章、跨书、批注记忆、不可回答（160 条）",
+    "frozenSHA256" : "e020606e3df740dbdcb34dbc2d2c5fff276c644194e036592221c5fabbd10bfc",
+    "name" : "retrieval-dev",
+    "split" : "dev",
+    "version" : "corpus-dev-1"
+  },
+  {
+    "annotationStatus" : "draft_unreviewed",
+    "description" : "陈述-证据对：支持\/证据不足\/矛盾各三分之一，按规则扰动生成（240 条）",
+    "frozenSHA256" : "745fcfb7e84d96bddf80787023e422a3fe376df22fc92bb6d3ca2e7ff8d17aea",
+    "name" : "verification-dev",
+    "split" : "dev",
+    "version" : "corpus-dev-1"
+  },
+  {
+    "annotationStatus" : "draft_unreviewed",
+    "description" : "阅读边界场景：章内未读、跳读、父块扩展、跨书、全书切换（100 条）",
+    "frozenSHA256" : "348e66626c90c916c99bf7254fbaf64e432022225fd92757f3aa017dcab111e6",
+    "name" : "boundary-dev",
+    "split" : "dev",
+    "version" : "corpus-dev-1"
+  },
+  {
+    "annotationStatus" : "draft_unreviewed",
+    "description" : "记忆提议场景：新增、重复、冲突、修订、关联、来源校验（60 条）",
+    "frozenSHA256" : "c9b7065143725a4b46b90c1c0f06ca96d55f064d75ca8a9dfab10a9202d388df",
+    "name" : "memory-dev",
+    "split" : "dev",
+    "version" : "corpus-dev-1"
+  },
+  {
+    "annotationStatus" : "draft_unreviewed",
+    "description" : "自测题：可作答性与反馈参考评分（60 条）",
+    "frozenSHA256" : "5040fb5b69ebc9e9fc94d16c6f22c9da30a34275ea44d8ece92692b8f2467d7c",
+    "name" : "learning-dev",
+    "split" : "dev",
+    "version" : "corpus-dev-1"
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "annotationStatus" : "draft_unreviewed",
+  "configuration" : {
+    "embedding" : "hash-bow-256",
+    "final_limit" : "8",
+    "retriever" : "同上，无父块扩展",
+    "variant" : "hybrid_rerank_no_expand"
+  },
+  "createdAt" : "2026-10-17T17:45:10Z",
+  "datasetName" : "retrieval-dev",
+  "datasetSHA256" : "e020606e3df740dbdcb34dbc2d2c5fff276c644194e036592221c5fabbd10bfc",
+  "datasetVersion" : "corpus-dev-1",
+  "failures" : [
+
+  ],
+  "metrics" : {
+    "latency_p50_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.09799003601074219,
+      "value" : 0.09799003601074219
+    },
+    "latency_p95_ms" : {
+      "denominator" : 1,
+      "numerator" : 0.2340078353881836,
+      "value" : 0.2340078353881836
+    },
+    "ndcg@5" : {
+      "denominator" : 130,
+      "numerator" : 113.75233873682619,
+      "value" : 0.8750179902832784
+    },
+    "recall@10" : {
+      "denominator" : 130,
+      "numerator" : 130,
+      "value" : 1
+    },
+    "recall@10.annotationMemory" : {
+      "denominator" : 20,
+      "numerator" : 20,
+      "value" : 1
+    },
+    "recall@10.crossBook" : {
+      "denominator" : 30,
+      "numerator" : 30,
+      "value" : 1
+    },
+    "recall@10.crossChapter" : {
+      "denominator" : 40,
+      "numerator" : 40,
+      "value" : 1
+    },
+    "recall@10.local" : {
+      "denominator" : 40,
+      "numerator" : 40,
+      "value" : 1
+    },
+    "recall@5" : {
+      "denominator" : 130,
+      "numerator" : 120.5,
+      "value" : 0.926923076923077
+    }
+  },
+  "runID" : "2026-10-17T174510Z",
+  "sampleCount" : 130,
+  "suite" : "retrieval_hybrid_rerank_no_expand"
+}
