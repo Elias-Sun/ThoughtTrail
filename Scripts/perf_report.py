@@ -22,11 +22,12 @@ def main():
         ("反思本地保存（更新草稿 + 提交）", suite["reflection_save_ms"], 300),
         ("取消后退出等待状态", suite["cancel_ms"], 500),
     ]
-    print("# 模拟器本地时延采样（开发参考）\n")
+    print("# 模拟器本地时延采样——模拟器参考值，不作为设备验收 D-13 依据\n")
     print(f"- 环境：{env}")
     print(f"- 提交：{commit}；Release 构建；确定性模型（`-demo`）；数据：示例书《{suite['book']}》（当前章 {suite['chapter_utf16']} UTF-16 单元）")
     print("- 冷启动为进程冷启动（每次先结束进程），磁盘缓存是热的；模拟器运行在 Mac 上，CPU/IO 与 iPhone 不同，**不作为 10.1 验收数据**。\n")
-    print("| 指标 | 次数 | P50 (ms) | P95 (ms) | 最大 (ms) | 10.1 目标 P95 | 对照 |")
+    print("**模拟器参考值，不作为设备验收 D-13 依据**\n")
+    print("| 指标（模拟器参考值，不作为设备验收 D-13 依据） | 次数 | P50 (ms) | P95 (ms) | 最大 (ms) | 10.1 目标 P95 | 对照 |")
     print("|---|---:|---:|---:|---:|---:|---|")
     for name, v, target in rows:
         if not v:
