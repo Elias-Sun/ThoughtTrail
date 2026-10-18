@@ -151,7 +151,7 @@ public struct ContextAssembler: Sendable {
             let remaining = budgetTokens - used - 12
             let truncatable = c.kind == .history || c.kind == .reflection || c.kind == .memory
             if truncatable, remaining >= minTruncatedTokens {
-                c.text = TokenEstimator.truncate(c.text, toTokens: remaining) + "…"
+                c.text = TokenEstimator.truncate(c.text, toTokens: remaining - TokenEstimator.estimate("…")) + "…"
                 used += TokenEstimator.estimate(c.text) + 12
                 truncated.append(c.id)
                 result.append(c)
