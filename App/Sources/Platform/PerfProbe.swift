@@ -2,6 +2,8 @@ import Foundation
 import LibraryCore
 import ReaderCore
 import ReflectionCore
+import RetrievalCore
+import Persistence
 #if os(iOS)
 import UIKit
 #endif
@@ -214,6 +216,107 @@ enum PerfProbe {
         }
     }
 
+    /// `-perf-recall`：10.1“5,000 个子块本地召回”与 20,000 子块规模检查。每个规模在独立的 SQLite 文件中
+    /// 写入合成子块（约 300 字/子块、4 子块/父块，与默认切块上限一致）、FTS5 与 1024 维向量，
+    /// 然后用正式的 HybridRetriever（词法 + 向量 + RRF + 父块扩展，无重排）检索。
+    /// 查询向量由本地哈希向量生成，不含网络 Embedding/Rerank；首个查询（冷读向量索引）单独记录。
+    static func runRecall(sizes: [Int] = [5_000, 20_000], samples: Int = 30) async {
+        var results: [[String: Any]] = []
+        for size in sizes {
+            let url = directory.appendingPathComponent("recall-\(size).sqlite")
+            for suffix in ["", "-wal", "-shm"] { try? FileManager.default.removeItem(atPath: url.path + suffix) }
+            try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            let memStart = footprintMB()
+            let embedder = LocalHashEmbedder(dimensions: 1024)
+            let bookID = "perf-scale", version = "v1"
+            var rng = SeededGenerator(seed: UInt64(size))
+            var parents: [ParentChunk] = [], children: [ChildChunk] = []
+            var textChars = 0
+            for p in 0..<(size / 4) {
+                var parentText = ""
+                var kids: [ChildChunk] = []
+                for k in 0..<4 {
+                    let i = p * 4 + k
+                    let text = syntheticChunk(index: i, rng: &rng)
+                    textChars += text.count
+                    let start = parentText.utf16.count
+                    parentText += text
+                    kids.append(ChildChunk(id: "c\(i)", parentID: "p\(p)", bookID: bookID, bookVersion: version, chapterIndex: p / 25,
+                                           range: TextSpan(start: start, end: parentText.utf16.count), text: text, fingerprint: "f\(i)"))
+                }
+                parents.append(ParentChunk(id: "p\(p)", bookID: bookID, bookVersion: version, chapterIndex: p / 25,
+                                           range: TextSpan(start: 0, end: parentText.utf16.count), text: parentText, fingerprint: "pf\(p)"))
+                children += kids
+            }
+            var entry: [String: Any] = ["child_chunks": size, "parent_chunks": parents.count, "text_chars": textChars, "dims": embedder.profile.dimensions]
+            do {
+                let buildStart = now()
+                let db = try AppDatabase.onDisk(at: url)
+                let store = SQLiteRetrievalStore(db)
+                try await store.replaceChunks(bookID: bookID, set: ChunkSet(parents: parents, children: children),
+                                              manifest: IndexManifest(bookID: bookID, bookVersion: version, chunkingVersion: "perf", embeddingProfile: embedder.profile,
+                                                                      childCount: size, embeddedCount: size, vectorStatus: .complete, updatedAt: Date()))
+                for batch in stride(from: 0, to: children.count, by: 500) {
+                    let slice = children[batch..<min(batch + 500, children.count)]
+                    try await store.saveEmbeddings(slice.map { EmbeddingItem(childID: $0.id, bookID: bookID, fingerprint: $0.fingerprint,
+                                                                             vector: embedder.vector($0.text)) }, profile: embedder.profile)
+                }
+                entry["build_ms"] = now() - buildStart
+                parents = []; children = []
+                entry["index_bytes"] = ["", "-wal", "-shm"].reduce(0) { total, suffix in
+                    total + ((try? FileManager.default.attributesOfItem(atPath: url.path + suffix)[.size] as? Int) ?? 0)
+                }
+                // 新建存储对象：向量缓存为空，首个查询包含从 SQLite 读取并解码全部向量（冷读）
+                let coldStore = SQLiteRetrievalStore(db)
+                let retriever = HybridRetriever(chunks: coldStore, lexical: coldStore, vectors: coldStore, embedder: embedder)
+                let scope = RetrievalScope([.wholeBook(bookID: bookID, version: version)])
+                let memBeforeQueries = footprintMB()
+                let c0 = now()
+                let first = await retriever.retrieve(queries: [recallQuery(0)], scope: scope)
+                entry["cold_first_query_ms"] = now() - c0
+                var latencies: [Double] = [], hits: [Int] = [], peak = footprintMB()
+                for q in 1...samples {
+                    let t0 = now()
+                    let r = await retriever.retrieve(queries: [recallQuery(q)], scope: scope)
+                    latencies.append(now() - t0)
+                    hits.append(r.units.count)
+                    peak = max(peak, footprintMB())
+                }
+                entry["warm_ms"] = latencies
+                entry["results_per_query"] = hits
+                entry["cold_query_results"] = first.units.count
+                entry["memory_mb"] = ["start": memStart, "before_queries": memBeforeQueries, "peak_during_queries": peak]
+            } catch {
+                entry["error"] = String(describing: error)
+            }
+            for suffix in ["", "-wal", "-shm"] { try? FileManager.default.removeItem(atPath: url.path + suffix) }
+            results.append(entry)
+        }
+        let out: [String: Any] = ["device": deviceDescription(), "samples": samples, "runs": results]
+        if let data = try? JSONSerialization.data(withJSONObject: out, options: [.prettyPrinted, .sortedKeys]) {
+            write(String(decoding: data, as: UTF8.self), to: "recall.json")
+        }
+    }
+
+    private static let recallWords = ["复习", "记忆", "间隔", "笔记", "原文", "反例", "章节", "概念", "论证", "假设", "故事", "转折", "数据", "来源",
+                                      "段落", "联系", "结构", "边界", "页边", "结论", "疑问", "解释", "比较", "整理"]
+
+    private static func recallQuery(_ i: Int) -> String {
+        "\(recallWords[i % recallWords.count])和\(recallWords[(i * 7 + 5) % recallWords.count])的关系"
+    }
+
+    private static func syntheticChunk(index: Int, rng: inout SeededGenerator) -> String {
+        let subjects = ["读者", "作者", "学生", "老师", "研究者", "图书管理员", "旅行者", "工程师", "园丁", "记录员"]
+        let verbs = ["注意到", "反复思考", "写下", "讨论", "比较", "怀疑", "整理", "复述", "追问", "重新阅读"]
+        var text = "第\(index)段："
+        while text.count < 290 {
+            let a = recallWords[Int(rng.next() % UInt64(recallWords.count))]
+            let b = recallWords[Int(rng.next() % UInt64(recallWords.count))]
+            text += subjects[Int(rng.next() % 10)] + verbs[Int(rng.next() % 10)] + a + "与" + b + "之间的关系，"
+        }
+        return text + "并记下了编号 \(index)。"
+    }
+
     // MARK: 辅助
 
     /// 进程物理内存占用（与 Xcode 内存仪表、Jetsam 使用的口径一致）。
@@ -290,5 +393,39 @@ enum PerfProbe {
         } else {
             try? Data(text.utf8).write(to: url)
         }
+    }
+}
+
+/// 本地确定性哈希向量（只用于性能采样，不调用网络）：字符二元组哈希到固定维度后归一化。
+struct LocalHashEmbedder: EmbeddingService {
+    let profile: EmbeddingProfile
+    let maxBatchSize = 64
+    init(dimensions: Int) { profile = EmbeddingProfile(model: "perf-local-hash", dimensions: dimensions) }
+
+    func vector(_ text: String) -> [Float] {
+        var v = [Float](repeating: 0, count: profile.dimensions)
+        let chars = Array(text.unicodeScalars)
+        for i in 0..<max(chars.count - 1, 0) {
+            var h: UInt64 = 1469598103934665603
+            for u in [chars[i].value, chars[i + 1].value] { h = (h ^ UInt64(u)) &* 1099511628211 }
+            v[Int(h % UInt64(profile.dimensions))] += 1
+        }
+        let norm = sqrt(v.reduce(0) { $0 + $1 * $1 })
+        return norm > 0 ? v.map { $0 / norm } : v
+    }
+
+    func embed(_ texts: [String], purpose: EmbeddingPurpose) async throws -> [[Float]] { texts.map(vector) }
+}
+
+/// 固定种子的伪随机数（SplitMix64），保证每次生成相同的合成语料。
+struct SeededGenerator: RandomNumberGenerator {
+    private var state: UInt64
+    init(seed: UInt64) { state = seed &+ 0x9E3779B97F4A7C15 }
+    mutating func next() -> UInt64 {
+        state &+= 0x9E3779B97F4A7C15
+        var z = state
+        z = (z ^ (z >> 30)) &* 0xBF58476D1CE4E5B9
+        z = (z ^ (z >> 27)) &* 0x94D049BB133111EB
+        return z ^ (z >> 31)
     }
 }

@@ -22,6 +22,7 @@ struct ThoughtTrailApp: App {
                     await PerfProbe.markLaunchReady(arguments: args, books: model.books.count)
                     await PerfProbe.importIfRequested(app: model, arguments: args)
                     if args.contains("-perf-suite") { await PerfProbe.runSuite(app: model) }
+                    if args.contains("-perf-recall") { await PerfProbe.runRecall() }
                     if let i = args.firstIndex(of: "-perf-soak"), i + 1 < args.count, let minutes = Double(args[i + 1]) {
                         await PerfProbe.runSoak(app: model, minutes: minutes)
                     }
