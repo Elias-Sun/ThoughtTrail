@@ -37,7 +37,10 @@ def main():
         if "error" not in r:
             per = r["results_per_query"]
             print(f"- {r['child_chunks']:,} 子块：每次查询返回 {min(per)}～{max(per)} 个结果单元（冷查询 {r['cold_query_results']} 个），确认检索确实命中。")
-    print("- 内存为进程 phys_footprint；索引体积为该临时 SQLite 文件（含 -wal/-shm）的总大小，包含子块与父块正文、FTS5 索引与向量。")
+    for r in data["runs"]:
+        if "error" not in r and "wal_bytes_before_checkpoint" in r:
+            print(f"- {r['child_chunks']:,} 子块：检查点前 WAL {r['wal_bytes_before_checkpoint'] / 1048576:.1f} MB，检查点后 {r['wal_bytes_after_checkpoint'] / 1048576:.1f} MB。")
+    print("- 内存为进程 phys_footprint；索引体积为 WAL 检查点（TRUNCATE）后的 SQLite 主库文件大小，包含子块与父块正文、FTS5 索引与 1024 维向量。")
 
 
 main()

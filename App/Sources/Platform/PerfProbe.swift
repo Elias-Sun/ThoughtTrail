@@ -263,9 +263,12 @@ enum PerfProbe {
                 }
                 entry["build_ms"] = now() - buildStart
                 parents = []; children = []
-                entry["index_bytes"] = ["", "-wal", "-shm"].reduce(0) { total, suffix in
-                    total + ((try? FileManager.default.attributesOfItem(atPath: url.path + suffix)[.size] as? Int) ?? 0)
-                }
+                func fileSize(_ suffix: String) -> Int { (try? FileManager.default.attributesOfItem(atPath: url.path + suffix)[.size] as? Int) ?? 0 }
+                entry["wal_bytes_before_checkpoint"] = fileSize("-wal")
+                try db.checkpoint()
+                // 索引体积：检查点（TRUNCATE）后的主库文件，含子块/父块正文、FTS5 与向量；WAL 已并入，不重复计算
+                entry["index_bytes"] = fileSize("")
+                entry["wal_bytes_after_checkpoint"] = fileSize("-wal")
                 // 新建存储对象：向量缓存为空，首个查询包含从 SQLite 读取并解码全部向量（冷读）
                 let coldStore = SQLiteRetrievalStore(db)
                 let retriever = HybridRetriever(chunks: coldStore, lexical: coldStore, vectors: coldStore, embedder: embedder)

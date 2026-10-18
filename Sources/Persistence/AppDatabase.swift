@@ -28,6 +28,11 @@ public final class AppDatabase: Sendable {
         return try AppDatabase(DatabasePool(path: url.path, configuration: configuration()))
     }
 
+    /// 把 WAL 内容写回主库并截断 WAL（统计库体积、备份前使用）。
+    public func checkpoint() throws {
+        try writer.writeWithoutTransaction { try $0.checkpoint(.truncate) }
+    }
+
     static func configuration() -> Configuration {
         var c = Configuration()
         c.foreignKeysEnabled = true
