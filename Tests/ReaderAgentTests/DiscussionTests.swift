@@ -418,3 +418,34 @@ struct MemoryProposalFlowTests {
         #expect(model.requests(stage: "memory_proposal").isEmpty)
     }
 }
+
+@Suite("M11 补充")
+struct DiscussionEdgeTests {
+    @Test("READ-05 未读章节上的批注不进入讨论证据")
+    func unreadAnnotationExcluded() async throws {
+        let rig = try await Rig.make(readChapters: [0, 1])
+        let ending = rig.chapters[3]
+        _ = try await AnnotationService(repository: rig.env.reading, clock: rig.env.clock, ids: rig.env.ids)
+            .addHighlight(book: rig.book, chapter: ending, range: ending.text.utf16Ranges(of: "灯塔管理员")[0], note: "复习时看到的灯塔秘密")
+        let model = ScriptedChatModel(fallback: .text("复习应当按照逐渐拉长的间隔进行[E1, E2, E3, E4]。"))
+        let log = EventLog()
+        _ = try await rig.ask("复习和灯塔管理员", model: model, log: log)
+        #expect(await log.evidence.allSatisfy { $0.kind != .annotation })
+    }
+
+    @Test("READ-05 阅读现场位于未读区间的反思不进入讨论证据")
+    func unreadReflectionExcluded() async throws {
+        let rig = try await Rig.make(readChapters: [0, 1])
+        let ending = rig.chapters[3]
+        let refl = ReflectionService(repository: rig.env.reflections, clock: rig.env.clock, ids: rig.env.ids)
+        let ctx = ReadingContextSnapshot(bookID: rig.book.id, bookVersion: rig.book.fingerprint, bookTitle: rig.book.title, chapterIndex: 3,
+                                         chapterTitle: nil, locator: Locator.make(book: rig.book, chapter: ending, range: TextSpan(start: 0, end: 5)),
+                                         selectedText: nil, sessionID: nil, capturedAt: rig.env.clock.now())
+        let d = try await refl.startDraft(context: ctx, text: "复习时我想到灯塔管理员就是船长")
+        _ = try await refl.commit(id: d.id, commitKey: "x")
+        let model = ScriptedChatModel(fallback: .text("复习应当按照逐渐拉长的间隔进行[E1, E2, E3]。"))
+        let log = EventLog()
+        _ = try await rig.ask("复习时想到了什么？", model: model, log: log)
+        #expect(await log.evidence.allSatisfy { $0.kind != .reflection })
+    }
+}

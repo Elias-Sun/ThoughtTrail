@@ -444,3 +444,52 @@ struct BackupTests {
         #expect(md.contains("### 记忆") && md.contains("间隔复习"))
     }
 }
+
+@Suite("M13 补充")
+struct PersistenceEdgeTests {
+    @Test("READ-01 书签保存、按书列出与删除")
+    func bookmarks() async throws {
+        let repo = SQLiteReadingRepository(try AppDatabase.inMemory())
+        let book = Make.book(fingerprint: "v")
+        let ch = Make.chapter(text: "第一页的内容")
+        let b = Bookmark(id: "bm1", bookID: book.id, locator: Locator.make(book: book, chapter: ch, range: TextSpan(start: 0, end: 2)),
+                         title: "第一页", createdAt: Date(timeIntervalSince1970: 1_700_000_000))
+        try await repo.save(b)
+        #expect(try await repo.bookmarks(bookID: book.id) == [b])
+        #expect(try await repo.bookmarks(bookID: "other").isEmpty)
+        try await repo.delete(bookmarkID: "bm1")
+        #expect(try await repo.bookmarks(bookID: book.id).isEmpty)
+    }
+
+    @Test("READ-04 未结束会话列表不含已结束会话；不指定书时返回全部")
+    func openSessions() async throws {
+        let repo = SQLiteReadingRepository(try AppDatabase.inMemory())
+        var ended = ReadingSession(id: "s1", bookID: "a", startedAt: Date()); ended.status = .ended
+        try await repo.saveSession(ended)
+        try await repo.saveSession(ReadingSession(id: "s2", bookID: "b", startedAt: Date()))
+        #expect(try await repo.openSessions().map(\.id) == ["s2"])
+        #expect(try await repo.sessions(bookID: nil).count == 2)
+    }
+
+    @Test("MEM-04 另一个提议使用相同幂等键时写入被拒绝，不覆盖原提议")
+    func proposalKeyConflict() async throws {
+        let repo = SQLiteBrainRepository(try AppDatabase.inMemory())
+        let now = Date()
+        let a = MemoryProposal(id: "p1", idempotencyKey: "k", conversationID: nil, messageID: nil,
+                               action: .create(kind: .question, content: "问一？", evidence: []), rationale: "", status: .pending, issues: [], createdAt: now)
+        var b = a; b.id = "p2"
+        try await repo.save(a)
+        await #expect(throws: (any Error).self) { try await repo.save(b) }
+        #expect(try await repo.proposal(idempotencyKey: "k")?.id == "p1")
+    }
+
+    @Test("LIB-04 Markdown 导出标注来源不可访问的书与失效证据")
+    func markdownMarksUnavailable() {
+        let book = Make.book(status: .sourceUnavailable)
+        let item = BrainItem(id: "i", kind: .memory, content: "记忆内容", origin: .user,
+                             evidence: [EvidenceRef(kind: .bookText, bookID: book.id, quote: "原句", isValid: false)], createdAt: Date(), updatedAt: Date())
+        let md = MarkdownExporter.export(books: [book], annotations: [], reflections: [], brainItems: [item], conversations: [], messages: [])
+        #expect(md.contains("阅读文件已删除"))
+        #expect(md.contains("（来源已失效）"))
+    }
+}
