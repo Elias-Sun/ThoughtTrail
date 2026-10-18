@@ -75,7 +75,7 @@ Scripts/eval.sh --live     # 追加真实模型（需 DASHSCOPE_API_KEY）
 | 5,000 | 2.1 ms | 2.3 ms | 105 ms | 4.9 MB | 0.7 MB |
 | 20,000 | 10.4 ms | 11.8 ms | 450 ms | 19.5 MB | 3.0 MB |
 
-真实 `text-embedding-v4` 默认 1024 维，向量体积约为上表的 4 倍；SQLite 路径（FTS5 + 向量 BLOB 读取）与 iPhone 上的时延需要在验收设备上另测。
+真实 `text-embedding-v4` 默认 1024 维，向量体积约为上表的 4 倍。SQLite 路径（FTS5 + 1024 维向量 BLOB）已在验收 iPhone 15 Pro Max 上实测：5,000 子块 P95 45.0 ms、20,000 子块 P95 180.1 ms，见 [reports/recall-device-20261018T172813.md](reports/recall-device-20261018T172813.md)（合成子块约 300 字，与上表的短文本语料不同，两者不可直接比较）。
 
 ## 4. 解读与后续
 

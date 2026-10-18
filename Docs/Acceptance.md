@@ -13,7 +13,7 @@
 | ACCEPT-05 | 对话、Embedding、Rerank 真实接口可用 | **已验收** | 2026-10-18T02:07:16Z `tt-live-check` 三项通过（[报告](reports/live-check-2026-10-18T020716Z.md)）：对话 `qwen-plus` 3.5 s，流式 13 帧，用量 63；`text-embedding-v4` 1.8 s，12/12，1024 维，相关 0.708 / 无关 0.361；`qwen3-rerank` 0.43 s，原生协议，最高分命中期望文档。只证明接口可用，不是效果评测（见 ACCEPT-07） |
 | ACCEPT-06 | 阅读边界、引用有效性和预算规则通过 | **规则测试达成；开发集边界 0 违规** | READ-04/05、EVID-01、RUN-01 测试；边界开发集结果见 [Evaluation.md](Evaluation.md)；验收集（人工复核）未建立 |
 | ACCEPT-07 | 检索、回答依据、复核、记忆、自测达到阈值 | **未验收** | 开发集与离线基线已运行（[Evaluation.md](Evaluation.md)）；冻结的人工标注验收集与真实模型评测需要人工与密钥 |
-| ACCEPT-08 | 性能、取消、故障恢复达到要求 | **故障/取消逻辑达成；真机 D-13、D-14、D-09、D-10 达到；未整体验收** | 10.3 故障均有测试；取消 UI 测试通过；固定 iPhone（15 Pro Max）Release D-13 各 30 次全部达到（[perf-device 报告](reports/perf-device-20261018T155925.md)）；D-14 30 分钟浸泡未崩溃、内存预热后稳定、Leaks 0 条（[soak 报告](reports/soak-device-20261018T155925.md)，自动化驱动）；真实模型下取消（D-10）与飞行模式离线失败/重试（D-09）由用户手工执行并报告达到；**真机 5k/20k 子块本地召回未测**（10.1 指标，未整体验收的原因）。模拟器 Release 采样见 [reports/perf-sim-20261018T135819.md](reports/perf-sim-20261018T135819.md)，**模拟器参考值，不作为设备验收 D-13 依据** |
+| ACCEPT-08 | 性能、取消、故障恢复达到要求 | **故障/取消逻辑达成；真机 D-13、D-14、D-09、D-10 与 5k 子块召回达到；未整体验收** | 10.3 故障均有测试；取消 UI 测试通过；固定 iPhone（15 Pro Max）Release D-13 各 30 次全部达到（[perf-device 报告](reports/perf-device-20261018T155925.md)）；D-14 30 分钟浸泡未崩溃、内存预热后稳定、Leaks 0 条（[soak 报告](reports/soak-device-20261018T155925.md)，自动化驱动）；真实模型下取消（D-10）与飞行模式离线失败/重试（D-09）由用户手工执行并报告达到；真机本地召回：5,000 子块 P95 45.0 ms（≤500 ms，达到），冷读首查 65.8 ms；20,000 子块规模检查 P95 180.1 ms、索引 237.3 MB（[recall 报告](reports/recall-device-20261018T172813.md)）。模拟器 Release 采样见 [reports/perf-sim-20261018T135819.md](reports/perf-sim-20261018T135819.md)，**模拟器参考值，不作为设备验收 D-13 依据** |
 | ACCEPT-09 | 数据迁移、导出恢复与删除行为正确 | **达成** | v1 旧库样本迁移、备份往返/损坏/旧版本/重复导入、LIB-04 删除测试；UI-19 |
 | ACCEPT-10 | 文档及演示可供他人复核和复现 | **文档达成；录像未完成** | README、Architecture、DataAndInterfaces、Evaluation、Presentation；演示录像需真机/真实模型 |
 
@@ -117,7 +117,7 @@
 1. **未接入 Readium**（偏离 3.1 计划）：阅读器显示规范化纯文本（保留段落），不显示原书图片、CSS 与复杂排版。选择原因与替换路径见 [Architecture.md](Architecture.md#4-关键取舍)。
 2. **真实模型只做了接口联调，未做效果评测**：`tt-live-check` 已对百炼 `qwen-plus`、`text-embedding-v4`、`qwen3-rerank` 三项通过（ACCEPT-05）；`tt-bench eval --live`（真实检索/裁判在固定数据集上的效果）尚未运行。
 3. **效果评测只有开发集**：数据集为开发者自拟、规则生成（`draft_unreviewed`），检索/复核/自测的离线结果使用词袋向量与启发式裁判作为代理，**不能作为第 9 节验收结论**；需要独立人工标注、冻结验收集与真实模型运行。
-4. **设备验收部分完成**：iPhone 15 Pro Max（iOS 27.0.1）已完成签名安装、D-13（[perf-device 报告](reports/perf-device-20261018T155925.md)）与 D-14（[soak 报告](reports/soak-device-20261018T155925.md)，由视图模型自动驱动，不是触控操作）；用户手工完成 D-01、D-02、D-04～D-12 的人工部分；仍未完成：英文语音转写、真机 5k/20k 子块召回与演示录像。模拟器上的 Release 采样只作参考（[perf-sim 报告](reports/perf-sim-20261018T135819.md)），不作为 D-13 依据。
+4. **设备验收部分完成**：iPhone 15 Pro Max（iOS 27.0.1）已完成签名安装、D-13（[perf-device 报告](reports/perf-device-20261018T155925.md)）与 D-14（[soak 报告](reports/soak-device-20261018T155925.md)，由视图模型自动驱动，不是触控操作）；用户手工完成 D-01、D-02、D-04～D-12 的人工部分；仍未完成：英文语音转写与演示录像；真机本地召回已实测（[recall 报告](reports/recall-device-20261018T172813.md)）。模拟器上的 Release 采样只作参考（[perf-sim 报告](reports/perf-sim-20261018T135819.md)），不作为 D-13 依据。
 5. **语音输入**：自动化测试使用确定性语音桩；真机中文录音转写已由用户手工验收（D-04），英文未测；SFSpeechRecognizer 转写在其他设备上可能受语言包与网络影响。
 6. **Token 用量**：没有精确 tokenizer，上下文预算用保守估算；服务端返回的用量单独记录，未返回时标记“未知”。
 7. **UI 测试使用确定性模型响应**（`-uitest`），不代表真实模型输出质量。

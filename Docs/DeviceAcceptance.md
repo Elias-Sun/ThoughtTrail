@@ -18,6 +18,7 @@
 |---|---|---|
 | 签名、安装、启动 | `xcodebuild -configuration Release -allowProvisioningUpdates` 自动签名成功，`devicectl device install app` 安装、`devicectl device process launch` 启动正常 | `Scripts/perf-device.sh` |
 | D-13 本地时延（各 30 次） | 全部达到目标，见第 3 节 D-13 与 [reports/perf-device-20261018T155925.md](reports/perf-device-20261018T155925.md) | 原始数据 `-suite.json`、`-coldstart.jsonl` |
+| 本地召回（10.1，各 30 次） | **5,000 子块 P95 45.0 ms（目标 ≤500 ms，达到）**，冷读首查 65.8 ms，索引 59.6 MB，内存峰值 56.9 MB；20,000 子块规模检查 P95 180.1 ms，冷读首查 261.1 ms，索引 237.3 MB，内存峰值 122.5 MB（同条件的前一次运行峰值为 194.6 MB，内存峰值在不同运行间有波动）。合成子块约 300 字、1024 维向量，正式 HybridRetriever，无网络 Embedding/Rerank | [reports/recall-device-20261018T172813.md](reports/recall-device-20261018T172813.md)、原始数据 `.json`；提交 `0676855` |
 | D-14 30 分钟浸泡 + Leaks | 无崩溃；内存预热后稳定；Leaks 0 条。见第 3 节 D-14 | [reports/soak-device-20261018T155925.md](reports/soak-device-20261018T155925.md) |
 | iOS 交互自动化（真机，确定性模型） | **24/24 均在真机上通过，但不是一次连续运行**：① 全量运行中 Data、Discussion、Learning、Library、Memory 五组 17 条通过，进入 ReaderUITests 时设备连接中断（CoreDeviceError 3）；② 重跑时安装测试运行器中途连接关闭，之后手机拒绝启动运行器（报“证书未信任/签名无效”，16:47、16:49 各一次，16:49 那次日志未保留），卸载测试运行器后重装即恢复；③ ReaderUITests 7 条中 6 条通过，UI-07 失败：点击“更多”时手机弹出系统通知横幅遮住工具栏，点击落在通知上，菜单未打开（等待“批注列表”超时）；④ 单独重跑 UI-07 通过。失败都来自连接、安装或系统通知，不是应用断言失败 | 提交 `f49405a`：[ui-tests-20261018T163655.log](reports/ui-tests-20261018T163655.log)（17 通过）、[…164616](reports/ui-tests-20261018T164616.log)、[…164755](reports/ui-tests-20261018T164755.log)（连接/运行器）、[…165017](reports/ui-tests-20261018T165017.log)（6 通过 1 失败）、[…165339](reports/ui-tests-20261018T165339.log)（UI-07 通过） |
 
@@ -29,7 +30,7 @@
 | iOS 18 最低系统 | iOS 18 模拟器运行时或 iOS 18 设备 | **未验收**：Xcode 27.1 运行时目录不提供 iOS 18.x（尝试记录见第 5 节）；本机只有 iOS 27.0/27.1 运行时，也没有 iOS 18 设备 |
 | 语音：真实麦克风权限、录音、Apple Speech 转写（中文/英文） | 真机 | 中文：**已完成**（D-04、D-06，用户手工执行）；英文语音转写未测 |
 | 来电/后台中断 | 真机 | **已完成**（D-05 来电、D-02 锁屏，用户手工执行） |
-| Release 构建性能 | 固定 iPhone、Instruments | 冷启动、重开书籍、本地保存、取消响应：**真机已测（D-13）**；30 分钟稳定性与内存：见 D-14；**5k/20k 子块本地召回在真机上未测**（只有开发机 macOS 的规模探测，见 [Evaluation.md](Evaluation.md)，不作为验收数据） |
+| Release 构建性能 | 固定 iPhone、Instruments | 冷启动、重开书籍、本地保存、取消响应：**真机已测（D-13）**；30 分钟稳定性与内存：见 D-14；5k/20k 子块本地召回：**真机已测**（5,000 子块 P95 45.0 ms，达到 ≤500 ms；见 1.1 与 [recall-device-20261018T172813.md](reports/recall-device-20261018T172813.md)） |
 | 含真实模型的完整演示与录像 | 密钥 + 真机/模拟器录屏 | **未验收** |
 
 ## 3. 真机验收操作清单（供执行时填写）
