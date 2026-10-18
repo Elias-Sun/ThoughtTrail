@@ -114,6 +114,7 @@ final class ReaderModel {
 
     /// 文本视图报告的可见区间：驱动已读记录（停留阈值）与阅读位置保存。
     func visibleRangeChanged(_ range: TextSpan) {
+        PerfProbe.readerReportedVisibleText()
         guard let chapter = currentChapter, range != visibleRange || chapter.index != visibleChapter else { return }
         visibleRange = range
         visibleChapter = chapter.index

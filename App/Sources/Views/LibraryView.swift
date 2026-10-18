@@ -94,6 +94,9 @@ struct LibraryView: View {
                 guard let request else { return }
                 path = [request.bookID]
             }
+            .onChange(of: model.closeReaderRequest) { _, request in
+                if request != nil { path = [] }
+            }
         }
     }
 

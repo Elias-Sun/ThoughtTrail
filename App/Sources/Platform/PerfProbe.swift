@@ -34,6 +34,28 @@ enum PerfProbe {
         if arguments.contains("-perf-reset") { try? FileManager.default.removeItem(at: directory) }
     }
 
+    /// 阅读器正文首次完成窗口内排版时（ReaderModel 收到可见区间）回调；只在采样时设置。
+    static var onReaderVisibleText: (() -> Void)?
+    static func readerReportedVisibleText() { onReaderVisibleText?(); onReaderVisibleText = nil }
+
+    /// 界面级“重新打开书籍”：从发出打开请求到阅读器正文在窗口内完成首次排版（含导航、ReaderView 创建、
+    /// 读库、定位与 TextKit 排版），之后关闭阅读器回到书库，重复 `samples` 次。
+    static func measureUIReopen(app: AppModel, book: Book, samples: Int) async -> [Double] {
+        var result: [Double] = []
+        for _ in 0..<samples {
+            var shown: Double?
+            onReaderVisibleText = { shown = now() }
+            let t0 = now()
+            app.openRequest = .init(bookID: book.id, locator: nil)
+            guard await waitUntil(timeout: 10, interval: 1_000_000, { shown != nil }), let shown else { onReaderVisibleText = nil; continue }
+            result.append(shown - t0)
+            app.openRequest = nil
+            app.closeReaderRequest = UUID()
+            try? await Task.sleep(nanoseconds: 1_000_000_000) // 等待返回动画与会话结束
+        }
+        return result
+    }
+
     /// `-perf-import <文件名>`：从 Documents/ 导入一本 EPUB（走正式导入、解析与建索引路径），记录耗时。
     static var importMilliseconds: Double?
     static let longBookTitle = "长篇性能样本"
@@ -56,6 +78,7 @@ enum PerfProbe {
         var reopen: [Double] = [], highlight: [Double] = [], reflection: [Double] = [], cancel: [Double] = []
         var lateChanges = 0
 
+        let uiReopen = await measureUIReopen(app: app, book: book, samples: samples)
         for _ in 0..<samples {
             let t0 = now()
             let reader = ReaderModel(book: book, app: app)
@@ -105,7 +128,7 @@ enum PerfProbe {
             "samples": samples, "book": book.title, "chapter_utf16": chapter.length,
             "book_chapters": chapters.count, "book_utf16": chapters.reduce(0) { $0 + $1.length },
             "import_ms": importMilliseconds ?? -1, "device": deviceDescription(),
-            "reopen_ms": reopen, "highlight_save_ms": highlight, "reflection_save_ms": reflection,
+            "reopen_ms": reopen, "reopen_ui_ms": uiReopen, "highlight_save_ms": highlight, "reflection_save_ms": reflection,
             "cancel_ms": cancel, "cancel_late_state_changes": lateChanges,
         ]
         if let data = try? JSONSerialization.data(withJSONObject: result, options: [.prettyPrinted, .sortedKeys]) {
@@ -120,7 +143,8 @@ enum PerfProbe {
         guard let book = perfBook(app) else { write(#"{"error":"no book"}"#, to: "soak-summary.json"); return }
         let started = Date()
         let deadline = started.addingTimeInterval(minutes * 60)
-        var cycles = 0, discussions = 0, cancels = 0, highlights = 0, reflections = 0, backups = 0, failures = 0
+        var cycles = 0, discussions = 0, cancels = 0, highlights = 0, reflections = 0, backups = 0
+        var failures: [String: Int] = [:]
         var lastSample = Date.distantPast
         func sample() {
             let line = String(format: "{\"t_s\":%.0f,\"footprint_mb\":%.1f,\"cycles\":%d}\n",
@@ -150,7 +174,7 @@ enum PerfProbe {
             }
             // 反思
             if let d = try? await app.container.reflections.startDraft(context: await reader.contextSnapshot(), text: "浸泡测试反思 \(cycles)") {
-                if (try? await app.container.reflections.commit(id: d.id, commitKey: "soak-\(d.id)")) != nil { reflections += 1 } else { failures += 1 }
+                if (try? await app.container.reflections.commit(id: d.id, commitKey: "soak-\(d.id)")) != nil { reflections += 1 } else { failures["reflection_commit", default: 0] += 1 }
             }
             // 讨论：完成一次（含检索、生成、核查）；每 3 轮取消一次慢速回答
             let discussion = DiscussionModel(app: app, book: book)
@@ -160,11 +184,11 @@ enum PerfProbe {
                 discussion.send()
                 if await waitUntil(timeout: 10, { discussion.liveStatus == .drafting && !discussion.liveDraft.isEmpty }) {
                     await discussion.cancel(); cancels += 1
-                } else { failures += 1 }
+                } else { failures["slow_answer_not_streaming", default: 0] += 1 }
             } else {
                 discussion.input = "这一章讲了什么？"
                 discussion.send()
-                if await waitUntil(timeout: 30, { !discussion.running && discussion.messages.count >= 2 }) { discussions += 1 } else { failures += 1 }
+                if await waitUntil(timeout: 30, { !discussion.running && discussion.messages.count >= 2 }) { discussions += 1 } else { failures["discussion_not_finished", default: 0] += 1 }
             }
             // 备份导出（含 EPUB），每 10 轮一次
             if cycles.isMultiple(of: 10) {
@@ -172,7 +196,7 @@ enum PerfProbe {
                     let url = FileManager.default.temporaryDirectory.appendingPathComponent("soak-backup.json")
                     try? data.write(to: url, options: .atomic)
                     backups += 1
-                } else { failures += 1 }
+                } else { failures["backup_export", default: 0] += 1 }
             }
             if Date().timeIntervalSince(lastSample) >= 10 { sample() }
             // 每轮间隔 3 秒，接近连续使用的节奏；不间断循环会让数据量的增长掩盖内存是否泄漏
@@ -182,7 +206,7 @@ enum PerfProbe {
         await reader.close()
         let summary: [String: Any] = [
             "minutes": minutes, "elapsed_s": Date().timeIntervalSince(started), "cycles": cycles, "discussions_completed": discussions,
-            "cancels": cancels, "highlights": highlights, "reflections": reflections, "backups": backups, "failures": failures,
+            "cancels": cancels, "highlights": highlights, "reflections": reflections, "backups": backups, "failures": failures.values.reduce(0, +), "failure_kinds": failures,
             "book": book.title, "device": deviceDescription(),
         ]
         if let data = try? JSONSerialization.data(withJSONObject: summary, options: [.prettyPrinted, .sortedKeys]) {
@@ -231,11 +255,11 @@ enum PerfProbe {
 
     private static func now() -> Double { Double(DispatchTime.now().uptimeNanoseconds) / 1_000_000 }
 
-    private static func waitUntil(timeout: Double, _ condition: () -> Bool) async -> Bool {
+    private static func waitUntil(timeout: Double, interval: UInt64 = 10_000_000, _ condition: () -> Bool) async -> Bool {
         let deadline = Date().addingTimeInterval(timeout)
         while Date() < deadline {
             if condition() { return true }
-            try? await Task.sleep(nanoseconds: 10_000_000)
+            try? await Task.sleep(nanoseconds: interval)
         }
         return false
     }

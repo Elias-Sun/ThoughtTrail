@@ -55,6 +55,8 @@ final class AppModel {
     var openRequest: OpenRequest?
     /// 最近一次导出的备份文件（确定性模式下用于恢复验证）。
     var lastBackupURL: URL?
+    /// 关闭阅读器回到书库（性能采样用于重复“打开书籍”）。
+    var closeReaderRequest: UUID?
     private let network = NetworkMonitor()
 
     struct Banner: Identifiable, Equatable {

@@ -21,7 +21,8 @@ def main():
         rows.append(("冷启动至书库可操作（宿主发起启动 → 就绪）", [c["launch_to_ready_ms"] for c in cold], 3000))
     rows += [
         ("冷启动（进程创建 → 就绪）", [c["process_to_ready_ms"] for c in cold], 3000),
-        ("已导入书籍重新打开（读库 + 定位 + 首屏排版）", suite["reopen_ms"], 2000),
+        ("已导入书籍重新打开·界面（打开请求 → 正文在窗口内首次排版）", suite.get("reopen_ui_ms", []), 2000),
+        ("已导入书籍重新打开·模型（读库 + 定位 + 离屏首屏排版）", suite["reopen_ms"], 2000),
         ("批注本地保存", suite["highlight_save_ms"], 300),
         ("反思本地保存（更新草稿 + 提交）", suite["reflection_save_ms"], 300),
         ("取消后退出等待状态", suite["cancel_ms"], 500),
