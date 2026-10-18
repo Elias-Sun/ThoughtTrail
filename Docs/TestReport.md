@@ -4,38 +4,39 @@
 
 | 类别 | 唯一用例 | 通过 | 失败 | 跳过 | 运行环境 | 原始结果 |
 |---|---:|---:|---:|---:|---|---|
-| 核心单元 + 集成（Swift Testing） | **529** | 529 | 0 | 0 | macOS 27.0.1，Swift 6.4，`swift test --parallel` | [core-tests-20261018T092221.log](reports/core-tests-20261018T092221.log)、`.xml`（xUnit）、[清单](reports/core-tests-latest-inventory.md) |
-| iOS 交互自动化（XCUITest） | **24** | 24 | 0 | 0 | Xcode 27.1，iPhone 18 Pro 模拟器 iOS 27.0，确定性模型响应 | [ui-tests-20261018T092238.log](reports/ui-tests-20261018T092238.log) |
-| 合计 | **553** | 553 | 0 | 0 | | |
+| 核心单元 + 集成（Swift Testing） | **552** | 552 | 0 | 0 | macOS 27.0.1，Swift 6.4，`swift test --parallel` | [core-tests-20261018T140134.log](reports/core-tests-20261018T140134.log)、`.xml`（xUnit）、[清单](reports/core-tests-latest-inventory.md) |
+| iOS 交互自动化（XCUITest） | **24** | 24 | 0 | 0 | Xcode 27.1，iPhone 18 Pro 模拟器 iOS 27.0，确定性模型响应 | [ui-tests-20261018T140150.log](reports/ui-tests-20261018T140150.log) |
+| 合计 | **576** | 576 | 0 | 0 | | |
 
-- 两次运行都在同一源码提交 **`1bc5d7f`** 上执行（核心日志首行记录了提交号；UI 运行时工作区与该提交一致，之后 `test-ui.sh` 也会在日志开头写入提交号）。
+- 两次运行都在同一源码提交 **`77da5c4`** 上执行（两份日志的开头都记录了提交号）。日志里如出现“工作区有未提交改动”，只来自测试运行自身生成的 `Docs/reports/` 报告文件，源码、测试与工程文件与该提交一致。
+- 上一轮（提交 `1bc5d7f`）为核心 529/529、UI 24/24。本轮核心净增 23 条（529 → 552）：缺陷修复提交 `6b1f0f8` 带 1 条回归测试，测试补充提交 `94b6043` 加 23 条，审查后 `77da5c4` 删除 1 条与已有用例重复的；逐条理由见第 5 节。
 - 统计口径（8.1）：每个 `@Test` / XCTest 方法计 1 个；没有参数化展开计数；没有跳过、禁用或预期失败；重名 0。核心测试不访问网络、不依赖收费服务（HTTP 用可编排桩，时钟用 `ManualClock`）。
-- **iOS 18 最低系统未实测**：本机只有 iOS 27 模拟器运行时。
+- **iOS 18 最低系统未验收**：Xcode 27.1 的运行时目录不提供 iOS 18.x 模拟器运行时（尝试记录见 [DeviceAcceptance.md](DeviceAcceptance.md)）。工程以 deployment target 18.0 编译通过，只能说明没有无条件调用更新系统的 API，不等于运行期行为已验证。
 
 ## 2. 核心测试分布
 
 | 测试 target | 用例 | 预算（第 4 节） | 说明 |
 |---|---:|---:|---|
 | LibraryCoreTests | 40 | 24 | EPUB 正常/异常样本、导入/重复/删除/恢复/并发 |
-| ReaderCoreTests | 24 | 26 | 定位、重新定位、分页、批注、书签 |
+| ReaderCoreTests | 27 | 26 | 定位、重新定位、分页、批注、书签 |
 | ReadingSessionCoreTests | 16 | 16 | 区间合并、跳读、会话、中断恢复 |
 | ReflectionCoreTests | 23 | 22 | 草稿、提交幂等、修改留痕、消息状态机 |
 | SpeechCoreTests | 16 | 16 | 权限、中断、取消、无语音、时长上限 |
 | RetrievalCoreTests | 63 | 60 | 分词、切块、BM25、向量、RRF、重排映射、扩展、降级、索引生命周期 |
-| ContextRoutingTests | 30 | 34 | 计划解析、规则编译、降级、注入防护 |
-| ContextEngineeringTests | 23 | 34 | 组装、去重、裁剪、提示词、引用 |
+| ContextRoutingTests | 34 | 34 | 计划解析、规则编译、降级、注入防护 |
+| ContextEngineeringTests | 34 | 34 | 组装、去重、裁剪、提示词、引用 |
 | BrainCoreTests | 39 | 38 | 条目、修订、提议、关系、失效、召回 |
 | AgentRuntimeTests | 34 | 34 | 预算、重试、超时、取消、完成门、任务登记、脱敏 |
-| ReaderAgentTests | 27 | 28 | 完整讨论链路、边界、取消、失败重试、幂等、记忆提议 |
+| ReaderAgentTests | 29 | 28 | 完整讨论链路、边界、取消、失败重试、幂等、记忆提议 |
 | ModelProvidersTests | 30 | 30 | 对话/SSE、Embedding、Rerank、错误映射 |
-| PersistenceTests | 29 | 32 | 迁移（含 v1 旧库样本）、删除级联、FTS5、向量、事务、备份 |
+| PersistenceTests | 32 | 32 | 迁移（含 v1 旧库样本）、删除级联、FTS5、向量、事务、备份 |
 | AppInfrastructureTests | 15 | 12 | 密钥（含真实钥匙串往返）、配置、启动恢复、策略、装配 |
 | AchievementCoreTests | 12 | 10 | 日历/时区/跨午夜、成就去重 |
 | BenchCoreTests | 17 | 14 | 指标分母、数据冻结、结果比较、运行器 |
 | EvidenceVerificationCoreTests | 34 | 32 | 陈述拆分、结构检查、裁判、失败语义、数字归一化 |
 | LearningCoreTests | 39 | 38 | 出题校验、评分、掌握、调度（固定时钟、时区） |
 | IntegrationTests | 18 | — | 跨模块：EPUB→定位、SQLite 重启、中文检索、HTTP 协议→讨论、恢复写入、记忆/学习/备份闭环、5k 子块性能冒烟 |
-| **合计** | **529** | 500 | |
+| **合计** | **552** | 500 | |
 
 ## 3. iOS 交互用例
 
@@ -81,3 +82,40 @@
 | 换章后可见区间偏移相同则不上报，位置不保存 | UI 测试（位置恢复） | 比较章节 |
 | 重新打开阅读器时首屏上报覆盖已保存位置（竞态） | UI 测试（全量运行偶发失败） | 先读位置再填充章节 |
 | 设置保存后密钥掩码不刷新 | UI 测试 | 掩码改为显式状态 |
+| 上下文截断讨论历史/反思/记忆后追加“…”，省略号的 token 未预留，组装用量可超过预算（CTX-03） | 边界测试（预算 200 时用量超出） | 截断到“剩余预算 − 省略号”后再追加；回归测试“CTX-03 讨论历史可截断以装入剩余预算”（提交 `6b1f0f8`） |
+
+## 5. 本轮新增用例与各自防范的缺陷（529 → 552）
+
+每条新增用例都对应一个具体失效方式。审查时删除了 2 条：
+- `ReaderNavigator` 未知章节回退（提交前删除）：应用不使用 `ReaderNavigator`，真实回退逻辑在 `ReaderModel.load`，该用例只测到无调用方的代码；
+- “未结束会话列表不含已结束会话”（`77da5c4` 删除）：`ReadingSessionCoreTests` 的中断恢复用例已在 SQLite 仓储上断言恢复后 `openSessions()` 为空，防的是同一缺陷。
+
+| 模块 | 用例 | 防范的缺陷 |
+|---|---|---|
+| ContextEngineering | 讨论历史可截断以装入剩余预算 | 截断后追加省略号使用量超出预算（本轮实际发现并修复） |
+| ContextEngineering | 丢弃中间候选后标签仍连续编号 | 先编号后过滤导致 E1、E3 跳号，模型引用的标签与证据错位 |
+| ContextEngineering | 同文本出现在原文与反思时保留原文 | 去重保留先出现的低优先级来源（反思），原文证据被当作重复丢弃；标点差异导致漏去重 |
+| ContextEngineering | 同一来源内按分数从高到低排序 | 按输入顺序装入，预算不足时高分证据被裁掉 |
+| ContextEngineering | 大量候选时估算用量始终不超过预算 | 多种预算（0～3000）下组装超预算，或候选既未入选也未记入丢弃清单 |
+| ContextEngineering | 只有反思与记忆时不算书籍证据 | 只凭个人材料就被当作“有原文依据”，跳过证据不足提示 |
+| ContextEngineering | 证据头部标注章节标题与“当前选段” | 提示词丢失章节/选段标记，模型无法区分当前选段与其他证据 |
+| ContextEngineering | 证据与问题中伪造的开始标签同样被转义 | 原文或问题里的 `<evidence>` 伪造新证据块（提示注入） |
+| ContextEngineering | 引用标签允许逗号两侧空格与顿号分隔 | `[E1 , E2]`、`[E3、E4]` 解析不到，陈述丢失引用被误判证据不足 |
+| ContextEngineering | 组合引用中只剔除伪造部分 | `[E1、E9]` 整组删除（丢掉有效引用）或整组保留（保留伪造引用） |
+| ContextEngineering | 证据来源映射 | 证据类型与上下文来源对应错误，来源过滤放行/拦截了错误的证据类型 |
+| ContextRouting | 已授权但没有阅读状态的书被拒绝 | 已删除的书仍在授权列表中，得到空或不受限的检索范围 |
+| ContextRouting | 全书范围允许未读章节但锁定版本 | 用户切换全书后仍拦截未读章节，或放行其他版本的旧内容 |
+| ContextRouting | needs_retrieval=false 被解析并保留 | 解析时默认值覆盖 false，选段解释类问题被强制检索 |
+| ContextRouting | 英文章节关键词识别为章节理解 | 规则规划只认中文“本章”，英文书的章节问题走错意图 |
+| ReaderCore | 章首/章尾锚点前后文为空不越界 | 取锚点前后文时字符串越界崩溃 |
+| ReaderCore | 空锚点无法重新定位，报告失效 | 空字符串在任意位置“匹配”，失效定位被错误重新定位到章首 |
+| ReaderCore | 超出章节末尾的偏移落在最后一页 | 页码查找返回越界下标或 -1 |
+| Persistence | 书签保存、按书列出与删除（SQLite） | 书签查询不按书过滤：另一本书同章节的书签显示为“已加书签”（已有的切换用例只有一本书，测不到过滤） |
+| Persistence | 另一提议使用相同幂等键时被拒绝且不覆盖 | `INSERT OR REPLACE` 类问题：重复键静默覆盖原提议 |
+| Persistence | Markdown 导出标注来源不可访问与失效证据 | 导出丢失“阅读文件已删除”“来源已失效”标记，读者误以为证据仍有效 |
+| ReaderAgent | 未读章节上的批注不进入讨论证据 | 未读区间的批注把后文内容带进讨论（剧透，READ-05） |
+| ReaderAgent | 阅读现场位于未读区间的反思不进入讨论证据 | 同上，经反思泄露未读内容 |
+
+## 6. 模拟器本地时延（参考）
+
+见 [reports/perf-sim-20261018T135819.md](reports/perf-sim-20261018T135819.md)。**模拟器参考值，不作为设备验收 D-13 依据。**

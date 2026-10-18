@@ -30,7 +30,7 @@ Package.swift   核心包（依赖：GRDB 7.11.1、ZIPFoundation 0.9.20，版本
 | macOS | 27.0（Apple Silicon） |
 | Xcode / Swift | Xcode 27.1，Swift 6.4（Swift 6 语言模式，完整并发检查） |
 | iOS 模拟器 | iPhone 18 Pro，iOS 27.0 |
-| 最低系统 | iOS 18.0（工程设置）；本机未安装 iOS 18 模拟器运行时，**最低系统尚未实测** |
+| 最低系统 | iOS 18.0（工程设置）；Xcode 27.1 运行时目录不提供 iOS 18.x，**最低系统未验收**（编译通过不等于运行期行为，见 [DeviceAcceptance.md](Docs/DeviceAcceptance.md)） |
 
 ## 构建与测试
 
