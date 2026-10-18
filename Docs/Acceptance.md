@@ -9,7 +9,7 @@
 | ACCEPT-01 | 18 个真实库模块，职责和依赖清楚 | **达成** | [Architecture.md](Architecture.md)；`Package.swift` 18 个 library target，SwiftPM 保证无循环；每个模块有调用方与测试 |
 | ACCEPT-02 | 第 5 节全部功能要求落实 | **大部分达成** | 本表第 2 节；未完成项为真实模型效果评测，以及未接入 Readium（偏离计划技术）；真机语音/中断已人工验收（D-04/05/06） |
 | ACCEPT-03 | ≥500 核心自动化与 ≥20 iOS 交互测试通过 | **达成（模拟器 iOS 27.0，提交 `77da5c4`）** | 核心 552/552 通过；iOS 交互 24/24 通过（[TestReport.md](TestReport.md)） |
-| ACCEPT-04 | iOS 构建、安装、核心页面和完整演示通过 | **模拟器部分达成；真机 D-02～D-14 大部分达到，未整体验收** | 模拟器构建/安装/全部页面可用；iPhone 15 Pro Max（iOS 27.0.1）Release 签名安装与启动完成，24 条交互测试均在真机上通过（分次运行，见 DeviceAcceptance 1.1）；D-02、D-04～D-10、D-12 由用户手工执行并报告达到（锁屏、语音、来电、拒绝麦克风、连接检测、真实模型讨论、飞行模式、取消、跨设备 iPhone 16e 恢复）；仍未完成：iOS 18 实测、从“文件”App 导入（D-01 人工部分）、真实模型出题（D-11 人工部分）与演示录像（[DeviceAcceptance.md](DeviceAcceptance.md)） |
+| ACCEPT-04 | iOS 构建、安装、核心页面和完整演示通过 | **模拟器部分达成；真机 D-01～D-14 达到，未整体验收** | 模拟器构建/安装/全部页面可用；iPhone 15 Pro Max（iOS 27.0.1）Release 签名安装与启动完成，24 条交互测试均在真机上通过（分次运行，见 DeviceAcceptance 1.1）；D-01、D-02、D-04～D-12 的人工部分由用户手工执行并报告达到（“文件”App 导入、锁屏、语音、来电、拒绝麦克风、连接检测、真实模型讨论、飞行模式、取消、真实模型出题、跨设备 iPhone 16e 恢复）；仍未完成：iOS 18 实测与演示录像（[DeviceAcceptance.md](DeviceAcceptance.md)） |
 | ACCEPT-05 | 对话、Embedding、Rerank 真实接口可用 | **已验收** | 2026-10-18T02:07:16Z `tt-live-check` 三项通过（[报告](reports/live-check-2026-10-18T020716Z.md)）：对话 `qwen-plus` 3.5 s，流式 13 帧，用量 63；`text-embedding-v4` 1.8 s，12/12，1024 维，相关 0.708 / 无关 0.361；`qwen3-rerank` 0.43 s，原生协议，最高分命中期望文档。只证明接口可用，不是效果评测（见 ACCEPT-07） |
 | ACCEPT-06 | 阅读边界、引用有效性和预算规则通过 | **规则测试达成；开发集边界 0 违规** | READ-04/05、EVID-01、RUN-01 测试；边界开发集结果见 [Evaluation.md](Evaluation.md)；验收集（人工复核）未建立 |
 | ACCEPT-07 | 检索、回答依据、复核、记忆、自测达到阈值 | **未验收** | 开发集与离线基线已运行（[Evaluation.md](Evaluation.md)）；冻结的人工标注验收集与真实模型评测需要人工与密钥 |
@@ -117,7 +117,7 @@
 1. **未接入 Readium**（偏离 3.1 计划）：阅读器显示规范化纯文本（保留段落），不显示原书图片、CSS 与复杂排版。选择原因与替换路径见 [Architecture.md](Architecture.md#4-关键取舍)。
 2. **真实模型只做了接口联调，未做效果评测**：`tt-live-check` 已对百炼 `qwen-plus`、`text-embedding-v4`、`qwen3-rerank` 三项通过（ACCEPT-05）；`tt-bench eval --live`（真实检索/裁判在固定数据集上的效果）尚未运行。
 3. **效果评测只有开发集**：数据集为开发者自拟、规则生成（`draft_unreviewed`），检索/复核/自测的离线结果使用词袋向量与启发式裁判作为代理，**不能作为第 9 节验收结论**；需要独立人工标注、冻结验收集与真实模型运行。
-4. **设备验收部分完成**：iPhone 15 Pro Max（iOS 27.0.1）已完成签名安装、D-13（[perf-device 报告](reports/perf-device-20261018T155925.md)）与 D-14（[soak 报告](reports/soak-device-20261018T155925.md)，由视图模型自动驱动，不是触控操作）；用户手工完成 D-02、D-04～D-10、D-12；仍未完成：从“文件”App 导入（D-01 人工部分）、真实模型出题（D-11 人工部分）、英文语音转写、真机 5k/20k 子块召回与演示录像。模拟器上的 Release 采样只作参考（[perf-sim 报告](reports/perf-sim-20261018T135819.md)），不作为 D-13 依据。
+4. **设备验收部分完成**：iPhone 15 Pro Max（iOS 27.0.1）已完成签名安装、D-13（[perf-device 报告](reports/perf-device-20261018T155925.md)）与 D-14（[soak 报告](reports/soak-device-20261018T155925.md)，由视图模型自动驱动，不是触控操作）；用户手工完成 D-01、D-02、D-04～D-12 的人工部分；仍未完成：英文语音转写、真机 5k/20k 子块召回与演示录像。模拟器上的 Release 采样只作参考（[perf-sim 报告](reports/perf-sim-20261018T135819.md)），不作为 D-13 依据。
 5. **语音输入**：自动化测试使用确定性语音桩；真机中文录音转写已由用户手工验收（D-04），英文未测；SFSpeechRecognizer 转写在其他设备上可能受语言包与网络影响。
 6. **Token 用量**：没有精确 tokenizer，上下文预算用保守估算；服务端返回的用量单独记录，未返回时标记“未知”。
 7. **UI 测试使用确定性模型响应**（`-uitest`），不代表真实模型输出质量。
