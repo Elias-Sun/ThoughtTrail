@@ -13,7 +13,11 @@ mkdir -p "$OUT" Docs/reports
 xcodebuild -project ThoughtTrail.xcodeproj -scheme ThoughtTrail -configuration Release -destination "id=$DEV" \
   -derivedDataPath .build/xcode-device -allowProvisioningUpdates -skipPackagePluginValidation build > "$OUT/build.log" 2>&1 \
   || { tail -30 "$OUT/build.log"; exit 1; }
-xcrun devicectl device install app --device "$DEV" .build/xcode-device/Build/Products/Release-iphoneos/ThoughtTrail.app > /dev/null
+# 安装偶发“Connection interrupted”（CoreDeviceError 3002），最多重试 3 次
+for attempt in 1 2 3; do
+  xcrun devicectl device install app --device "$DEV" .build/xcode-device/Build/Products/Release-iphoneos/ThoughtTrail.app > "$OUT/install.log" 2>&1 && break
+  echo "安装第 $attempt 次失败，重试"; [ "$attempt" = 3 ] && { tail -5 "$OUT/install.log"; exit 1; }
+done
 xcrun devicectl device process launch --device "$DEV" --terminate-existing "$BUNDLE" -- -demo -perf-reset -perf-recall > /dev/null
 for _ in $(seq 1 180); do
   xcrun devicectl device copy from --device "$DEV" --domain-type appDataContainer --domain-identifier "$BUNDLE" \
