@@ -58,6 +58,6 @@
 ## 6. 仍有哪些限制
 
 见 [Acceptance.md](Acceptance.md) 的“未完成项与已知限制”。最重要的三条：
-1. 三类真实接口联调已通过（[live-check 报告](reports/live-check-2026-10-18T020716Z.md)）；真实模型的效果评测（`tt-bench eval --live`）、基于人工标注的冻结验收集、真机（语音、来电中断、性能 D-13/D-14）验收需要标注人力与设备，尚未完成；
+1. 三类真实接口联调已通过（[live-check 报告](reports/live-check-2026-10-18T020716Z.md)）；真机验收 D-02～D-14 大部分已完成（自动化 + 用户手工，见 DeviceAcceptance）；真实模型的效果评测（`tt-bench eval --live`）、基于人工标注的冻结验收集、iOS 18 实测与演示录像尚未完成；
 2. 未接入 Readium，阅读器以规范化正文显示，不保留原书复杂排版与图片；
 3. 只在 iOS 27 模拟器上运行过；iOS 18 最低系统未验收（Xcode 27.1 运行时目录不提供 18.x）。deployment target 18.0 下编译通过只说明没有无条件调用新 API，不等于运行期行为。
