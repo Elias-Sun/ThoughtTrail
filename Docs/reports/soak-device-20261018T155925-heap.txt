@@ -1,0 +1,1 @@
+category="All Heap Allocations" persistent-bytes="35291312" count-persistent="136843" total-bytes="11244899232" transient-bytes="11209607920" count-events="44006021" count-transient="8790876" count-total="8927719"

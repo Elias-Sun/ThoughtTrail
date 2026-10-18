@@ -1,0 +1,16 @@
+{
+  "backups" : 52,
+  "book" : "长篇性能样本",
+  "cancels" : 175,
+  "cycles" : 525,
+  "device" : "iPhone16,2 iOS 27.0.1",
+  "discussions_completed" : 350,
+  "elapsed_s" : 1802.4560790061951,
+  "failure_kinds" : {
+
+  },
+  "failures" : 0,
+  "highlights" : 525,
+  "minutes" : 30,
+  "reflections" : 525
+}
