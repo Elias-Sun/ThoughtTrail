@@ -1,0 +1,44 @@
+[
+  {
+    "baseURL" : "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "checks" : {
+      "complete.finish" : "stop",
+      "complete.json_parse" : "ok",
+      "complete.usage" : "19+5（服务端报告）",
+      "stream.delta_frames" : "13",
+      "stream.finish" : "stop",
+      "stream.usage" : "63"
+    },
+    "kind" : "chat",
+    "latencyMs" : 3512,
+    "model" : "qwen-plus",
+    "ok" : true
+  },
+  {
+    "baseURL" : "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "checks" : {
+      "batches" : "2（每批 ≤10）",
+      "cos(related)" : "0.708",
+      "cos(unrelated)" : "0.361",
+      "count" : "12/12",
+      "dimensions" : "1024"
+    },
+    "kind" : "embedding",
+    "latencyMs" : 1817,
+    "model" : "text-embedding-v4",
+    "ok" : true
+  },
+  {
+    "baseURL" : "https://dashscope.aliyuncs.com/api/v1",
+    "checks" : {
+      "protocol" : "native",
+      "results" : "3",
+      "scores" : "1:0.904, 2:0.219, 0:0.138",
+      "top_index" : "1（期望 1）"
+    },
+    "kind" : "rerank",
+    "latencyMs" : 430,
+    "model" : "qwen3-rerank",
+    "ok" : true
+  }
+]
