@@ -1,0 +1,1420 @@
+环境：macOS 27.0.1；Xcode 27.1 Build version 27A9275 ；目标：id=00008130-00164D581E62001C；参数：-only-testing:ThoughtTrailUITests/ReaderUITests
+提交：3f2c830（工作区有未提交改动）
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ThoughtTrail.xcodeproj -scheme ThoughtTrail -destination id=00008130-00164D581E62001C -derivedDataPath .build/xcode -skipPackagePluginValidation -allowProvisioningUpdates -resultBundlePath .build/ui-20261018T165017.xcresult test "-only-testing:ThoughtTrailUITests/ReaderUITests"
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  GRDB: https://github.com/groue/GRDB.swift.git @ 7.11.1
+  ThoughtTrail: /Users/sunyibo/Desktop/ThoughtTrai
+  ZIPFoundation: https://github.com/weichsel/ZIPFoundation.git @ 0.9.20
+
+Writing result bundle at path:
+	/Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165017.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (43 targets)
+    Target 'ThoughtTrailUITests' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ThoughtTrail' in project 'ThoughtTrail'
+    Target 'ThoughtTrail' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AppInfrastructure-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore-product' in project 'ThoughtTrail'
+    Target 'LearningCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'EvidenceVerificationCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AchievementCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AppInfrastructure-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AppInfrastructure' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'AppInfrastructure' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'Persistence-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'GRDB-product' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+    Target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDBSQLite' in project 'GRDB'
+    Target 'GRDBSQLite' in project 'GRDB' (no dependencies)
+    Target 'GRDB_GRDB' in project 'GRDB' (no dependencies)
+    Target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ModelProviders-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderAgent-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AgentRuntime-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'BrainCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextEngineering-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextRouting-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'RetrievalCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'SpeechCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReflectionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReadingSessionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LibraryCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation'
+    Target 'ZIPFoundation' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation'
+    Target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.1.sdk /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKStatCaches.noindex/iphoneos27.1-24A94232-7568eff67e6f40c5a98ca4ef40d9005c.sdkstatcache
+    cd /Users/sunyibo/Desktop/ThoughtTrai/ThoughtTrail.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.1.sdk -o /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKStatCaches.noindex/iphoneos27.1-24A94232-7568eff67e6f40c5a98ca4ef40d9005c.sdkstatcache
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+2026-10-18 16:50:23.427 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:50:23.861676+1100 ThoughtTrailUITests-Runner[2750:221006] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-10-18 16:50:24.307.
+Test Suite 'ThoughtTrailUITests.xctest' started at 2026-10-18 16:50:24.308.
+Test Suite 'ReaderUITests' started at 2026-10-18 16:50:24.308.
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_REF03_microphoneDeniedFallsBackToText]' started.
+    t =     0.00s Start Test at 2026-10-18 16:50:24.309
+    t =     0.01s Set Up
+    t =     0.01s Open app.thoughttrail.ThoughtTrail
+    t =     0.01s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:50:24.391 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:50:24.391 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:50:29.914 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     6.37s         Setting up automation session
+    t =     6.93s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.15s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     9.16s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     9.16s         Checking existence of `"library.book.阅读之道" Button`
+    t =     9.18s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =     9.34s Tap "library.book.阅读之道" Button
+    t =     9.34s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.35s     Find the "library.book.阅读之道" Button
+    t =     9.36s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =     9.40s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     9.42s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =     9.45s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.45s     Synthesize event
+    t =     9.76s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.10s Waiting 10.0s for "reader.text" TextView to exist
+    t =    11.13s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =    11.13s         Checking existence of `"reader.text" TextView`
+    t =    11.14s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    11.22s             Find: Descendants matching type TextView
+    t =    11.23s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    11.23s Waiting 8.0s for "reader.more" Button to exist
+    t =    12.25s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =    12.25s         Checking existence of `"reader.more" Button`
+    t =    12.26s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    12.35s Tap "reader.more" Button
+    t =    12.35s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.35s     Find the "reader.more" Button
+    t =    12.36s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    12.41s     Check for interrupting elements affecting "reader.more" Button
+    t =    12.43s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    12.47s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.47s     Synthesize event
+    t =    12.79s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.63s Waiting 5.0s for "reader.reflect" Button to exist
+    t =    14.64s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.reflect" Button`
+    t =    14.64s         Checking existence of `"reader.reflect" Button`
+    t =    14.65s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    14.74s Tap "reader.reflect" Button
+    t =    14.74s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.74s     Find the "reader.reflect" Button
+    t =    14.75s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    14.79s     Check for interrupting elements affecting "reader.reflect" Button
+    t =    14.80s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    14.83s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.84s     Synthesize event
+    t =    15.13s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    16.25s Waiting 8.0s for "voice.start" Button to exist
+    t =    17.26s     Checking `Expect predicate `existsNoRetry == 1` for object "voice.start" Button`
+    t =    17.27s         Checking existence of `"voice.start" Button`
+    t =    17.27s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    17.40s Tap "voice.start" Button
+    t =    17.40s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    17.41s     Find the "voice.start" Button
+    t =    17.41s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    17.50s     Check for interrupting elements affecting "voice.start" Button
+    t =    17.51s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    17.57s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    17.58s     Synthesize event
+    t =    17.86s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.13s Waiting 10.0s for "voice.error" StaticText to exist
+    t =    19.16s     Checking `Expect predicate `existsNoRetry == 1` for object "voice.error" StaticText`
+    t =    19.16s         Checking existence of `"voice.error" StaticText`
+    t =    19.16s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    19.27s             Find: Descendants matching type StaticText
+    t =    19.28s             Find: Elements matching predicate '"voice.error" IN identifiers'
+    t =    19.28s Tap "reflection.text" TextView
+    t =    19.28s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.29s     Find the "reflection.text" TextView
+    t =    19.29s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    19.37s     Check for interrupting elements affecting "reflection.text" TextView
+    t =    19.38s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    19.44s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    19.45s     Synthesize event
+    t =    19.75s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.82s Type '改用文字记录' into "reflection.text" TextView
+    t =    19.82s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    20.22s     Find the "reflection.text" TextView
+    t =    20.22s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    20.37s     Check for interrupting elements affecting "reflection.text" TextView
+    t =    20.39s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    20.47s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    20.48s     Synthesize event
+2026-10-18 16:50:44.894679+1100 ThoughtTrailUITests-Runner[2750:221006] [MC] Reading from public effective user settings.
+    t =    20.80s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    21.03s Tap "reflection.save" Button
+    t =    21.03s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    21.05s     Find the "reflection.save" Button
+    t =    21.05s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    21.15s         Find: Descendants matching type Button
+    t =    21.15s         Find: Elements matching predicate '"reflection.save" IN identifiers'
+    t =    21.16s     Check for interrupting elements affecting "reflection.save" Button
+    t =    21.17s         Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    21.25s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    21.25s     Synthesize event
+    t =    21.55s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    21.97s Waiting 8.0s for "banner.message" StaticText to exist
+    t =    22.99s     Checking `Expect predicate `existsNoRetry == 1` for object "banner.message" StaticText`
+    t =    23.00s         Checking existence of `"banner.message" StaticText`
+    t =    23.00s             Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    23.08s             Find: Descendants matching type StaticText
+    t =    23.08s             Find: Elements matching predicate '"banner.message" IN identifiers'
+    t =    23.08s Find the "banner.message" StaticText
+    t =    23.09s     Requesting snapshot of accessibility hierarchy for app with pid 2753
+    t =    23.14s     Find: Descendants matching type StaticText
+    t =    23.14s     Find: Elements matching predicate '"banner.message" IN identifiers'
+    t =    23.15s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_REF03_microphoneDeniedFallsBackToText]' passed (23.235 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_REF03_voiceReflection]' started.
+    t =     0.00s Start Test at 2026-10-18 16:50:47.545
+    t =     0.02s Set Up
+2026-10-18 16:50:47.586 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:50:47.587 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:50:47.587 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     0.02s Open app.thoughttrail.ThoughtTrail
+    t =     0.02s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.02s         Terminate app.thoughttrail.ThoughtTrail:2753
+2026-10-18 16:50:48.596 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:50:48.596 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:50:48.605 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.29s         Setting up automation session
+    t =     1.57s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     2.79s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     3.82s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     3.82s         Checking existence of `"library.book.阅读之道" Button`
+    t =     3.83s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     3.99s Tap "library.book.阅读之道" Button
+    t =     3.99s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.99s     Find the "library.book.阅读之道" Button
+    t =     4.00s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     4.05s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.07s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     4.11s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.11s     Synthesize event
+    t =     4.40s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.75s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.78s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.78s         Checking existence of `"reader.text" TextView`
+    t =     5.78s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     5.85s             Find: Descendants matching type TextView
+    t =     5.86s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     5.87s Waiting 8.0s for "reader.more" Button to exist
+    t =     6.87s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     6.87s         Checking existence of `"reader.more" Button`
+    t =     6.88s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     6.98s Tap "reader.more" Button
+    t =     6.98s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     6.99s     Find the "reader.more" Button
+    t =     6.99s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     7.05s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.07s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     7.11s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.12s     Synthesize event
+    t =     7.43s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.26s Waiting 5.0s for "reader.reflect" Button to exist
+    t =     9.29s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.reflect" Button`
+    t =     9.29s         Checking existence of `"reader.reflect" Button`
+    t =     9.30s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     9.39s Tap "reader.reflect" Button
+    t =     9.39s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.40s     Find the "reader.reflect" Button
+    t =     9.40s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     9.46s     Check for interrupting elements affecting "reader.reflect" Button
+    t =     9.48s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =     9.52s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.52s     Synthesize event
+    t =     9.82s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.97s Waiting 8.0s for "voice.start" Button to exist
+    t =    11.99s     Checking `Expect predicate `existsNoRetry == 1` for object "voice.start" Button`
+    t =    11.99s         Checking existence of `"voice.start" Button`
+    t =    12.00s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    12.11s Tap "voice.start" Button
+    t =    12.11s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.11s     Find the "voice.start" Button
+    t =    12.11s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    12.18s     Check for interrupting elements affecting "voice.start" Button
+    t =    12.19s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    12.25s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.26s     Synthesize event
+    t =    12.55s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.82s Waiting 8.0s for "voice.stop" Button to exist
+    t =    13.82s     Checking `Expect predicate `existsNoRetry == 1` for object "voice.stop" Button`
+    t =    13.82s         Checking existence of `"voice.stop" Button`
+    t =    13.82s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    13.92s Tap "voice.stop" Button
+    t =    13.92s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.92s     Find the "voice.stop" Button
+    t =    13.92s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    13.99s     Check for interrupting elements affecting "voice.stop" Button
+    t =    14.00s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    14.05s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.05s     Synthesize event
+    t =    14.33s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.35s Waiting 10.0s for "voice.transcript" StaticText to exist
+    t =    15.35s     Checking `Expect predicate `existsNoRetry == 1` for object "voice.transcript" StaticText`
+    t =    15.35s         Checking existence of `"voice.transcript" StaticText`
+    t =    15.36s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    15.46s             Find: Descendants matching type StaticText
+    t =    15.47s             Find: Elements matching predicate '"voice.transcript" IN identifiers'
+    t =    15.49s Find the "reflection.text" TextView
+    t =    15.49s     Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    15.57s Tap "reflection.save" Button
+    t =    15.57s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.58s     Find the "reflection.save" Button
+    t =    15.58s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    15.64s         Find: Descendants matching type Button
+    t =    15.64s         Find: Elements matching predicate '"reflection.save" IN identifiers'
+    t =    15.65s     Check for interrupting elements affecting "reflection.save" Button
+    t =    15.66s         Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    15.72s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    15.73s     Synthesize event
+    t =    16.03s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    16.44s Waiting 8.0s for "banner.message" StaticText to exist
+    t =    17.47s     Checking `Expect predicate `existsNoRetry == 1` for object "banner.message" StaticText`
+    t =    17.47s         Checking existence of `"banner.message" StaticText`
+    t =    17.48s             Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    17.55s             Find: Descendants matching type StaticText
+    t =    17.56s             Find: Elements matching predicate '"banner.message" IN identifiers'
+    t =    17.56s Find the "banner.message" StaticText
+    t =    17.57s     Requesting snapshot of accessibility hierarchy for app with pid 2757
+    t =    17.61s     Find: Descendants matching type StaticText
+    t =    17.61s     Find: Elements matching predicate '"banner.message" IN identifiers'
+    t =    17.61s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_REF03_voiceReflection]' passed (17.651 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI05_restorePosition]' started.
+    t =     0.00s Start Test at 2026-10-18 16:51:05.196
+    t =     0.01s Set Up
+    t =     0.01s Open app.thoughttrail.ThoughtTrail
+    t =     0.02s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.02s         Terminate app.thoughttrail.ThoughtTrail:2757
+2026-10-18 16:51:05.490 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:05.490 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:05.490 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:06.294 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:51:06.294 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:51:06.306 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.37s         Setting up automation session
+    t =     1.80s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.01s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     4.03s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     4.03s         Checking existence of `"library.book.阅读之道" Button`
+    t =     4.03s             Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     4.18s Tap "library.book.阅读之道" Button
+    t =     4.18s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.19s     Find the "library.book.阅读之道" Button
+    t =     4.19s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     4.25s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.26s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     4.30s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.31s     Synthesize event
+    t =     4.60s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.95s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.96s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.96s         Checking existence of `"reader.text" TextView`
+    t =     5.96s             Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     6.03s             Find: Descendants matching type TextView
+    t =     6.03s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     6.04s Waiting 8.0s for "reader.toc" Button to exist
+    t =     7.04s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.toc" Button`
+    t =     7.04s         Checking existence of `"reader.toc" Button`
+    t =     7.05s             Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     7.14s             Find: Descendants matching type Button
+    t =     7.14s             Find: Elements matching predicate '"reader.toc" IN identifiers'
+    t =     7.14s Tap "reader.toc" Button
+    t =     7.15s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     7.15s     Find the "reader.toc" Button
+    t =     7.16s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     7.21s         Find: Descendants matching type Button
+    t =     7.21s         Find: Elements matching predicate '"reader.toc" IN identifiers'
+    t =     7.21s     Check for interrupting elements affecting "reader.toc" Button
+    t =     7.23s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     7.27s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.28s     Synthesize event
+    t =     7.59s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.03s Waiting 8.0s for "第三章 思考的习惯" Button to exist
+    t =     9.06s     Checking `Expect predicate `existsNoRetry == 1` for object "第三章 思考的习惯" Button`
+    t =     9.06s         Checking existence of `"第三章 思考的习惯" Button`
+    t =     9.07s             Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     9.19s Tap "第三章 思考的习惯" Button
+    t =     9.19s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.19s     Find the "第三章 思考的习惯" Button
+    t =     9.19s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     9.26s     Check for interrupting elements affecting "第三章 思考的习惯" Button
+    t =     9.27s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =     9.33s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.34s     Synthesize event
+    t =     9.62s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.99s Waiting 10.0s for "reader.chapterTitle" StaticText to exist
+    t =    11.01s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.chapterTitle" StaticText`
+    t =    11.01s         Checking existence of `"reader.chapterTitle" StaticText`
+    t =    11.02s             Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =    11.09s             Find: Descendants matching type StaticText
+    t =    11.09s             Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    12.13s Checking `Expect predicate `label CONTAINS "第三章"` for object "reader.chapterTitle" StaticText`
+    t =    12.13s     Find the "reader.chapterTitle" StaticText
+    t =    12.14s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =    12.21s         Find: Descendants matching type StaticText
+    t =    12.21s         Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    14.23s Tap Button (Element at index 0)
+    t =    14.23s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.25s     Find the Button (Element at index 0)
+    t =    14.25s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =    14.32s         Find: Descendants matching type NavigationBar
+    t =    14.33s         Find: Descendants matching type Button
+    t =    14.33s         Find: Element at index 0
+    t =    14.35s     Check for interrupting elements affecting "BackButton" Button
+    t =    14.36s         Requesting snapshot of accessibility hierarchy for app with pid 2763
+    t =    14.41s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.41s     Synthesize event
+    t =    14.72s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.10s Terminate app.thoughttrail.ThoughtTrail:2763
+2026-10-18 16:51:20.306 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:20.306 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:20.307 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    16.17s Open app.thoughttrail.ThoughtTrail
+    t =    16.19s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:51:21.391 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:51:21.391 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:51:21.399 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    16.41s         Setting up automation session
+    t =    16.71s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    17.89s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =    18.91s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =    18.91s         Checking existence of `"library.book.阅读之道" Button`
+    t =    18.92s             Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    19.07s Tap "library.book.阅读之道" Button
+    t =    19.07s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.07s     Find the "library.book.阅读之道" Button
+    t =    19.08s         Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    19.13s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =    19.14s         Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    19.18s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    19.18s     Synthesize event
+    t =    19.47s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.82s Waiting 10.0s for "reader.text" TextView to exist
+    t =    20.83s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =    20.83s         Checking existence of `"reader.text" TextView`
+    t =    20.83s             Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    20.91s             Find: Descendants matching type TextView
+    t =    20.91s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    20.92s Waiting 5.0s for "reader.chapterTitle" StaticText to exist
+    t =    21.92s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.chapterTitle" StaticText`
+    t =    21.92s         Checking existence of `"reader.chapterTitle" StaticText`
+    t =    21.92s             Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    21.99s             Find: Descendants matching type StaticText
+    t =    21.99s             Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    22.00s Find the "reader.chapterTitle" StaticText
+    t =    22.00s     Requesting snapshot of accessibility hierarchy for app with pid 2765
+    t =    22.05s     Find: Descendants matching type StaticText
+    t =    22.05s     Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    22.06s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI05_restorePosition]' passed (22.213 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI06_fontAndTheme]' started.
+    t =     0.00s Start Test at 2026-10-18 16:51:27.413
+    t =     0.03s Set Up
+    t =     0.03s Open app.thoughttrail.ThoughtTrail
+    t =     0.03s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.04s         Terminate app.thoughttrail.ThoughtTrail:2765
+2026-10-18 16:51:27.455 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:27.455 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:27.455 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:28.545 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:51:28.546 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:51:28.554 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.35s         Setting up automation session
+    t =     1.65s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     2.80s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     3.84s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     3.84s         Checking existence of `"library.book.阅读之道" Button`
+    t =     3.85s             Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     4.01s Tap "library.book.阅读之道" Button
+    t =     4.01s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.01s     Find the "library.book.阅读之道" Button
+    t =     4.01s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     4.07s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.09s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     4.13s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.13s     Synthesize event
+    t =     4.42s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.78s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.79s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.79s         Checking existence of `"reader.text" TextView`
+    t =     5.80s             Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     5.91s             Find: Descendants matching type TextView
+    t =     5.91s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     5.92s Tap "reader.nextPage" Button
+    t =     5.92s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     5.93s     Find the "reader.nextPage" Button
+    t =     5.93s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     5.97s         Find: Descendants matching type Button
+    t =     5.97s         Find: Elements matching predicate '"reader.nextPage" IN identifiers'
+    t =     5.98s     Check for interrupting elements affecting "reader.nextPage" Button
+    t =     5.99s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     6.03s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     6.03s     Synthesize event
+    t =     6.32s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     6.35s Find the "reader.chapterTitle" StaticText
+    t =     6.35s     Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     6.43s     Find: Descendants matching type StaticText
+    t =     6.43s     Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =     6.44s Waiting 8.0s for "reader.more" Button to exist
+    t =     7.45s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     7.45s         Checking existence of `"reader.more" Button`
+    t =     7.46s             Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     7.55s Tap "reader.more" Button
+    t =     7.55s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     7.56s     Find the "reader.more" Button
+    t =     7.56s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     7.62s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.64s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     7.68s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.69s     Synthesize event
+    t =     8.00s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.85s Waiting 5.0s for "reader.appearance" Button to exist
+    t =     9.86s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.appearance" Button`
+    t =     9.86s         Checking existence of `"reader.appearance" Button`
+    t =     9.87s             Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =     9.95s Tap "reader.appearance" Button
+    t =     9.95s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.96s     Find the "reader.appearance" Button
+    t =     9.96s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    10.03s     Check for interrupting elements affecting "reader.appearance" Button
+    t =    10.04s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    10.09s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    10.09s     Synthesize event
+    t =    10.38s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    11.50s Waiting 10.0s for "appearance.fontSize" StaticText to exist
+    t =    12.51s     Checking `Expect predicate `existsNoRetry == 1` for object "appearance.fontSize" StaticText`
+    t =    12.52s         Checking existence of `"appearance.fontSize" StaticText`
+    t =    12.53s             Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    12.64s             Find: Descendants matching type StaticText
+    t =    12.64s             Find: Elements matching predicate '"appearance.fontSize" IN identifiers'
+    t =    12.65s Find the "appearance.fontSize" StaticText
+    t =    12.65s     Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    12.71s     Find: Descendants matching type StaticText
+    t =    12.71s     Find: Elements matching predicate '"appearance.fontSize" IN identifiers'
+    t =    12.71s Tap "appearance.larger" Button
+    t =    12.71s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.72s     Find the "appearance.larger" Button
+    t =    12.72s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    12.77s         Find: Descendants matching type Button
+    t =    12.77s         Find: Elements matching predicate '"appearance.larger" IN identifiers'
+    t =    12.78s     Check for interrupting elements affecting "appearance.larger" Button
+    t =    12.79s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    12.84s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.84s     Synthesize event
+    t =    13.13s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.86s Find the "appearance.fontSize" StaticText
+    t =    13.87s     Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    13.97s     Find: Descendants matching type StaticText
+    t =    13.98s     Find: Elements matching predicate '"appearance.fontSize" IN identifiers'
+    t =    13.98s Tap "深色" Button
+    t =    13.98s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.99s     Find the "深色" Button
+    t =    13.99s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    14.06s         Find: Descendants matching type Button
+    t =    14.06s         Find: Elements matching predicate '"深色" IN identifiers'
+    t =    14.06s     Check for interrupting elements affecting "深色" Button
+    t =    14.07s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    14.13s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.13s     Synthesize event
+    t =    14.43s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.95s Swipe down Target Application 'app.thoughttrail.ThoughtTrail'
+    t =    15.95s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.97s     Find the Target Application 'app.thoughttrail.ThoughtTrail'
+    t =    15.97s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    16.09s     Check for interrupting elements affecting "思迹" Application
+    t =    16.10s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    16.16s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    16.17s     Synthesize event
+    t =    16.56s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    17.94s Checking `Expect predicate `exists == 0` for object "appearance.fontSize" StaticText`
+    t =    17.94s     Checking existence of `"appearance.fontSize" StaticText`
+    t =    17.95s         Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    18.03s         Find: Descendants matching type StaticText
+    t =    18.04s         Find: Elements matching predicate '"appearance.fontSize" IN identifiers'
+    t =    18.04s Find the "reader.chapterTitle" StaticText
+    t =    18.04s     Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    18.09s     Find: Descendants matching type StaticText
+    t =    18.10s     Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    18.10s Checking existence of `"reader.text" TextView`
+    t =    18.10s     Requesting snapshot of accessibility hierarchy for app with pid 2767
+    t =    18.14s     Find: Descendants matching type TextView
+    t =    18.15s     Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    18.15s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI06_fontAndTheme]' passed (18.188 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI07_highlightPersists]' started.
+    t =     0.00s Start Test at 2026-10-18 16:51:45.600
+    t =     0.02s Set Up
+    t =     0.02s Open app.thoughttrail.ThoughtTrail
+    t =     0.02s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.02s         Terminate app.thoughttrail.ThoughtTrail:2767
+2026-10-18 16:51:45.628 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:45.628 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:45.628 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:51:46.690 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:51:46.690 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:51:46.697 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.32s         Setting up automation session
+    t =     1.61s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     2.77s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     3.79s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     3.79s         Checking existence of `"library.book.阅读之道" Button`
+    t =     3.80s             Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     3.96s Tap "library.book.阅读之道" Button
+    t =     3.96s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.97s     Find the "library.book.阅读之道" Button
+    t =     3.97s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     4.02s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.04s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     4.07s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.08s     Synthesize event
+    t =     4.38s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.73s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.74s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.74s         Checking existence of `"reader.text" TextView`
+    t =     5.75s             Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     5.86s             Find: Descendants matching type TextView
+    t =     5.86s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     5.87s Waiting 8.0s for "reader.more" Button to exist
+    t =     6.89s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     6.89s         Checking existence of `"reader.more" Button`
+    t =     6.90s             Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     6.99s Tap "reader.more" Button
+    t =     6.99s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     7.00s     Find the "reader.more" Button
+    t =     7.00s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     7.05s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.07s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     7.11s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.11s     Synthesize event
+    t =     7.43s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.26s Waiting 5.0s for "reader.selectParagraph" Button to exist
+    t =     9.27s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.selectParagraph" Button`
+    t =     9.28s         Checking existence of `"reader.selectParagraph" Button`
+    t =     9.28s             Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     9.38s Tap "reader.selectParagraph" Button
+    t =     9.38s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.39s     Find the "reader.selectParagraph" Button
+    t =     9.39s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     9.46s     Check for interrupting elements affecting "reader.selectParagraph" Button
+    t =     9.47s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =     9.53s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.53s     Synthesize event
+    t =     9.84s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.95s Waiting 10.0s for "selection.highlight" Button to exist
+    t =    11.97s     Checking `Expect predicate `existsNoRetry == 1` for object "selection.highlight" Button`
+    t =    11.97s         Checking existence of `"selection.highlight" Button`
+    t =    11.98s             Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    12.07s             Find: Descendants matching type Button
+    t =    12.07s             Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    12.08s Tap "selection.highlight" Button
+    t =    12.08s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.08s     Find the "selection.highlight" Button
+    t =    12.09s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    12.14s         Find: Descendants matching type Button
+    t =    12.14s         Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    12.14s     Check for interrupting elements affecting "selection.highlight" Button
+    t =    12.16s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    12.20s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.20s     Synthesize event
+    t =    12.50s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.54s Checking `Expect predicate `exists == 0` for object "selection.highlight" Button`
+    t =    13.54s     Checking existence of `"selection.highlight" Button`
+    t =    13.55s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    13.63s         Find: Descendants matching type Button
+    t =    13.63s         Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    13.63s Tap Button (Element at index 0)
+    t =    13.64s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    13.65s     Find the Button (Element at index 0)
+    t =    13.65s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    13.69s         Find: Descendants matching type NavigationBar
+    t =    13.70s         Find: Descendants matching type Button
+    t =    13.70s         Find: Element at index 0
+    t =    13.71s     Check for interrupting elements affecting "BackButton" Button
+    t =    13.72s         Requesting snapshot of accessibility hierarchy for app with pid 2771
+    t =    13.76s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    13.76s     Synthesize event
+    t =    14.07s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.44s Terminate app.thoughttrail.ThoughtTrail:2771
+2026-10-18 16:52:00.052 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:00.052 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:00.053 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    15.49s Open app.thoughttrail.ThoughtTrail
+    t =    15.51s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:52:01.117 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:52:01.117 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:52:01.130 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    15.73s         Setting up automation session
+    t =    16.03s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    17.26s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =    18.29s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =    18.30s         Checking existence of `"library.book.阅读之道" Button`
+    t =    18.30s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    18.46s Tap "library.book.阅读之道" Button
+    t =    18.46s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.47s     Find the "library.book.阅读之道" Button
+    t =    18.47s         Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    18.52s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =    18.53s         Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    18.57s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    18.57s     Synthesize event
+    t =    18.86s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.22s Waiting 10.0s for "reader.text" TextView to exist
+    t =    20.23s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =    20.23s         Checking existence of `"reader.text" TextView`
+    t =    20.24s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    20.32s             Find: Descendants matching type TextView
+    t =    20.32s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    20.32s Waiting 8.0s for "reader.more" Button to exist
+    t =    21.34s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =    21.34s         Checking existence of `"reader.more" Button`
+    t =    21.35s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    21.43s Tap "reader.more" Button
+    t =    21.43s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    21.44s     Find the "reader.more" Button
+    t =    21.45s         Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    21.50s     Check for interrupting elements affecting "reader.more" Button
+    t =    21.53s         Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    21.57s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    21.58s         Wait for com.apple.springboard to idle
+    t =    21.62s         Requesting snapshot of accessibility hierarchy for app with pid 245
+    t =    21.69s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    21.71s Failed to construct element query matching interruption. Interrupting element BannerNotification, {{8.0, 56.0}, {414.0, 66.0}}, identifier: 'NotificationShortLookView', foreground application Application 'com.apple.springboard', element application: (null). If your test failed after this unhandled interruption, please file a bug and attach your .xcresult bundle.
+    t =    21.71s     Synthesize event
+    t =    22.07s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    22.12s Waiting 5.0s for "reader.annotations" Button to exist
+    t =    23.20s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    23.20s         Checking existence of `"reader.annotations" Button`
+    t =    23.20s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    23.42s         Capturing element debug description
+    t =    24.14s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    24.14s         Checking existence of `"reader.annotations" Button`
+    t =    24.15s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    24.22s         Capturing element debug description
+    t =    25.13s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    25.13s         Checking existence of `"reader.annotations" Button`
+    t =    25.14s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    25.22s         Capturing element debug description
+    t =    26.14s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    26.14s         Checking existence of `"reader.annotations" Button`
+    t =    26.15s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    26.24s         Capturing element debug description
+    t =    27.12s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    27.13s         Checking existence of `"reader.annotations" Button`
+    t =    27.14s             Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    27.22s         Capturing element debug description
+    t =    27.22s     Checking existence of `"reader.annotations" Button`
+    t =    27.22s         Requesting snapshot of accessibility hierarchy for app with pid 2774
+    t =    27.27s Collecting debug information to assist test failure triage
+    t =    27.27s     Requesting snapshot of accessibility hierarchy for app with pid 2774
+/Users/sunyibo/Desktop/ThoughtTrai/UITests/UITestCase.swift:61: error: -[ThoughtTrailUITests.ReaderUITests test_UI07_highlightPersists] : XCTAssertTrue failed - 等待元素超时："reader.annotations" Button
+    t =    27.44s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI07_highlightPersists]' failed (27.511 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI08_editAndDeleteAnnotation]' started.
+    t =     0.00s Start Test at 2026-10-18 16:52:13.112
+    t =     0.05s Set Up
+    t =     0.05s Open app.thoughttrail.ThoughtTrail
+    t =     0.05s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.05s         Terminate app.thoughttrail.ThoughtTrail:2774
+2026-10-18 16:52:13.169 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:13.169 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:13.169 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:14.235 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:52:14.236 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:52:14.249 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.33s         Setting up automation session
+    t =     1.62s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     2.76s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     3.78s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     3.78s         Checking existence of `"library.book.阅读之道" Button`
+    t =     3.79s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     3.95s Tap "library.book.阅读之道" Button
+    t =     3.95s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.95s     Find the "library.book.阅读之道" Button
+    t =     3.95s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     4.01s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.03s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     4.07s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.07s     Synthesize event
+    t =     4.36s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.70s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.74s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.74s         Checking existence of `"reader.text" TextView`
+    t =     5.75s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     5.85s             Find: Descendants matching type TextView
+    t =     5.86s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     5.86s Waiting 8.0s for "reader.more" Button to exist
+    t =     6.88s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     6.88s         Checking existence of `"reader.more" Button`
+    t =     6.89s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     6.98s Tap "reader.more" Button
+    t =     6.98s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     6.98s     Find the "reader.more" Button
+    t =     6.99s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     7.04s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.06s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     7.10s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.11s     Synthesize event
+    t =     7.42s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.24s Waiting 5.0s for "reader.selectParagraph" Button to exist
+    t =     9.25s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.selectParagraph" Button`
+    t =     9.25s         Checking existence of `"reader.selectParagraph" Button`
+    t =     9.26s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     9.35s Tap "reader.selectParagraph" Button
+    t =     9.35s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.35s     Find the "reader.selectParagraph" Button
+    t =     9.36s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     9.42s     Check for interrupting elements affecting "reader.selectParagraph" Button
+    t =     9.44s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =     9.49s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.49s     Synthesize event
+    t =     9.79s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.91s Waiting 10.0s for "selection.highlight" Button to exist
+    t =    11.93s     Checking `Expect predicate `existsNoRetry == 1` for object "selection.highlight" Button`
+    t =    11.93s         Checking existence of `"selection.highlight" Button`
+    t =    11.94s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    12.02s             Find: Descendants matching type Button
+    t =    12.02s             Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    12.03s Tap "selection.note" Button
+    t =    12.03s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.04s     Find the "selection.note" Button
+    t =    12.04s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    12.09s         Find: Descendants matching type Button
+    t =    12.09s         Find: Elements matching predicate '"selection.note" IN identifiers'
+    t =    12.09s     Check for interrupting elements affecting "selection.note" Button
+    t =    12.11s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    12.15s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.15s     Synthesize event
+    t =    12.45s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.85s Waiting 10.0s for "note.field" TextField to exist
+    t =    13.88s     Checking `Expect predicate `existsNoRetry == 1` for object "note.field" TextField`
+    t =    13.88s         Checking existence of `"note.field" TextField`
+    t =    13.89s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    14.01s Tap "note.field" TextField
+    t =    14.01s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.02s     Find the "note.field" TextField
+    t =    14.02s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    14.09s     Check for interrupting elements affecting "note.field" TextField
+    t =    14.10s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    14.16s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.16s     Synthesize event
+    t =    14.48s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.29s Type '第一条笔记' into "note.field" TextField
+    t =    15.29s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.31s     Find the "note.field" TextField
+    t =    15.31s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    15.47s     Check for interrupting elements affecting "note.field" TextField
+    t =    15.48s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    15.57s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    15.57s     Synthesize event
+    t =    15.87s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    16.08s Tap "note.save" Button
+    t =    16.08s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    16.10s     Find the "note.save" Button
+    t =    16.10s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    16.19s         Find: Descendants matching type Button
+    t =    16.19s         Find: Elements matching predicate '"note.save" IN identifiers'
+    t =    16.20s     Check for interrupting elements affecting "note.save" Button
+    t =    16.21s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    16.28s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    16.28s     Synthesize event
+    t =    16.58s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    17.03s Waiting 8.0s for "reader.more" Button to exist
+    t =    18.03s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =    18.04s         Checking existence of `"reader.more" Button`
+    t =    18.04s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    18.14s Tap "reader.more" Button
+    t =    18.14s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.15s     Find the "reader.more" Button
+    t =    18.15s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    18.21s     Check for interrupting elements affecting "reader.more" Button
+    t =    18.22s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    18.26s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    18.27s     Synthesize event
+    t =    18.59s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.41s Waiting 5.0s for "reader.annotations" Button to exist
+    t =    20.42s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    20.42s         Checking existence of `"reader.annotations" Button`
+    t =    20.43s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    20.51s Tap "reader.annotations" Button
+    t =    20.51s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    20.53s     Find the "reader.annotations" Button
+    t =    20.54s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    20.59s     Check for interrupting elements affecting "reader.annotations" Button
+    t =    20.60s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    20.65s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    20.65s     Synthesize event
+    t =    20.96s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    22.06s Waiting 10.0s for "annotation.row" Any to exist
+    t =    23.15s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.row" Any`
+    t =    23.15s         Checking existence of `"annotation.row" Any`
+    t =    23.16s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    23.28s Checking existence of `"第一条笔记" StaticText`
+    t =    23.28s     Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    23.33s     Find: Descendants matching type StaticText
+    t =    23.33s     Find: Elements matching predicate '"第一条笔记" IN identifiers'
+    t =    23.34s Swipe left "annotation.row" Any
+    t =    23.34s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    23.34s     Find the "annotation.row" Any
+    t =    23.34s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    23.41s     Check for interrupting elements affecting "annotation.row" StaticText
+    t =    23.42s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    23.46s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    23.48s     Synthesize event
+    t =    23.87s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    24.54s Waiting 8.0s for "annotation.edit" Button to exist
+    t =    25.57s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.edit" Button`
+    t =    25.57s         Checking existence of `"annotation.edit" Button`
+    t =    25.58s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    25.69s Tap "annotation.edit" Button
+    t =    25.69s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    25.70s     Find the "annotation.edit" Button
+    t =    25.70s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    25.78s     Check for interrupting elements affecting "annotation.edit" Button
+    t =    25.79s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    25.84s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    25.85s     Synthesize event
+    t =    26.14s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    26.74s Waiting 10.0s for "annotation.editField" TextField to exist
+    t =    27.74s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.editField" TextField`
+    t =    27.75s         Checking existence of `"annotation.editField" TextField`
+    t =    27.76s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    27.89s Tap "annotation.editField" TextField
+    t =    27.90s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    27.90s     Find the "annotation.editField" TextField
+    t =    27.90s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    27.98s     Check for interrupting elements affecting "annotation.editField" TextField
+    t =    28.00s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    28.06s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    28.07s     Synthesize event
+    t =    28.36s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    29.13s Type '（已修改）' into "annotation.editField" TextField
+    t =    29.13s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    29.15s     Find the "annotation.editField" TextField
+    t =    29.15s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    29.30s     Check for interrupting elements affecting "annotation.editField" TextField
+    t =    29.32s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    29.41s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    29.42s     Synthesize event
+    t =    29.71s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    29.93s Waiting 8.0s for "annotation.editSave" Button to exist
+    t =    30.95s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.editSave" Button`
+    t =    30.96s         Checking existence of `"annotation.editSave" Button`
+    t =    30.97s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    31.11s Tap "annotation.editSave" Button
+    t =    31.11s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    31.19s     Find the "annotation.editSave" Button
+    t =    31.20s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    31.33s     Check for interrupting elements affecting "annotation.editSave" Button
+    t =    31.34s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    31.43s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    31.44s     Synthesize event
+    t =    31.73s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    32.17s Waiting 10.0s for StaticText (First Match) to exist
+    t =    33.27s     Checking `Expect predicate `existsNoRetry == 1` for object StaticText (First Match)`
+    t =    33.27s         Checking existence of `StaticText (First Match)`
+    t =    33.28s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    33.37s Swipe left "annotation.row" StaticText
+    t =    33.37s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    33.39s     Find the "annotation.row" StaticText
+    t =    33.39s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    33.48s     Check for interrupting elements affecting "annotation.row" StaticText
+    t =    33.49s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    33.53s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    33.56s     Synthesize event
+    t =    33.95s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    34.61s Waiting 8.0s for "annotation.delete" Button to exist
+    t =    35.64s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.delete" Button`
+    t =    35.64s         Checking existence of `"annotation.delete" Button`
+    t =    35.64s             Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    35.75s Tap "annotation.delete" Button
+    t =    35.75s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    35.76s     Find the "annotation.delete" Button
+    t =    35.76s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    35.83s     Check for interrupting elements affecting "annotation.delete" Button
+    t =    35.84s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    35.89s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    35.90s     Synthesize event
+    t =    36.19s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    37.43s Checking `Expect predicate `exists == 0` for object "annotation.row" StaticText`
+    t =    37.43s     Checking existence of `"annotation.row" StaticText`
+    t =    37.44s         Requesting snapshot of accessibility hierarchy for app with pid 2778
+    t =    37.57s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI08_editAndDeleteAnnotation]' passed (37.754 seconds).
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI09_reflectionDraftSurvivesRestart]' started.
+    t =     0.00s Start Test at 2026-10-18 16:52:50.869
+    t =     0.02s Set Up
+    t =     0.02s Open app.thoughttrail.ThoughtTrail
+    t =     0.03s     Launch app.thoughttrail.ThoughtTrail
+    t =     0.03s         Terminate app.thoughttrail.ThoughtTrail:2778
+2026-10-18 16:52:50.903 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:50.903 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:50.903 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:52:51.918 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:52:51.918 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:52:51.931 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     1.27s         Setting up automation session
+    t =     1.59s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     2.74s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     3.75s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     3.75s         Checking existence of `"library.book.阅读之道" Button`
+    t =     3.76s             Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     3.92s Tap "library.book.阅读之道" Button
+    t =     3.92s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.92s     Find the "library.book.阅读之道" Button
+    t =     3.92s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     3.98s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     3.99s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     4.03s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.03s     Synthesize event
+    t =     4.33s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.69s Waiting 10.0s for "reader.text" TextView to exist
+    t =     5.70s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     5.70s         Checking existence of `"reader.text" TextView`
+    t =     5.71s             Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     5.82s             Find: Descendants matching type TextView
+    t =     5.83s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     5.84s Waiting 8.0s for "reader.more" Button to exist
+    t =     6.85s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     6.85s         Checking existence of `"reader.more" Button`
+    t =     6.86s             Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     6.94s Tap "reader.more" Button
+    t =     6.94s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     6.95s     Find the "reader.more" Button
+    t =     6.95s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     7.01s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.03s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     7.07s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.07s     Synthesize event
+    t =     7.38s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     8.23s Waiting 5.0s for "reader.reflect" Button to exist
+    t =     9.23s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.reflect" Button`
+    t =     9.23s         Checking existence of `"reader.reflect" Button`
+    t =     9.24s             Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     9.34s Tap "reader.reflect" Button
+    t =     9.34s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.34s     Find the "reader.reflect" Button
+    t =     9.35s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     9.41s     Check for interrupting elements affecting "reader.reflect" Button
+    t =     9.43s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =     9.48s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     9.49s     Synthesize event
+    t =     9.78s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.89s Waiting 10.0s for "reflection.text" TextView to exist
+    t =    11.90s     Checking `Expect predicate `existsNoRetry == 1` for object "reflection.text" TextView`
+    t =    11.90s         Checking existence of `"reflection.text" TextView`
+    t =    11.91s             Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    12.04s Tap "reflection.text" TextView
+    t =    12.04s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.05s     Find the "reflection.text" TextView
+    t =    12.05s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    12.12s     Check for interrupting elements affecting "reflection.text" TextView
+    t =    12.14s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    12.19s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.20s     Synthesize event
+    t =    12.49s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.90s Type '一个还没写完的想法' into "reflection.text" TextView
+    t =    12.90s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.92s     Find the "reflection.text" TextView
+    t =    12.93s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    13.06s     Check for interrupting elements affecting "reflection.text" TextView
+    t =    13.08s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    13.16s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    13.16s     Synthesize event
+    t =    13.53s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.68s Tap "reflection.later" Button
+    t =    14.68s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.00s     Find the "reflection.later" Button
+    t =    15.01s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    15.13s         Find: Descendants matching type Button
+    t =    15.13s         Find: Elements matching predicate '"reflection.later" IN identifiers'
+    t =    15.14s     Check for interrupting elements affecting "reflection.later" Button
+    t =    15.15s         Requesting snapshot of accessibility hierarchy for app with pid 2800
+    t =    15.24s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    15.25s     Synthesize event
+    t =    15.54s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.95s Terminate app.thoughttrail.ThoughtTrail:2800
+2026-10-18 16:53:06.829 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:06.829 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:06.830 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    17.01s Open app.thoughttrail.ThoughtTrail
+    t =    17.02s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:53:07.900 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:53:07.900 xcodebuild[46370:9454890] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:53:07.908 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    17.25s         Setting up automation session
+    t =    17.54s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.72s Tap "思考与记忆" Button
+    t =    18.72s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.74s     Find the "思考与记忆" Button
+    t =    18.75s         Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    18.89s     Check for interrupting elements affecting "思考与记忆" Button
+    t =    18.91s         Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    18.95s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    18.96s     Synthesize event
+    t =    19.24s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    20.47s Waiting 10.0s for "draft.row" Button to exist
+    t =    21.48s     Checking `Expect predicate `existsNoRetry == 1` for object "draft.row" Button`
+    t =    21.48s         Checking existence of `"draft.row" Button`
+    t =    21.48s             Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    21.59s Find the "draft.row" Button
+    t =    21.60s     Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    21.65s Tap "draft.row" Button
+    t =    21.65s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    21.65s     Find the "draft.row" Button
+    t =    21.65s         Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    21.70s     Check for interrupting elements affecting "draft.row" Button
+    t =    21.72s         Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    21.76s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    21.76s     Synthesize event
+    t =    22.05s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    22.47s Waiting 10.0s for "reflection.text" TextView to exist
+    t =    23.49s     Checking `Expect predicate `existsNoRetry == 1` for object "reflection.text" TextView`
+    t =    23.49s         Checking existence of `"reflection.text" TextView`
+    t =    23.50s             Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    23.63s Find the "reflection.text" TextView
+    t =    23.63s     Requesting snapshot of accessibility hierarchy for app with pid 2803
+    t =    23.71s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI09_reflectionDraftSurvivesRestart]' passed (23.771 seconds).
+Test Suite 'ReaderUITests' failed at 2026-10-18 16:53:14.639.
+	 Executed 7 tests, with 1 failure (0 unexpected) in 170.323 (170.331) seconds
+Test Suite 'ThoughtTrailUITests.xctest' failed at 2026-10-18 16:53:14.640.
+	 Executed 7 tests, with 1 failure (0 unexpected) in 170.323 (170.331) seconds
+Test Suite 'Selected tests' failed at 2026-10-18 16:53:14.640.
+	 Executed 7 tests, with 1 failure (0 unexpected) in 170.323 (170.332) seconds
+2026-10-18 16:53:14.658 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:14.658 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:14.659 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:14.670 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:14.671 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:14.671 xcodebuild[46370:9454890] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:15.096 xcodebuild[46370:9454891]  IDETestOperationsObserverDebug: Failure collecting diagnostics from devices: Process exited with error 1:
+ ERROR: The operation couldn?t be completed. (CoreDeviceCLISupport.DiagnoseError error 0.)
+This tool generates files that allow Apple to investigate issues with your
+computer and help improve Apple products. The files might contain personal
+information found on your device or associated with your Apple Account(s),
+including but not limited to your name, serial numbers of your device,
+your device name, your device's location over the last one to two days,
+your attached peripheral devices, your user name, your email address and
+email settings, file paths, file names, Siri suggestions, your computer's
+IP addresses, and network connection information.
+
+This information is used by Apple in accordance with its privacy policy
+(www.apple.com/privacy) and is not shared with any other company. By using
+this tool and sending the results to Apple, you consent to Apple using the
+contents of these files to improve Apple products.
+
+An error occurred while running devicectl diagnose. Will archive the diagnostics collected thus far.
+Wrote file to /Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165017.xcresult/Staging/1_Test/Diagnostics/devicectl_diagnostics.zip
+Partial devicectl diagnose bundle located here: /Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165017.xcresult/Staging/1_Test/Diagnostics/devicectl_diagnostics.zip
+
+2026-10-18 16:53:15.105 xcodebuild[46370:9454890] [MT] IDETestOperationsObserverDebug: 173.018 elapsed -- Testing started completed.
+2026-10-18 16:53:15.105 xcodebuild[46370:9454890] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-18 16:53:15.105 xcodebuild[46370:9454890] [MT] IDETestOperationsObserverDebug: 173.018 sec, +173.018 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165017.xcresult
+
+Failing tests:
+	ReaderUITests.test_UI07_highlightPersists()
+
+** TEST FAILED **
+
+Testing started

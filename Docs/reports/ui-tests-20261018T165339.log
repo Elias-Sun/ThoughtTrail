@@ -1,0 +1,539 @@
+环境：macOS 27.0.1；Xcode 27.1 Build version 27A9275 ；目标：id=00008130-00164D581E62001C；参数：-only-testing:ThoughtTrailUITests/ReaderUITests/test_UI07_highlightPersists
+提交：3f2c830（工作区有未提交改动）
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project ThoughtTrail.xcodeproj -scheme ThoughtTrail -destination id=00008130-00164D581E62001C -derivedDataPath .build/xcode -skipPackagePluginValidation -allowProvisioningUpdates -resultBundlePath .build/ui-20261018T165339.xcresult test "-only-testing:ThoughtTrailUITests/ReaderUITests/test_UI07_highlightPersists"
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  ThoughtTrail: /Users/sunyibo/Desktop/ThoughtTrai
+  ZIPFoundation: https://github.com/weichsel/ZIPFoundation.git @ 0.9.20
+  GRDB: https://github.com/groue/GRDB.swift.git @ 7.11.1
+
+Writing result bundle at path:
+	/Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165339.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (43 targets)
+    Target 'ThoughtTrailUITests' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ThoughtTrail' in project 'ThoughtTrail'
+    Target 'ThoughtTrail' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AppInfrastructure-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore-product' in project 'ThoughtTrail'
+    Target 'LearningCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'EvidenceVerificationCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AchievementCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AppInfrastructure-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AppInfrastructure' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'AppInfrastructure' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'Persistence-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'Persistence' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'GRDB-product' in project 'GRDB'
+    Target 'GRDB-product' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+    Target 'GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDB_GRDB' in project 'GRDB'
+        ➜ Explicit dependency on target 'GRDBSQLite' in project 'GRDB'
+    Target 'GRDBSQLite' in project 'GRDB' (no dependencies)
+    Target 'GRDB_GRDB' in project 'GRDB' (no dependencies)
+    Target 'AchievementCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LearningCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ModelProviders-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ModelProviders' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderAgent-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderAgent' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'EvidenceVerificationCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AgentRuntime-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'BrainCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'BrainCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextEngineering-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextEngineering' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextRouting-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ContextRouting' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'AgentRuntime' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'RetrievalCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'RetrievalCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'SpeechCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'SpeechCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReflectionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReflectionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReadingSessionCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReadingSessionCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ReaderCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LibraryCore-product' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'LibraryCore' in project 'ThoughtTrail'
+        ➜ Explicit dependency on target 'ZIPFoundation-product' in project 'ZIPFoundation'
+    Target 'ZIPFoundation-product' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation'
+    Target 'ZIPFoundation' in project 'ZIPFoundation'
+        ➜ Explicit dependency on target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation'
+    Target 'ZIPFoundation_ZIPFoundation' in project 'ZIPFoundation' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.1.sdk /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKStatCaches.noindex/iphoneos27.1-24A94232-7568eff67e6f40c5a98ca4ef40d9005c.sdkstatcache
+    cd /Users/sunyibo/Desktop/ThoughtTrai/ThoughtTrail.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.1.sdk -o /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKStatCaches.noindex/iphoneos27.1-24A94232-7568eff67e6f40c5a98ca4ef40d9005c.sdkstatcache
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/sunyibo/Desktop/ThoughtTrai/.build/xcode/SDKExplicitPrecompiledModules
+
+2026-10-18 16:53:43.973 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:44.411151+1100 ThoughtTrailUITests-Runner[2813:227364] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-10-18 16:53:44.787.
+Test Suite 'ThoughtTrailUITests.xctest' started at 2026-10-18 16:53:44.788.
+Test Suite 'ReaderUITests' started at 2026-10-18 16:53:44.788.
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI07_highlightPersists]' started.
+    t =     0.00s Start Test at 2026-10-18 16:53:44.790
+    t =     0.01s Set Up
+    t =     0.01s Open app.thoughttrail.ThoughtTrail
+    t =     0.02s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:53:44.875 xcodebuild[46703:9459576] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:53:44.875 xcodebuild[46703:9459576] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:53:46.661 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =     2.16s         Setting up automation session
+    t =     2.43s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     3.57s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =     4.57s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =     4.57s         Checking existence of `"library.book.阅读之道" Button`
+    t =     4.59s             Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     4.77s Tap "library.book.阅读之道" Button
+    t =     4.77s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     4.77s     Find the "library.book.阅读之道" Button
+    t =     4.78s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     4.83s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =     4.84s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     4.88s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     4.88s     Synthesize event
+    t =     5.18s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     5.52s Waiting 10.0s for "reader.text" TextView to exist
+    t =     6.53s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =     6.53s         Checking existence of `"reader.text" TextView`
+    t =     6.53s             Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     6.62s             Find: Descendants matching type TextView
+    t =     6.62s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =     6.63s Waiting 8.0s for "reader.more" Button to exist
+    t =     7.65s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =     7.65s         Checking existence of `"reader.more" Button`
+    t =     7.66s             Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     7.74s Tap "reader.more" Button
+    t =     7.74s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     7.75s     Find the "reader.more" Button
+    t =     7.76s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     7.81s     Check for interrupting elements affecting "reader.more" Button
+    t =     7.84s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =     7.88s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =     7.88s     Synthesize event
+    t =     8.20s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =     9.04s Waiting 5.0s for "reader.selectParagraph" Button to exist
+    t =    10.06s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.selectParagraph" Button`
+    t =    10.06s         Checking existence of `"reader.selectParagraph" Button`
+    t =    10.07s             Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    10.16s Tap "reader.selectParagraph" Button
+    t =    10.16s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    10.17s     Find the "reader.selectParagraph" Button
+    t =    10.17s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    10.23s     Check for interrupting elements affecting "reader.selectParagraph" Button
+    t =    10.25s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    10.30s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    10.31s     Synthesize event
+    t =    10.61s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    11.69s Waiting 10.0s for "selection.highlight" Button to exist
+    t =    12.72s     Checking `Expect predicate `existsNoRetry == 1` for object "selection.highlight" Button`
+    t =    12.72s         Checking existence of `"selection.highlight" Button`
+    t =    12.73s             Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    12.81s             Find: Descendants matching type Button
+    t =    12.82s             Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    12.82s Tap "selection.highlight" Button
+    t =    12.82s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    12.83s     Find the "selection.highlight" Button
+    t =    12.83s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    12.88s         Find: Descendants matching type Button
+    t =    12.88s         Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    12.89s     Check for interrupting elements affecting "selection.highlight" Button
+    t =    12.90s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    12.94s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    12.95s     Synthesize event
+    t =    13.25s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.28s Checking `Expect predicate `exists == 0` for object "selection.highlight" Button`
+    t =    14.28s     Checking existence of `"selection.highlight" Button`
+    t =    14.30s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    14.38s         Find: Descendants matching type Button
+    t =    14.38s         Find: Elements matching predicate '"selection.highlight" IN identifiers'
+    t =    14.38s Tap Button (Element at index 0)
+    t =    14.38s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    14.39s     Find the Button (Element at index 0)
+    t =    14.39s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    14.44s         Find: Descendants matching type NavigationBar
+    t =    14.44s         Find: Descendants matching type Button
+    t =    14.44s         Find: Element at index 0
+    t =    14.46s     Check for interrupting elements affecting "BackButton" Button
+    t =    14.47s         Requesting snapshot of accessibility hierarchy for app with pid 2814
+    t =    14.51s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    14.52s     Synthesize event
+    t =    14.82s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    15.18s Terminate app.thoughttrail.ThoughtTrail:2814
+2026-10-18 16:53:59.985 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:59.985 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:53:59.986 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    16.26s Open app.thoughttrail.ThoughtTrail
+    t =    16.27s     Launch app.thoughttrail.ThoughtTrail
+2026-10-18 16:54:01.076 xcodebuild[46703:9459576] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-10-18 16:54:01.076 xcodebuild[46703:9459576] [MT] IDELaunchParametersSnapshot: no debugger version
+2026-10-18 16:54:01.090 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+    t =    16.50s         Setting up automation session
+    t =    16.79s         Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    18.02s Waiting 10.0s for "library.book.阅读之道" Button to exist
+    t =    19.03s     Checking `Expect predicate `existsNoRetry == 1` for object "library.book.阅读之道" Button`
+    t =    19.03s         Checking existence of `"library.book.阅读之道" Button`
+    t =    19.04s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    19.19s Tap "library.book.阅读之道" Button
+    t =    19.19s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.20s     Find the "library.book.阅读之道" Button
+    t =    19.20s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    19.25s     Check for interrupting elements affecting "library.book.阅读之道" Button
+    t =    19.26s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    19.30s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    19.30s     Synthesize event
+    t =    19.59s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    19.95s Waiting 10.0s for "reader.text" TextView to exist
+    t =    20.98s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =    20.98s         Checking existence of `"reader.text" TextView`
+    t =    20.99s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    21.09s             Find: Descendants matching type TextView
+    t =    21.09s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    21.10s Waiting 8.0s for "reader.more" Button to exist
+    t =    22.11s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.more" Button`
+    t =    22.11s         Checking existence of `"reader.more" Button`
+    t =    22.12s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    22.21s Tap "reader.more" Button
+    t =    22.21s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    22.22s     Find the "reader.more" Button
+    t =    22.22s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    22.28s     Check for interrupting elements affecting "reader.more" Button
+    t =    22.30s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    22.34s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    22.34s     Synthesize event
+    t =    22.66s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    23.50s Waiting 5.0s for "reader.annotations" Button to exist
+    t =    24.51s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.annotations" Button`
+    t =    24.51s         Checking existence of `"reader.annotations" Button`
+    t =    24.52s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    24.61s Tap "reader.annotations" Button
+    t =    24.61s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    24.62s     Find the "reader.annotations" Button
+    t =    24.62s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    24.69s     Check for interrupting elements affecting "reader.annotations" Button
+    t =    24.70s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    24.75s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    24.76s     Synthesize event
+    t =    25.06s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    26.16s Waiting 10.0s for "annotation.row" Any to exist
+    t =    27.20s     Checking `Expect predicate `existsNoRetry == 1` for object "annotation.row" Any`
+    t =    27.20s         Checking existence of `"annotation.row" Any`
+    t =    27.21s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    27.33s Tap "annotation.row" Any
+    t =    27.33s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    27.33s     Find the "annotation.row" Any
+    t =    27.33s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    27.40s     Check for interrupting elements affecting "annotation.row" StaticText
+    t =    27.41s         Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    27.45s         Find: Descendants matching predicate identifier == "NotificationShortLookView" OR elementType == 7
+    t =    27.48s     Synthesize event
+    t =    27.76s     Wait for app.thoughttrail.ThoughtTrail to idle
+    t =    28.14s Waiting 10.0s for "reader.text" TextView to exist
+    t =    29.16s     Checking `Expect predicate `existsNoRetry == 1` for object "reader.text" TextView`
+    t =    29.16s         Checking existence of `"reader.text" TextView`
+    t =    29.17s             Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    29.25s             Find: Descendants matching type TextView
+    t =    29.26s             Find: Elements matching predicate '"reader.text" IN identifiers'
+    t =    29.26s Find the "reader.chapterTitle" StaticText
+    t =    29.27s     Requesting snapshot of accessibility hierarchy for app with pid 2819
+    t =    29.32s     Find: Descendants matching type StaticText
+    t =    29.32s     Find: Elements matching predicate '"reader.chapterTitle" IN identifiers'
+    t =    29.32s Tear Down
+Test Case '-[ThoughtTrailUITests.ReaderUITests test_UI07_highlightPersists]' passed (29.394 seconds).
+Test Suite 'ReaderUITests' passed at 2026-10-18 16:54:14.189.
+	 Executed 1 test, with 0 failures (0 unexpected) in 29.394 (29.402) seconds
+Test Suite 'ThoughtTrailUITests.xctest' passed at 2026-10-18 16:54:14.191.
+	 Executed 1 test, with 0 failures (0 unexpected) in 29.394 (29.404) seconds
+Test Suite 'Selected tests' passed at 2026-10-18 16:54:14.192.
+	 Executed 1 test, with 0 failures (0 unexpected) in 29.394 (29.406) seconds
+2026-10-18 16:54:14.208 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.208 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.208 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.238 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.238 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.239 xcodebuild[46703:9459576] [MT] IDESchemeActionSDKRecord: operatingSystemBuild = <DVTBuildVersion 24A94232>, error = invalidDigitCount(94232).
+2026-10-18 16:54:14.508 xcodebuild[46703:9459576] [MT] IDETestOperationsObserverDebug: 32.217 elapsed -- Testing started completed.
+2026-10-18 16:54:14.508 xcodebuild[46703:9459576] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-18 16:54:14.508 xcodebuild[46703:9459576] [MT] IDETestOperationsObserverDebug: 32.217 sec, +32.217 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/sunyibo/Desktop/ThoughtTrai/.build/ui-20261018T165339.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

@@ -9,7 +9,7 @@
 | ACCEPT-01 | 18 个真实库模块，职责和依赖清楚 | **达成** | [Architecture.md](Architecture.md)；`Package.swift` 18 个 library target，SwiftPM 保证无循环；每个模块有调用方与测试 |
 | ACCEPT-02 | 第 5 节全部功能要求落实 | **大部分达成** | 本表第 2 节；未完成项为真机语音/中断、真实模型效果，以及未接入 Readium（偏离计划技术） |
 | ACCEPT-03 | ≥500 核心自动化与 ≥20 iOS 交互测试通过 | **达成（模拟器 iOS 27.0，提交 `77da5c4`）** | 核心 552/552 通过；iOS 交互 24/24 通过（[TestReport.md](TestReport.md)） |
-| ACCEPT-04 | iOS 构建、安装、核心页面和完整演示通过 | **模拟器部分达成；真机已签名安装，未整体验收** | 模拟器构建/安装/全部页面可用；iPhone 15 Pro Max（iOS 27.0.1）Release 签名安装与启动完成；iOS 18 实测、需人工操作的真机项（语音、中断、真实模型讨论等）与演示录像未完成（[DeviceAcceptance.md](DeviceAcceptance.md)） |
+| ACCEPT-04 | iOS 构建、安装、核心页面和完整演示通过 | **模拟器部分达成；真机已签名安装，未整体验收** | 模拟器构建/安装/全部页面可用；iPhone 15 Pro Max（iOS 27.0.1）Release 签名安装与启动完成，24 条交互测试均在真机上通过（分次运行，见 DeviceAcceptance 1.1）；iOS 18 实测、需人工操作的真机项（语音、中断、真实模型讨论等）与演示录像未完成（[DeviceAcceptance.md](DeviceAcceptance.md)） |
 | ACCEPT-05 | 对话、Embedding、Rerank 真实接口可用 | **已验收** | 2026-10-18T02:07:16Z `tt-live-check` 三项通过（[报告](reports/live-check-2026-10-18T020716Z.md)）：对话 `qwen-plus` 3.5 s，流式 13 帧，用量 63；`text-embedding-v4` 1.8 s，12/12，1024 维，相关 0.708 / 无关 0.361；`qwen3-rerank` 0.43 s，原生协议，最高分命中期望文档。只证明接口可用，不是效果评测（见 ACCEPT-07） |
 | ACCEPT-06 | 阅读边界、引用有效性和预算规则通过 | **规则测试达成；开发集边界 0 违规** | READ-04/05、EVID-01、RUN-01 测试；边界开发集结果见 [Evaluation.md](Evaluation.md)；验收集（人工复核）未建立 |
 | ACCEPT-07 | 检索、回答依据、复核、记忆、自测达到阈值 | **未验收** | 开发集与离线基线已运行（[Evaluation.md](Evaluation.md)）；冻结的人工标注验收集与真实模型评测需要人工与密钥 |
