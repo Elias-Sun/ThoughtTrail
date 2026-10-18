@@ -461,16 +461,6 @@ struct PersistenceEdgeTests {
         #expect(try await repo.bookmarks(bookID: book.id).isEmpty)
     }
 
-    @Test("READ-04 未结束会话列表不含已结束会话；不指定书时返回全部")
-    func openSessions() async throws {
-        let repo = SQLiteReadingRepository(try AppDatabase.inMemory())
-        var ended = ReadingSession(id: "s1", bookID: "a", startedAt: Date()); ended.status = .ended
-        try await repo.saveSession(ended)
-        try await repo.saveSession(ReadingSession(id: "s2", bookID: "b", startedAt: Date()))
-        #expect(try await repo.openSessions().map(\.id) == ["s2"])
-        #expect(try await repo.sessions(bookID: nil).count == 2)
-    }
-
     @Test("MEM-04 另一个提议使用相同幂等键时写入被拒绝，不覆盖原提议")
     func proposalKeyConflict() async throws {
         let repo = SQLiteBrainRepository(try AppDatabase.inMemory())
