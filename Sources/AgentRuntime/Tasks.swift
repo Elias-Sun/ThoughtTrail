@@ -55,11 +55,29 @@ public actor TaskRegistry {
     private let clock: WallClock
     private let ids: IDGenerating
 
+    /// 正在登记中的键。actor 在 await 存储时会处理其他调用（可重入），
+    /// 若不合并，同一键的并发调用都会在保存前读到“无记录”而各自开始。
+    private var pendingBegins: [String: Task<TaskBeginResult, Error>] = [:]
+
     public init(store: AgentTaskStore, clock: WallClock, ids: IDGenerating) {
         self.store = store; self.clock = clock; self.ids = ids
     }
 
     public func begin(kind: AgentTaskKind, idempotencyKey: String) async throws -> TaskBeginResult {
+        if let pending = pendingBegins[idempotencyKey] {
+            // 同一键正在由另一调用登记：以其结果为准，本调用不再开始
+            switch try await pending.value {
+            case .started(let r), .alreadyRunning(let r): return .alreadyRunning(r)
+            case .alreadySucceeded(let r): return .alreadySucceeded(r)
+            }
+        }
+        let registration = Task { try await self.register(kind: kind, idempotencyKey: idempotencyKey) }
+        pendingBegins[idempotencyKey] = registration
+        defer { pendingBegins[idempotencyKey] = nil }
+        return try await registration.value
+    }
+
+    private func register(kind: AgentTaskKind, idempotencyKey: String) async throws -> TaskBeginResult {
         let now = clock.now()
         if var existing = try await store.task(idempotencyKey: idempotencyKey) {
             switch existing.status {

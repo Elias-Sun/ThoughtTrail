@@ -69,6 +69,32 @@ struct RuntimeEdgeTests {
         #expect(results.filter { if case .started = $0 { return true } else { return false } }.count == 1)
     }
 
+    /// 每次读写都让出执行权的存储：把“查到无记录 → 保存”之间的 await 交错稳定地暴露出来（真实 SQLite 存储同样是异步的）。
+    actor YieldingTaskStore: AgentTaskStore {
+        private var byKey: [String: AgentTaskRecord] = [:]
+        func save(_ record: AgentTaskRecord) async throws { await Task.yield(); byKey[record.idempotencyKey] = record }
+        func task(idempotencyKey: String) async throws -> AgentTaskRecord? { await Task.yield(); return byKey[idempotencyKey] }
+        func tasks(status: AgentTaskStatus) async throws -> [AgentTaskRecord] { byKey.values.filter { $0.status == status } }
+    }
+
+    @Test("RUN-02 存储读写会挂起时，同一键并发开始仍只有一个获得执行权，其余报告正在执行")
+    func concurrentBeginWithSuspendingStore() async throws {
+        for round in 0..<20 {
+            let store = YieldingTaskStore()
+            let reg = TaskRegistry(store: store, clock: ManualClock(), ids: SequentialIDGenerator())
+            let results = try await withThrowingTaskGroup(of: TaskBeginResult.self) { group in
+                for _ in 0..<10 { group.addTask { try await reg.begin(kind: .discussion, idempotencyKey: "k\(round)") } }
+                var out: [TaskBeginResult] = []
+                for try await r in group { out.append(r) }
+                return out
+            }
+            let started = results.compactMap { if case .started(let r) = $0 { return r } else { return nil } }
+            let running = results.compactMap { if case .alreadyRunning(let r) = $0 { return r } else { return nil } }
+            #expect(started.count == 1, "第 \(round) 轮")
+            #expect(running.count == 9 && running.allSatisfy { $0.id == started.first?.id }, "第 \(round) 轮")
+        }
+    }
+
     @Test("10.3 重试等待期间被取消：停止重试并报告取消")
     func cancelDuringBackoff() async throws {
         struct SlowSleeper: Sleeper { func sleep(seconds: TimeInterval) async throws { try await Task.sleep(nanoseconds: 2_000_000_000) } }
