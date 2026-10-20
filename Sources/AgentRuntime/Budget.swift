@@ -13,7 +13,7 @@ public struct ExecutionLimits: Codable, Hashable, Sendable {
         self.maxOutputTokens = max(1, maxOutputTokens); self.contextTokenBudget = max(0, contextTokenBudget)
     }
 
-    /// 一次前台阅读讨论：≤6 次外部请求，60 秒，回答 1500 Token，证据/历史 6000 Token。
+    /// 一次前台阅读讨论：≤6 次外部请求，60 秒，回答 1500 Token，组装证据 6000 Token；另附历史按轮数保留，不计入证据预算。
     public static let discussion = ExecutionLimits(maxModelCalls: 6, maxDuration: 60, maxOutputTokens: 1_500, contextTokenBudget: 6_000)
     /// 异步记忆提议：≤2 次请求，30 秒。
     public static let memoryProposal = ExecutionLimits(maxModelCalls: 2, maxDuration: 30, maxOutputTokens: 800, contextTokenBudget: 3_000)

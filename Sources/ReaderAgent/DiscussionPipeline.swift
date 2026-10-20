@@ -221,7 +221,7 @@ struct DiscussionPipeline: Sendable {
                                 quote: e.text, structurallyValid: valid)
     }
 
-    /// 历史回答：只纳入范围不比当前更宽、且引用仍在当前范围内的轮次（READ-05：不能通过历史绕过边界）。
+    /// 历史快照：按状态筛选，并排除从全书切回已读后的全书轮次；不重新校验引用来源、版本与区间（已知限制 R-01）。
     func history() async throws -> [ChatMessage] {
         let messages = try await deps.conversations.messages(conversationID: conversation.id)
             .filter { $0.id != assistant.id }

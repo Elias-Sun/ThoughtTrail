@@ -85,7 +85,7 @@ targets.append(.executableTarget(
 let package = Package(
     name: "ThoughtTrail",
     defaultLocalization: "zh-Hans",
-    platforms: [.iOS(.v18), .macOS(.v14)],
+    platforms: [.iOS("27.0"), .macOS(.v14)],
     products: modules.map { .library(name: $0.name, targets: [$0.name]) },
     dependencies: [
         .package(url: "https://github.com/groue/GRDB.swift.git", exact: "7.11.1"),

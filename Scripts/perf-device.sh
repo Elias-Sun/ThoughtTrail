@@ -1,18 +1,22 @@
 #!/usr/bin/env bash
 # 真机 Release 验收采样：D-13（冷启动 / 重开书籍 / 保存批注，各 N 次）与 D-14（同一进程混合操作浸泡 + 内存采样 + Leaks）。
 # 用法：Scripts/perf-device.sh <设备 UDID 或名称> [采样次数，默认 30] [浸泡分钟，默认 30；0 表示跳过]
+# 环境变量：STAGES（默认 "d13 soak leaks"，可只跑其中几段）、OUT（续用已有输出目录）、LEAKS_MIN（默认 5）
 # 前提：iPhone 已配对、开启开发者模式；project.yml 中的 Team 可签名。测量期间应用会禁止自动锁屏，请保持设备解锁、连接电源。
 set -euo pipefail
 cd "$(dirname "$0")/.."
 DEV="$1"; N="${2:-30}"; SOAK="${3:-30}"
 BUNDLE=app.thoughttrail.ThoughtTrail
-STAMP="$(date +%Y%m%dT%H%M%S)"
-OUT=".build/perf-device-$STAMP"
+STAGES=" ${STAGES:-d13 soak leaks} "
+OUT="${OUT:-.build/perf-device-$(date +%Y%m%dT%H%M%S)}"; OUT="${OUT%/}"
+STAMP="${OUT##*perf-device-}"
+has() { [[ "$STAGES" == *" $1 "* ]]; }
 mkdir -p "$OUT" Docs/reports
 fetch() { xcrun devicectl device copy from --device "$DEV" --domain-type appDataContainer --domain-identifier "$BUNDLE" \
             --source "Documents/perf/$1" --destination "$OUT/$1" > /dev/null 2>&1; }
 launch() { xcrun devicectl device process launch --device "$DEV" --terminate-existing "$BUNDLE" -- "$@" > /dev/null; }
 
+if has d13; then
 python3 Scripts/make_long_epub.py "$OUT/long-zh.epub" 30 15000
 xcodebuild -project ThoughtTrail.xcodeproj -scheme ThoughtTrail -configuration Release -destination "id=$(xcrun devicectl list devices | awk -v d="$DEV" '$0 ~ d && /physical/ {for(i=1;i<=NF;i++) if ($i ~ /^[0-9A-F]{8}-[0-9A-F]{16}$/) print $i}' | head -1)" \
   -derivedDataPath .build/xcode-device -allowProvisioningUpdates -skipPackagePluginValidation build > "$OUT/build.log" 2>&1 \
@@ -34,25 +38,30 @@ for i in $(seq 1 "$N"); do
   done
 done
 
+fi
 XCODE="$(xcodebuild -version | sed -n 1p)"
 ENV="$(xcrun devicectl device info details --device "$DEV" 2>/dev/null | awk -F': ' '/Marketing Name/{m=$2} /OS Version/{v=$2} /OS Build Update/{b=$2} END{print m"，iOS "v"（"b"）"}' || true)；$XCODE"
 COMMIT="$(git rev-parse --short HEAD 2>/dev/null || echo 未提交)$(git diff --quiet HEAD -- App Sources Scripts project.yml 2>/dev/null || echo '（源码有未提交改动）')"
-python3 Scripts/perf_report.py "$OUT" "$ENV" "$COMMIT" device > "Docs/reports/perf-device-$STAMP.md"
-cp "$OUT/suite.json" "Docs/reports/perf-device-$STAMP-suite.json"
-cp "$OUT/coldstart.jsonl" "Docs/reports/perf-device-$STAMP-coldstart.jsonl"
-cat "Docs/reports/perf-device-$STAMP.md"
+if has d13; then
+  python3 Scripts/perf_report.py "$OUT" "$ENV" "$COMMIT" device > "Docs/reports/perf-device-$STAMP.md"
+  cp "$OUT/suite.json" "Docs/reports/perf-device-$STAMP-suite.json"
+  cp "$OUT/coldstart.jsonl" "Docs/reports/perf-device-$STAMP-coldstart.jsonl"
+  cat "Docs/reports/perf-device-$STAMP.md"
+fi
 
 # D-14 ①：同一进程混合操作浸泡（不附着 Instruments，内存曲线不受采集开销影响）
-if [ "$SOAK" != "0" ]; then
+if [ "$SOAK" != "0" ] && has soak; then
   launch -demo -perf-reset -perf-soak "$SOAK"
   sleep $((SOAK * 60))
+fi
+if [ "$SOAK" != "0" ]; then
   for _ in $(seq 1 120); do fetch soak-summary.json && break; sleep 5; done
   fetch soak.jsonl || true
   [ -f "$OUT/soak-summary.json" ] || echo "soak-summary.json 未生成（进程可能已崩溃）"
 
   # D-14 ②：Instruments Leaks 附着同样的混合操作 LEAKS_MIN 分钟（整段 30 分钟的分配记录约 27 GB，xctrace 保存时崩溃，故单独短时运行）
   LEAKS_MIN="${LEAKS_MIN:-5}"
-  mkdir -p "$OUT/leaks-run"
+  if has leaks; then
   launch -demo -perf-soak "$LEAKS_MIN"
   sleep 3
   PID="$(xcrun devicectl device info processes --device "$DEV" 2>/dev/null | awk '/ThoughtTrail.app\/ThoughtTrail/ {print $1; exit}')"
@@ -75,6 +84,7 @@ print(f"附着同样的混合操作 {minutes} 分钟：泄漏记录 {len(rows)} 
 PY
   else
     echo "xctrace 未成功（见 $OUT/xctrace.log），不报告泄漏结论" > "$OUT/leaks-summary.txt"
+  fi
   fi
   python3 Scripts/soak_report.py "$OUT" "$ENV" "$COMMIT" > "Docs/reports/soak-device-$STAMP.md" || true
   cp "$OUT"/soak.jsonl "Docs/reports/soak-device-$STAMP.jsonl" 2>/dev/null || true

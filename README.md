@@ -1,9 +1,13 @@
 # 思迹 ThoughtTrail
 
+项目状态：**按调整后的个人项目范围完成**。采用 iOS 27、纯文本 EPUB 阅读与中文语音，以已有核心/交互测试、接口联调和设备记录交付；额外真实案例检查、量化效果评测和完整演示材料为可选。详见 [验收要求](ThoughtTrail_项目验收要求.md) 和 [验收记录](Docs/Acceptance.md)。
+
+已知限制：历史会话未逐轮重新校验来源，删除书籍文件并保留笔记后，旧回答摘录仍可能用于后续模型请求；历史也不计入 6,000 Token 证据预算。
+
 原生 iOS 阅读与个人思考 Agent：导入 EPUB → 阅读与批注 → 文字或语音反思 → 基于证据讨论 → 核查回答 → 确认长期记忆 → 自测与复习 → 在后续阅读中重新关联。
 
 - 18 个 Swift 库模块（`Sources/`），可在 macOS 上运行全部离线测试；
-- iOS 18+ SwiftUI 应用（`App/`），由 `project.yml`（XcodeGen）生成工程；
+- iOS 27+ SwiftUI 应用（`App/`），由 `project.yml`（XcodeGen）生成工程；
 - 本地 SQLite（GRDB）存储，用户自行配置模型服务（默认阿里云百炼：千问对话、`text-embedding-v4`、`qwen3-rerank`），密钥保存在系统钥匙串。
 
 当前完成度与未完成项见 [Docs/Acceptance.md](Docs/Acceptance.md)。
@@ -30,7 +34,7 @@ Package.swift   核心包（依赖：GRDB 7.11.1、ZIPFoundation 0.9.20，版本
 | macOS | 27.0（Apple Silicon） |
 | Xcode / Swift | Xcode 27.1，Swift 6.4（Swift 6 语言模式，完整并发检查） |
 | iOS 模拟器 | iPhone 18 Pro，iOS 27.0 |
-| 最低系统 | iOS 18.0（工程设置）；Xcode 27.1 运行时目录不提供 iOS 18.x，**最低系统未验收**（编译通过不等于运行期行为，见 [DeviceAcceptance.md](Docs/DeviceAcceptance.md)） |
+| 最低系统与验收范围 | iOS 27.0 起；按用户 2026-10-18 的要求取消 iOS 18 验收，采用 iOS 27 模拟器与 iOS 27.0.1 真机；历史结果和本次配置变更后的验证分别记录 |
 
 ## 构建与测试
 

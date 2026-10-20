@@ -2,7 +2,7 @@ name: ThoughtTrail
 options:
   bundleIdPrefix: app.thoughttrail
   deploymentTarget:
-    iOS: "18.0"
+    iOS: "27.0"
   createIntermediateGroups: true
   developmentLanguage: zh-Hans
 settings:
